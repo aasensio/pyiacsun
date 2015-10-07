@@ -80,25 +80,39 @@ def get_libgfortran_dir():
             continue
         return []
 
+pathGlobal = "pyiacsun/radtran/"
+
 # Monkey patch the compilers to treat Fortran files like C files.
 CCompiler.language_map['.f90'] = "c"
 UnixCCompiler.src_extensions.append(".f90")
 
 # Milne-Eddington
 # Import the version string.
-path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), "sourceMilne")
+path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), pathGlobal+"sourceMilne")
 with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
   VERSION = fh.read().strip()
 
 DOCSTRING = __doc__.strip().split("\n")
 
-lib = MyExtension('milne',
+libMilne = MyExtension('pyiacsun.radtran.milne',
                   libraries=["gfortran"],
                   library_dirs=get_libgfortran_dir(),
-                  sources=['sourceMilne/pymilne.pyx', 'sourceMilne/vars.f90', 'sourceMilne/maths.f90', 'sourceMilne/atomic.f90', 'sourceMilne/milne.f90'])
+                  sources=[path+'/pymilne.pyx', path+'/vars.f90', path+'/maths.f90', path+'/atomic.f90', path+'/milne.f90'])
 
-setup_configMilne = dict(
-    name='milne',
+path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), pathGlobal+"sourceLTE")
+with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
+  VERSION = fh.read().strip()
+
+DOCSTRING = __doc__.strip().split("\n")
+
+libLTE = MyExtension('pyiacsun.radtran.lte',
+                  libraries=["gfortran"],
+                  library_dirs=get_libgfortran_dir(),
+                  sources=[path+'/pylte.pyx', path+'/vars.f90', path+'/partition.f90', path+'/maths.f90', path+'/background.f90', 
+                  path+'/hydros.f90', path+'/synth.f90', path+'/lte.f90'])
+
+setup_config = dict(
+    name='pyiacsun',
     version=VERSION,
     description=DOCSTRING[0],
     long_description="\n".join(DOCSTRING[2:]),
@@ -110,8 +124,8 @@ setup_configMilne = dict(
     install_requires=[
         'numpy',
     ],
-    ext_package='',
-    ext_modules=[lib],
+    packages=["radtran.milne", "radtran.lte"],
+    ext_modules=[libMilne, libLTE],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
@@ -128,63 +142,14 @@ setup_configMilne = dict(
         'Topic :: Scientific/Engineering :: Physics',
     ],
     keywords=['milne', 'radiative transfer'],
-    packages=find_packages(),
+    # packages=find_packages(),
     zip_safe=False,
-    include_package_data=True
+    include_package_data=True,
+    package_data = {'pyiacsun': [os.path.join('data', '*')]}
 )
-
-
-path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), "sourceLTE")
-with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
-  VERSION = fh.read().strip()
-
-DOCSTRING = __doc__.strip().split("\n")
-
-lib = MyExtension('lte',
-                  libraries=["gfortran"],
-                  library_dirs=get_libgfortran_dir(),
-                  sources=['sourceLTE/pylte.pyx', 'sourceLTE/vars.f90', 'sourceLTE/partition.f90', 'sourceLTE/maths.f90', 'sourceLTE/background.f90', 
-                  'sourceLTE/hydros.f90', 'sourceLTE/synth.f90', 'sourceLTE/lte.f90'])
-setup_configLTE = dict(
-    name='lte',
-    version=VERSION,
-    description=DOCSTRING[0],
-    long_description="\n".join(DOCSTRING[2:]),
-    author=' A. Asensio Ramos',
-    author_email='aasensio@iac.es',
-    url='https://github.com/aasensio/pyiacsun',
-    license='GNU General Public License, version 3 (GPLv3)',
-    platforms='OS Independent',
-    install_requires=[
-        'numpy',
-    ],
-    ext_package='',
-    ext_modules=[lib],
-    classifiers=[
-        'Development Status :: 4 - Beta',
-        'Environment :: Console',
-        'Intended Audience :: Science/Research',
-        'Intended Audience :: Developers',
-        "Operating System :: Unix",
-        "Operating System :: POSIX",
-        "Operating System :: MacOS",
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-        'Programming Language :: Python',
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: Implementation :: CPython",
-        'Topic :: Scientific/Engineering',
-        'Topic :: Scientific/Engineering :: Physics',
-    ],
-    keywords=['lte', 'radiative transfer'],
-    packages=find_packages(),
-    zip_safe=False,
-    include_package_data=True
-)
-
 
 if __name__ == "__main__":
-    setup(**setup_configMilne)
-    setup(**setup_configLTE)
+    setup(**setup_config)
 
     # Attempt to remove the mod files once again.
     for filename in ["vars.mod", "atomic_functions.mod", "math_functions.mod", "math_vars.mod", "milnemod.mod", "atomicpartitionmodule.mod",

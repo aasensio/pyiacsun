@@ -1,0 +1,7 @@
+[run]
+branch = True
+source = pyiacsun/*
+include = pyiacsun/*
+omit = */setup.py
+[report]
+include = pyiacsun/*
