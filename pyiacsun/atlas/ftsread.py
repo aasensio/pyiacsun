@@ -1,54 +1,66 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-#
 # Author: cdiazbas@iac.es
-# Date: 16.04.2015
-# Code: Translation of IDL ftsread
+# Date: 07.10.2015
+# Code: Translation of IDL ftsread:
+#       /usr/pkg/rsi/idl_local/data/ftsread.pro
 
 
 def ftsread(ini,endi):
 
-    import os
-    #import os.path
-    from struct import unpack
-    import numpy
+	"""
+	Extract spectral data from the Kitt Peak FTS-Spectral-Atlas
+	as provided by H. Neckel, Hamburg.
 
-    #Mensaje importante
-    print('Wavelength range (3290 - 12508 A)')
-    
-    # Directorio actual
-    currdir = os.getcwd()
+	OUTPUT: Array with stepwidth 2mA . It is based on (interpolated)  
+	Fourier-Transform-Spectra from the Kitt Peak Observatory 
+	taken by J. Brault et al.
 
-    #Directorio del atlas
-    sdir = '/usr/pkg/rsi/idl_local/data'
+	CALL: [atlas,xlam] = ftsread(ini = waveIni ,endi = waveEndi)
+	with a wavelength range (3290 - 12508 A).
+	"""
 
-    #Directorio de trabajo
-    tdir = currdir
+	import os
+	from struct import unpack
+	import numpy as np
 
-    #Copiamos los datos necesarios
-    skip= (ini-3290)
-    count = abs(ini-endi)
-    os.system('dd if='+sdir+'/fts_cent.dat of='+tdir+'/tmp bs=1000 skip='+str(skip)+' count='+str(count))
+	# Important message:
+	print('Wavelength range (3290 - 12508 A)')
+	
+	# Current directory
+	currdir = os.getcwd()
 
-    #Accedemos a los datos
-    FileTmp = open('tmp', 'rb')
-    FileRead =FileTmp.read()
-    VarDecode=unpack('!'+str(len(FileRead)/2)+'h',FileRead)
-    VarFinal = numpy.array(VarDecode)
+	# Atlas directory
+	sdir = '/usr/pkg/rsi/idl_local/data'
 
-    #Eliminamos el fichero al final
-    os.remove(tdir+'/tmp')
+	# Work directory
+	tdir = currdir
 
-    return VarFinal
+	# Copy from the data a temporary range
+	skip  = (ini-3290)
+	count = abs(ini-endi)
+	os.system('dd if='+sdir+'/fts_cent.dat of='+tdir+'/tmp bs=1000 skip='+str(skip)+' count='+str(count))
+	lmbda = np.arange(ini,endi,0.002) 
+	
+	# Read the tmp file
+	FileTmp   = open('tmp', 'rb')
+	FileRead  = FileTmp.read()
+	varDecode = unpack('!'+str(len(FileRead)/2)+'h',FileRead)
+	varFinal  = np.array(varDecode)
+
+	# Delete the tmp file
+	os.remove(tdir+'/tmp')
+
+	return [varFinal,lmbda]
 
 
 
 if __name__ == '__main__':
-    
-    import pylab
-    Atlas = ftsread(ini= 10825,endi = 10843)
-        
-    pylab.plot(Atlas/1e4)
-    pylab.ylim(0,1)
-    pylab.show()
-    
+	
+	import matplotlib.pyplot as plt
+	[atlas,xlam] = ftsread(ini = 10825,endi = 10843)
+
+	plt.plot(xlam,atlas/1.E+4)
+	plt.title('Kitt Peak FTS-Spectral-Atlas')
+	plt.xlabel('Wavelength [A]')
+	plt.ylim(0.,1.)
+	plt.show()
+	
