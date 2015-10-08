@@ -45,8 +45,8 @@ def ftsread(ini,endi,ftsdir=None):
     
     # Read the tmp file
     FileTmp   = open('tmp', 'rb')
-    FileRead  = FileTmp.read()
-    varDecode = unpack('!'+str(len(FileRead)/2)+'h',FileRead)
+    FileRead  = FileTmp.read(count*500*2)
+    varDecode = unpack('!'+str(int(count*500))+'h',FileRead)
     varFinal  = np.array(varDecode)
 
     # Delete the tmp file
