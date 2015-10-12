@@ -44,7 +44,7 @@ def ftsread(ini, endi, ftsdir=None):
     skip = (ini-3290)
     count = abs(ini-endi)
     os.system('dd if='+sdir+'/fts_cent.dat of='+tdir +
-              '/tmp bs=1000 skip='+str(skip)+' count='+str(count)+'>> x.txt')
+              '/tmp bs=1000 skip='+str(skip)+' count='+str(count))
     lmbda = np.arange(ini, endi, 0.002)
 
     # Read the tmp file
