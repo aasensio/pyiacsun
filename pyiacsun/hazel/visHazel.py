@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 10 10:18:41 2014
-
-@author: aasensio
-"""
+from __future__ import print_function
 __all__ = ["AppForm"]
 
 from PyQt4.QtGui import QMainWindow, QWidget, QApplication, QGridLayout
@@ -97,7 +93,7 @@ class AppForm(QMainWindow):
 				loop += 1		
 						
 	def onMouseMove(self, event):	
-		print event.xdata, event.ydata
+		print(event.xdata, event.ydata)
 		if (event.xdata != None and event.ydata != None):			
 			newPos = np.asarray([event.xdata, event.ydata])
 			newPos = newPos.astype(int)

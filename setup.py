@@ -88,7 +88,8 @@ UnixCCompiler.src_extensions.append(".f90")
 
 # Milne-Eddington
 # Import the version string.
-path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), pathGlobal+"sourceMilne")
+# path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), pathGlobal+"sourceMilne")
+path = pathGlobal+"sourceMilne"
 with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
   VERSION = fh.read().strip()
 
@@ -99,7 +100,8 @@ libMilne = MyExtension('pyiacsun.radtran.milne',
                   library_dirs=get_libgfortran_dir(),
                   sources=[path+'/pymilne.pyx', path+'/vars.f90', path+'/maths.f90', path+'/atomic.f90', path+'/milne.f90'])
 
-path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), pathGlobal+"sourceLTE")
+# path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), pathGlobal+"sourceLTE")
+path = pathGlobal+"sourceLTE"
 with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
   VERSION = fh.read().strip()
 
@@ -124,7 +126,7 @@ setup_config = dict(
     install_requires=[
         'numpy',
     ],
-    # packages=["pyiacsun.radtran.milne", "pyiacsun.radtran.lte"],
+    # packages=["pyiacsun.atlas"], #, "pyiacsun.linalg", "pyiacsun.plot", "pyiacsun.sparse", "pyiacsun.util"], #.radtran.milne", "pyiacsun.radtran.lte"],
     ext_modules=[libMilne, libLTE],
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -142,7 +144,7 @@ setup_config = dict(
         'Topic :: Scientific/Engineering :: Physics',
     ],
     keywords=['milne', 'radiative transfer'],
-    # packages=find_packages(),
+    packages=find_packages(),
     zip_safe=False,
     include_package_data=True,
     package_data = {'pyiacsun': [os.path.join('data', '*')]}
