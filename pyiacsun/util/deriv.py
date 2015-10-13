@@ -1,3 +1,5 @@
+#!/usr/bin/python
+ # -*- coding: utf-8 -*-
 __all__ = ['deriv']
 
 import numpy as np

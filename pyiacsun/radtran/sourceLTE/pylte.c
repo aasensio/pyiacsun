@@ -234,8 +234,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__lte
-#define __PYX_HAVE_API__lte
+#define __PYX_HAVE__pyiacsun__radtran__lte
+#define __PYX_HAVE_API__pyiacsun__radtran__lte
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -1107,13 +1107,13 @@ static PyTypeObject *__pyx_ptype_5numpy_ndarray = 0;
 static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, char *, char *, int *); /*proto*/
 
-/* Module declarations from 'lte' */
-static int __pyx_v_3lte_nLambdaGlobal;
+/* Module declarations from 'pyiacsun.radtran.lte' */
+static int __pyx_v_8pyiacsun_7radtran_3lte_nLambdaGlobal;
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "lte"
-int __pyx_module_is_main_lte = 0;
+#define __Pyx_MODULE_NAME "pyiacsun.radtran.lte"
+int __pyx_module_is_main_pyiacsun__radtran__lte = 0;
 
-/* Implementation of 'lte' */
+/* Implementation of 'pyiacsun.radtran.lte' */
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_RuntimeError;
@@ -1135,7 +1135,6 @@ static char __pyx_k_q[] = "q";
 static char __pyx_k_Zd[] = "Zd";
 static char __pyx_k_Zf[] = "Zf";
 static char __pyx_k_Zg[] = "Zg";
-static char __pyx_k_lte[] = "lte";
 static char __pyx_k_main[] = "__main__";
 static char __pyx_k_test[] = "__test__";
 static char __pyx_k_empty[] = "empty";
@@ -1158,6 +1157,7 @@ static char __pyx_k_synthLines[] = "synthLines";
 static char __pyx_k_RuntimeError[] = "RuntimeError";
 static char __pyx_k_atmosphereIn[] = "atmosphereIn";
 static char __pyx_k_ascontiguousarray[] = "ascontiguousarray";
+static char __pyx_k_pyiacsun_radtran_lte[] = "pyiacsun.radtran.lte";
 static char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
 static char __pyx_k_scratch_Dropbox_GIT_pyiacsun_py[] = "/scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/sourceLTE/pylte.pyx";
 static char __pyx_k_unknown_dtype_code_in_numpy_pxd[] = "unknown dtype code in numpy.pxd (%d)";
@@ -1181,7 +1181,6 @@ static PyObject *__pyx_n_s_initLines;
 static PyObject *__pyx_n_s_lambdaIn;
 static PyObject *__pyx_n_s_lines;
 static PyObject *__pyx_n_s_linesIn;
-static PyObject *__pyx_n_s_lte;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_nDepths;
 static PyObject *__pyx_n_s_nLambda;
@@ -1190,15 +1189,16 @@ static PyObject *__pyx_kp_u_ndarray_is_not_C_contiguous;
 static PyObject *__pyx_kp_u_ndarray_is_not_Fortran_contiguou;
 static PyObject *__pyx_n_s_numpy;
 static PyObject *__pyx_n_s_order;
+static PyObject *__pyx_n_s_pyiacsun_radtran_lte;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py;
 static PyObject *__pyx_n_s_stokesOut;
 static PyObject *__pyx_n_s_synthLines;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
-static PyObject *__pyx_pf_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_atmosphereIn); /* proto */
-static PyObject *__pyx_pf_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_linesIn, PyArrayObject *__pyx_v_lambdaIn); /* proto */
-static PyObject *__pyx_pf_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_atmosphereIn); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_atmosphereIn); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_linesIn, PyArrayObject *__pyx_v_lambdaIn); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_atmosphereIn); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static PyObject *__pyx_int_0;
@@ -1222,7 +1222,7 @@ static PyObject *__pyx_codeobj__13;
 static PyObject *__pyx_codeobj__15;
 static PyObject *__pyx_codeobj__17;
 
-/* "lte.pyx":11
+/* "pyiacsun/radtran/sourceLTE/pylte.pyx":11
  * cdef int nLambdaGlobal = 1
  * 
  * def initAtmos(ar[double,ndim=2] atmosphereIn):             # <<<<<<<<<<<<<<
@@ -1231,9 +1231,9 @@ static PyObject *__pyx_codeobj__17;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3lte_1initAtmos(PyObject *__pyx_self, PyObject *__pyx_v_atmosphereIn); /*proto*/
-static PyMethodDef __pyx_mdef_3lte_1initAtmos = {"initAtmos", (PyCFunction)__pyx_pw_3lte_1initAtmos, METH_O, 0};
-static PyObject *__pyx_pw_3lte_1initAtmos(PyObject *__pyx_self, PyObject *__pyx_v_atmosphereIn) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_3lte_1initAtmos(PyObject *__pyx_self, PyObject *__pyx_v_atmosphereIn); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_3lte_1initAtmos = {"initAtmos", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_3lte_1initAtmos, METH_O, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_3lte_1initAtmos(PyObject *__pyx_self, PyObject *__pyx_v_atmosphereIn) {
   CYTHON_UNUSED int __pyx_lineno = 0;
   CYTHON_UNUSED const char *__pyx_filename = NULL;
   CYTHON_UNUSED int __pyx_clineno = 0;
@@ -1241,7 +1241,7 @@ static PyObject *__pyx_pw_3lte_1initAtmos(PyObject *__pyx_self, PyObject *__pyx_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("initAtmos (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_atmosphereIn), __pyx_ptype_5numpy_ndarray, 1, "atmosphereIn", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_3lte_initAtmos(__pyx_self, ((PyArrayObject *)__pyx_v_atmosphereIn));
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_3lte_initAtmos(__pyx_self, ((PyArrayObject *)__pyx_v_atmosphereIn));
 
   /* function exit code */
   goto __pyx_L0;
@@ -1252,7 +1252,7 @@ static PyObject *__pyx_pw_3lte_1initAtmos(PyObject *__pyx_self, PyObject *__pyx_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_atmosphereIn) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_atmosphereIn) {
   int __pyx_v_nDepths;
   CYTHON_UNUSED PyArrayObject *__pyx_v_atmosphere = 0;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_atmosphere;
@@ -1288,7 +1288,7 @@ static PyObject *__pyx_pf_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyA
   }
   __pyx_pybuffernd_atmosphereIn.diminfo[0].strides = __pyx_pybuffernd_atmosphereIn.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_atmosphereIn.diminfo[0].shape = __pyx_pybuffernd_atmosphereIn.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_atmosphereIn.diminfo[1].strides = __pyx_pybuffernd_atmosphereIn.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_atmosphereIn.diminfo[1].shape = __pyx_pybuffernd_atmosphereIn.rcbuffer->pybuffer.shape[1];
 
-  /* "lte.pyx":13
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":13
  * def initAtmos(ar[double,ndim=2] atmosphereIn):
  * 	cdef:
  * 		int nDepths = atmosphereIn.shape[0]             # <<<<<<<<<<<<<<
@@ -1297,7 +1297,7 @@ static PyObject *__pyx_pf_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyA
  */
   __pyx_v_nDepths = (__pyx_v_atmosphereIn->dimensions[0]);
 
-  /* "lte.pyx":17
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":17
  * 
  * 	# Make sure that the 2D array is C_CONTIGUOUS
  * 	atmosphere = ascontiguousarray(atmosphereIn)             # <<<<<<<<<<<<<<
@@ -1353,7 +1353,7 @@ static PyObject *__pyx_pf_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyA
   __pyx_v_atmosphere = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "lte.pyx":19
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":19
  * 	atmosphere = ascontiguousarray(atmosphereIn)
  * 	#c_initatmosphere(&nDepths, &atmosphere[0,0])
  * 	c_initatmosphere(&nDepths)             # <<<<<<<<<<<<<<
@@ -1362,7 +1362,7 @@ static PyObject *__pyx_pf_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyA
  */
   c_initatmosphere((&__pyx_v_nDepths));
 
-  /* "lte.pyx":11
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":11
  * cdef int nLambdaGlobal = 1
  * 
  * def initAtmos(ar[double,ndim=2] atmosphereIn):             # <<<<<<<<<<<<<<
@@ -1383,7 +1383,7 @@ static PyObject *__pyx_pf_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyA
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_atmosphere.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_atmosphereIn.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("lte.initAtmos", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.lte.initAtmos", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -1396,7 +1396,7 @@ static PyObject *__pyx_pf_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyA
   return __pyx_r;
 }
 
-/* "lte.pyx":21
+/* "pyiacsun/radtran/sourceLTE/pylte.pyx":21
  * 	c_initatmosphere(&nDepths)
  * 
  * def initLines(ar[double,ndim=2] linesIn, ar[double] lambdaIn):             # <<<<<<<<<<<<<<
@@ -1405,9 +1405,9 @@ static PyObject *__pyx_pf_3lte_initAtmos(CYTHON_UNUSED PyObject *__pyx_self, PyA
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3lte_3initLines(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_3lte_3initLines = {"initLines", (PyCFunction)__pyx_pw_3lte_3initLines, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3lte_3initLines(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_3lte_3initLines(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_3lte_3initLines = {"initLines", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_3lte_3initLines, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_3lte_3initLines(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_linesIn = 0;
   PyArrayObject *__pyx_v_lambdaIn = 0;
   int __pyx_lineno = 0;
@@ -1455,13 +1455,13 @@ static PyObject *__pyx_pw_3lte_3initLines(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("initLines", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("lte.initLines", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.lte.initLines", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_linesIn), __pyx_ptype_5numpy_ndarray, 1, "linesIn", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_lambdaIn), __pyx_ptype_5numpy_ndarray, 1, "lambdaIn", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_3lte_2initLines(__pyx_self, __pyx_v_linesIn, __pyx_v_lambdaIn);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_3lte_2initLines(__pyx_self, __pyx_v_linesIn, __pyx_v_lambdaIn);
 
   /* function exit code */
   goto __pyx_L0;
@@ -1472,7 +1472,7 @@ static PyObject *__pyx_pw_3lte_3initLines(PyObject *__pyx_self, PyObject *__pyx_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_linesIn, PyArrayObject *__pyx_v_lambdaIn) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_linesIn, PyArrayObject *__pyx_v_lambdaIn) {
   int __pyx_v_nLines;
   int __pyx_v_nLambda;
   PyArrayObject *__pyx_v_lines = 0;
@@ -1523,7 +1523,7 @@ static PyObject *__pyx_pf_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, Py
   }
   __pyx_pybuffernd_lambdaIn.diminfo[0].strides = __pyx_pybuffernd_lambdaIn.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_lambdaIn.diminfo[0].shape = __pyx_pybuffernd_lambdaIn.rcbuffer->pybuffer.shape[0];
 
-  /* "lte.pyx":23
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":23
  * def initLines(ar[double,ndim=2] linesIn, ar[double] lambdaIn):
  * 	cdef:
  * 		int nLines = linesIn.shape[0]             # <<<<<<<<<<<<<<
@@ -1532,7 +1532,7 @@ static PyObject *__pyx_pf_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, Py
  */
   __pyx_v_nLines = (__pyx_v_linesIn->dimensions[0]);
 
-  /* "lte.pyx":24
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":24
  * 	cdef:
  * 		int nLines = linesIn.shape[0]
  * 		int nLambda = lambdaIn.shape[0]             # <<<<<<<<<<<<<<
@@ -1541,7 +1541,7 @@ static PyObject *__pyx_pf_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, Py
  */
   __pyx_v_nLambda = (__pyx_v_lambdaIn->dimensions[0]);
 
-  /* "lte.pyx":29
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":29
  * 
  * 	# Make sure that the 2D array is C_CONTIGUOUS
  * 	lines = ascontiguousarray(linesIn)             # <<<<<<<<<<<<<<
@@ -1597,16 +1597,16 @@ static PyObject *__pyx_pf_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, Py
   __pyx_v_lines = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "lte.pyx":30
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":30
  * 	# Make sure that the 2D array is C_CONTIGUOUS
  * 	lines = ascontiguousarray(linesIn)
  * 	nLambdaGlobal = nLambda             # <<<<<<<<<<<<<<
  * 	c_initlines(&nLines, &lines[0,0], &nLambda, &lambdaIn[0])
  * 
  */
-  __pyx_v_3lte_nLambdaGlobal = __pyx_v_nLambda;
+  __pyx_v_8pyiacsun_7radtran_3lte_nLambdaGlobal = __pyx_v_nLambda;
 
-  /* "lte.pyx":31
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":31
  * 	lines = ascontiguousarray(linesIn)
  * 	nLambdaGlobal = nLambda
  * 	c_initlines(&nLines, &lines[0,0], &nLambda, &lambdaIn[0])             # <<<<<<<<<<<<<<
@@ -1640,7 +1640,7 @@ static PyObject *__pyx_pf_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, Py
   }
   c_initlines((&__pyx_v_nLines), (&(*__Pyx_BufPtrCContig2d(double *, __pyx_pybuffernd_lines.rcbuffer->pybuffer.buf, __pyx_t_10, __pyx_pybuffernd_lines.diminfo[0].strides, __pyx_t_11, __pyx_pybuffernd_lines.diminfo[1].strides))), (&__pyx_v_nLambda), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_lambdaIn.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_lambdaIn.diminfo[0].strides))));
 
-  /* "lte.pyx":21
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":21
  * 	c_initatmosphere(&nDepths)
  * 
  * def initLines(ar[double,ndim=2] linesIn, ar[double] lambdaIn):             # <<<<<<<<<<<<<<
@@ -1662,7 +1662,7 @@ static PyObject *__pyx_pf_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, Py
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_lines.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_linesIn.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("lte.initLines", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.lte.initLines", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -1676,7 +1676,7 @@ static PyObject *__pyx_pf_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, Py
   return __pyx_r;
 }
 
-/* "lte.pyx":34
+/* "pyiacsun/radtran/sourceLTE/pylte.pyx":34
  * 
  * 
  * def synthLines(ar[double,ndim=2] atmosphereIn):             # <<<<<<<<<<<<<<
@@ -1685,9 +1685,9 @@ static PyObject *__pyx_pf_3lte_2initLines(CYTHON_UNUSED PyObject *__pyx_self, Py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3lte_5synthLines(PyObject *__pyx_self, PyObject *__pyx_v_atmosphereIn); /*proto*/
-static PyMethodDef __pyx_mdef_3lte_5synthLines = {"synthLines", (PyCFunction)__pyx_pw_3lte_5synthLines, METH_O, 0};
-static PyObject *__pyx_pw_3lte_5synthLines(PyObject *__pyx_self, PyObject *__pyx_v_atmosphereIn) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_3lte_5synthLines(PyObject *__pyx_self, PyObject *__pyx_v_atmosphereIn); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_3lte_5synthLines = {"synthLines", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_3lte_5synthLines, METH_O, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_3lte_5synthLines(PyObject *__pyx_self, PyObject *__pyx_v_atmosphereIn) {
   CYTHON_UNUSED int __pyx_lineno = 0;
   CYTHON_UNUSED const char *__pyx_filename = NULL;
   CYTHON_UNUSED int __pyx_clineno = 0;
@@ -1695,7 +1695,7 @@ static PyObject *__pyx_pw_3lte_5synthLines(PyObject *__pyx_self, PyObject *__pyx
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("synthLines (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_atmosphereIn), __pyx_ptype_5numpy_ndarray, 1, "atmosphereIn", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_3lte_4synthLines(__pyx_self, ((PyArrayObject *)__pyx_v_atmosphereIn));
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_3lte_4synthLines(__pyx_self, ((PyArrayObject *)__pyx_v_atmosphereIn));
 
   /* function exit code */
   goto __pyx_L0;
@@ -1706,7 +1706,7 @@ static PyObject *__pyx_pw_3lte_5synthLines(PyObject *__pyx_self, PyObject *__pyx
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_atmosphereIn) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_atmosphereIn) {
   int __pyx_v_nDepths;
   int __pyx_v_nLambda;
   PyArrayObject *__pyx_v_atmosphere = 0;
@@ -1753,7 +1753,7 @@ static PyObject *__pyx_pf_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, P
   }
   __pyx_pybuffernd_atmosphereIn.diminfo[0].strides = __pyx_pybuffernd_atmosphereIn.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_atmosphereIn.diminfo[0].shape = __pyx_pybuffernd_atmosphereIn.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_atmosphereIn.diminfo[1].strides = __pyx_pybuffernd_atmosphereIn.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_atmosphereIn.diminfo[1].shape = __pyx_pybuffernd_atmosphereIn.rcbuffer->pybuffer.shape[1];
 
-  /* "lte.pyx":37
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":37
  * 	global nLambdaGlobal
  * 	cdef:
  * 		int nDepths = atmosphereIn.shape[0]             # <<<<<<<<<<<<<<
@@ -1762,16 +1762,16 @@ static PyObject *__pyx_pf_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, P
  */
   __pyx_v_nDepths = (__pyx_v_atmosphereIn->dimensions[0]);
 
-  /* "lte.pyx":38
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":38
  * 	cdef:
  * 		int nDepths = atmosphereIn.shape[0]
  * 		int nLambda = nLambdaGlobal             # <<<<<<<<<<<<<<
  * 		ar[double, ndim=2, mode="c"] atmosphere
  * 		ar[double, ndim=2] stokesOut = empty((5,nLambdaGlobal), order='F')
  */
-  __pyx_v_nLambda = __pyx_v_3lte_nLambdaGlobal;
+  __pyx_v_nLambda = __pyx_v_8pyiacsun_7radtran_3lte_nLambdaGlobal;
 
-  /* "lte.pyx":40
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":40
  * 		int nLambda = nLambdaGlobal
  * 		ar[double, ndim=2, mode="c"] atmosphere
  * 		ar[double, ndim=2] stokesOut = empty((5,nLambdaGlobal), order='F')             # <<<<<<<<<<<<<<
@@ -1780,7 +1780,7 @@ static PyObject *__pyx_pf_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, P
  */
   __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_empty); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_3lte_nLambdaGlobal); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_8pyiacsun_7radtran_3lte_nLambdaGlobal); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
@@ -1817,7 +1817,7 @@ static PyObject *__pyx_pf_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, P
   __pyx_v_stokesOut = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "lte.pyx":43
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":43
  * 
  * 	# Make sure that the 2D array is C_CONTIGUOUS
  * 	atmosphere = ascontiguousarray(atmosphereIn)             # <<<<<<<<<<<<<<
@@ -1873,7 +1873,7 @@ static PyObject *__pyx_pf_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, P
   __pyx_v_atmosphere = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "lte.pyx":44
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":44
  * 	# Make sure that the 2D array is C_CONTIGUOUS
  * 	atmosphere = ascontiguousarray(atmosphereIn)
  * 	c_synthlines(&nDepths, &atmosphere[0,0], &nLambda, <double*> stokesOut.data)             # <<<<<<<<<<<<<<
@@ -1897,7 +1897,7 @@ static PyObject *__pyx_pf_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, P
   }
   c_synthlines((&__pyx_v_nDepths), (&(*__Pyx_BufPtrCContig2d(double *, __pyx_pybuffernd_atmosphere.rcbuffer->pybuffer.buf, __pyx_t_11, __pyx_pybuffernd_atmosphere.diminfo[0].strides, __pyx_t_12, __pyx_pybuffernd_atmosphere.diminfo[1].strides))), (&__pyx_v_nLambda), ((double *)__pyx_v_stokesOut->data));
 
-  /* "lte.pyx":46
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":46
  * 	c_synthlines(&nDepths, &atmosphere[0,0], &nLambda, <double*> stokesOut.data)
  * 
  * 	return stokesOut[0:4,:], stokesOut[4,:]             # <<<<<<<<<<<<<<
@@ -1919,7 +1919,7 @@ static PyObject *__pyx_pf_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, P
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "lte.pyx":34
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":34
  * 
  * 
  * def synthLines(ar[double,ndim=2] atmosphereIn):             # <<<<<<<<<<<<<<
@@ -1939,7 +1939,7 @@ static PyObject *__pyx_pf_3lte_4synthLines(CYTHON_UNUSED PyObject *__pyx_self, P
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_atmosphereIn.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_stokesOut.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("lte.synthLines", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.lte.synthLines", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -4136,7 +4136,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_lambdaIn, __pyx_k_lambdaIn, sizeof(__pyx_k_lambdaIn), 0, 0, 1, 1},
   {&__pyx_n_s_lines, __pyx_k_lines, sizeof(__pyx_k_lines), 0, 0, 1, 1},
   {&__pyx_n_s_linesIn, __pyx_k_linesIn, sizeof(__pyx_k_linesIn), 0, 0, 1, 1},
-  {&__pyx_n_s_lte, __pyx_k_lte, sizeof(__pyx_k_lte), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_nDepths, __pyx_k_nDepths, sizeof(__pyx_k_nDepths), 0, 0, 1, 1},
   {&__pyx_n_s_nLambda, __pyx_k_nLambda, sizeof(__pyx_k_nLambda), 0, 0, 1, 1},
@@ -4145,6 +4144,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_ndarray_is_not_Fortran_contiguou, __pyx_k_ndarray_is_not_Fortran_contiguou, sizeof(__pyx_k_ndarray_is_not_Fortran_contiguou), 0, 1, 0, 0},
   {&__pyx_n_s_numpy, __pyx_k_numpy, sizeof(__pyx_k_numpy), 0, 0, 1, 1},
   {&__pyx_n_s_order, __pyx_k_order, sizeof(__pyx_k_order), 0, 0, 1, 1},
+  {&__pyx_n_s_pyiacsun_radtran_lte, __pyx_k_pyiacsun_radtran_lte, sizeof(__pyx_k_pyiacsun_radtran_lte), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_k_scratch_Dropbox_GIT_pyiacsun_py, sizeof(__pyx_k_scratch_Dropbox_GIT_pyiacsun_py), 0, 0, 1, 0},
   {&__pyx_n_s_stokesOut, __pyx_k_stokesOut, sizeof(__pyx_k_stokesOut), 0, 0, 1, 1},
@@ -4166,7 +4166,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "lte.pyx":46
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":46
  * 	c_synthlines(&nDepths, &atmosphere[0,0], &nLambda, <double*> stokesOut.data)
  * 
  * 	return stokesOut[0:4,:], stokesOut[4,:]             # <<<<<<<<<<<<<<
@@ -4253,7 +4253,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "lte.pyx":11
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":11
  * cdef int nLambdaGlobal = 1
  * 
  * def initAtmos(ar[double,ndim=2] atmosphereIn):             # <<<<<<<<<<<<<<
@@ -4265,7 +4265,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__12);
   __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_initAtmos, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "lte.pyx":21
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":21
  * 	c_initatmosphere(&nDepths)
  * 
  * def initLines(ar[double,ndim=2] linesIn, ar[double] lambdaIn):             # <<<<<<<<<<<<<<
@@ -4277,7 +4277,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__14);
   __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_initLines, 21, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "lte.pyx":34
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":34
  * 
  * 
  * def synthLines(ar[double,ndim=2] atmosphereIn):             # <<<<<<<<<<<<<<
@@ -4373,14 +4373,14 @@ PyMODINIT_FUNC PyInit_lte(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_lte) {
+  if (__pyx_module_is_main_pyiacsun__radtran__lte) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "lte")) {
-      if (unlikely(PyDict_SetItemString(modules, "lte", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pyiacsun.radtran.lte")) {
+      if (unlikely(PyDict_SetItemString(modules, "pyiacsun.radtran.lte", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -4412,7 +4412,7 @@ PyMODINIT_FUNC PyInit_lte(void)
   if (__Pyx_patch_abc() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
 
-  /* "lte.pyx":2
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":2
  * from numpy cimport ndarray as ar
  * from numpy import empty, ascontiguousarray             # <<<<<<<<<<<<<<
  * 
@@ -4439,52 +4439,52 @@ PyMODINIT_FUNC PyInit_lte(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "lte.pyx":9
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":9
  * 	void c_synthlines(int *nDepths, double *atmosphereIn, int *nLambda, double *stokesOut)
  * 
  * cdef int nLambdaGlobal = 1             # <<<<<<<<<<<<<<
  * 
  * def initAtmos(ar[double,ndim=2] atmosphereIn):
  */
-  __pyx_v_3lte_nLambdaGlobal = 1;
+  __pyx_v_8pyiacsun_7radtran_3lte_nLambdaGlobal = 1;
 
-  /* "lte.pyx":11
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":11
  * cdef int nLambdaGlobal = 1
  * 
  * def initAtmos(ar[double,ndim=2] atmosphereIn):             # <<<<<<<<<<<<<<
  * 	cdef:
  * 		int nDepths = atmosphereIn.shape[0]
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_3lte_1initAtmos, NULL, __pyx_n_s_lte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_3lte_1initAtmos, NULL, __pyx_n_s_pyiacsun_radtran_lte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_initAtmos, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "lte.pyx":21
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":21
  * 	c_initatmosphere(&nDepths)
  * 
  * def initLines(ar[double,ndim=2] linesIn, ar[double] lambdaIn):             # <<<<<<<<<<<<<<
  * 	cdef:
  * 		int nLines = linesIn.shape[0]
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_3lte_3initLines, NULL, __pyx_n_s_lte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_3lte_3initLines, NULL, __pyx_n_s_pyiacsun_radtran_lte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_initLines, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "lte.pyx":34
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":34
  * 
  * 
  * def synthLines(ar[double,ndim=2] atmosphereIn):             # <<<<<<<<<<<<<<
  * 	global nLambdaGlobal
  * 	cdef:
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_3lte_5synthLines, NULL, __pyx_n_s_lte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_3lte_5synthLines, NULL, __pyx_n_s_pyiacsun_radtran_lte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_synthLines, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "lte.pyx":1
+  /* "pyiacsun/radtran/sourceLTE/pylte.pyx":1
  * from numpy cimport ndarray as ar             # <<<<<<<<<<<<<<
  * from numpy import empty, ascontiguousarray
  * 
@@ -4510,11 +4510,11 @@ PyMODINIT_FUNC PyInit_lte(void)
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init lte", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init pyiacsun.radtran.lte", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init lte");
+    PyErr_SetString(PyExc_ImportError, "init pyiacsun.radtran.lte");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

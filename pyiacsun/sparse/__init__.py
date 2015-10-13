@@ -1,4 +1,4 @@
-from . import iht
-from . import fasta
-from . import zeroSR1
+from .iht import * 
+from .fasta import * 
+from .zeroSR1 import * 
 from .proxes import *

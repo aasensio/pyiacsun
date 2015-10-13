@@ -124,7 +124,7 @@ setup_config = dict(
     install_requires=[
         'numpy',
     ],
-    packages=["radtran.milne", "radtran.lte"],
+    # packages=["pyiacsun.radtran.milne", "pyiacsun.radtran.lte"],
     ext_modules=[libMilne, libLTE],
     classifiers=[
         'Development Status :: 4 - Beta',

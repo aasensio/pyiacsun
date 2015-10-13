@@ -1,3 +1,10 @@
 from .voigt import *
-from . import milne
-from . import lte 
+try:
+    from . import milne
+except:
+    print("milne could not be imported")
+
+try:
+    from . import lte 
+except:
+    print("lte could not be imported")

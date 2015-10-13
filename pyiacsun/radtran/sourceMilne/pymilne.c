@@ -234,8 +234,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__milne
-#define __PYX_HAVE_API__milne
+#define __PYX_HAVE__pyiacsun__radtran__milne
+#define __PYX_HAVE_API__pyiacsun__radtran__milne
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -1226,16 +1226,16 @@ static PyTypeObject *__pyx_ptype_5numpy_ndarray = 0;
 static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, char *, char *, int *); /*proto*/
 
-/* Module declarations from 'milne' */
+/* Module declarations from 'pyiacsun.radtran.milne' */
 __PYX_EXTERN_C DL_IMPORT(void) c_setline(int *, double *, double *); /*proto*/
 __PYX_EXTERN_C DL_IMPORT(void) c_addline(double *); /*proto*/
 __PYX_EXTERN_C DL_IMPORT(void) c_milnesynth(int *, double *, double *, double *); /*proto*/
 __PYX_EXTERN_C DL_IMPORT(void) c_milnesynthmany(int *, int *, double *, double *, double *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "milne"
-int __pyx_module_is_main_milne = 0;
+#define __Pyx_MODULE_NAME "pyiacsun.radtran.milne"
+int __pyx_module_is_main_pyiacsun__radtran__milne = 0;
 
-/* Implementation of 'milne' */
+/* Implementation of 'pyiacsun.radtran.milne' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_RuntimeError;
@@ -1319,6 +1319,7 @@ static char __pyx_k_milne_varInvChange[] = "milne.varInvChange";
 static char __pyx_k_perturbManyParameters[] = "__perturbManyParameters";
 static char __pyx_k_synthGroupDerivatives[] = "synthGroupDerivatives";
 static char __pyx_k_milne_synthDerivatives[] = "milne.synthDerivatives";
+static char __pyx_k_pyiacsun_radtran_milne[] = "pyiacsun.radtran.milne";
 static char __pyx_k_milne__perturbParameter[] = "_milne__perturbParameter";
 static char __pyx_k_milne___perturbParameter[] = "milne.__perturbParameter";
 static char __pyx_k_milne_synthGroupDerivatives[] = "milne.synthGroupDerivatives";
@@ -1387,6 +1388,7 @@ static PyObject *__pyx_n_s_p;
 static PyObject *__pyx_n_s_perturbManyParameters;
 static PyObject *__pyx_n_s_perturbParameter;
 static PyObject *__pyx_n_s_prepare;
+static PyObject *__pyx_n_s_pyiacsun_radtran_milne;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_relativeChange;
@@ -1409,19 +1411,19 @@ static PyObject *__pyx_n_s_varInvChange;
 static PyObject *__pyx_n_s_waveOut;
 static PyObject *__pyx_n_s_wavelength;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_pf_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, PyArrayObject *__pyx_v_lineData); /* proto */
-static PyObject *__pyx_pf_5milne_2addLine(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_lineData); /* proto */
-static PyObject *__pyx_pf_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, PyArrayObject *__pyx_v_modelIn, double __pyx_v_muIn); /* proto */
-static PyObject *__pyx_pf_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, int __pyx_v_nModels, PyArrayObject *__pyx_v_modelIn, double __pyx_v_muIn); /* proto */
-static PyObject *__pyx_pf_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nLambda, PyObject *__pyx_v_lineInfo); /* proto */
-static PyObject *__pyx_pf_5milne_5milne_2synth(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu); /* proto */
-static PyObject *__pyx_pf_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu); /* proto */
-static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_index, PyObject *__pyx_v_relativeChange); /* proto */
-static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_index, PyObject *__pyx_v_relativeChange); /* proto */
-static PyObject *__pyx_pf_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_p); /* proto */
-static PyObject *__pyx_pf_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_p); /* proto */
-static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu, PyObject *__pyx_v_relativeChange); /* proto */
-static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu, PyObject *__pyx_v_relativeChange); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, PyArrayObject *__pyx_v_lineData); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_2addLine(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_lineData); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, PyArrayObject *__pyx_v_modelIn, double __pyx_v_muIn); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, int __pyx_v_nModels, PyArrayObject *__pyx_v_modelIn, double __pyx_v_muIn); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nLambda, PyObject *__pyx_v_lineInfo); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_2synth(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_index, PyObject *__pyx_v_relativeChange); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_index, PyObject *__pyx_v_relativeChange); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_p); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_p); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu, PyObject *__pyx_v_relativeChange); /* proto */
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu, PyObject *__pyx_v_relativeChange); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static PyObject *__pyx_float_1_0;
@@ -1474,7 +1476,7 @@ static PyObject *__pyx_codeobj__37;
 static PyObject *__pyx_codeobj__39;
 static PyObject *__pyx_codeobj__42;
 
-/* "milne.pyx":11
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":11
  * 	void c_milnesynthmany(int *nLambda, int *nModels, double *modelIn, double *muIn, double *stokesOut)
  * 
  * def init(int nLambda, ar[double,ndim=1] lineData):             # <<<<<<<<<<<<<<
@@ -1483,9 +1485,9 @@ static PyObject *__pyx_codeobj__42;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_1init(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5milne_1init = {"init", (PyCFunction)__pyx_pw_5milne_1init, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5milne_1init(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_1init(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_1init = {"init", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_1init, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_1init(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   int __pyx_v_nLambda;
   PyArrayObject *__pyx_v_lineData = 0;
   int __pyx_lineno = 0;
@@ -1533,12 +1535,12 @@ static PyObject *__pyx_pw_5milne_1init(PyObject *__pyx_self, PyObject *__pyx_arg
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("init", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.init", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.init", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_lineData), __pyx_ptype_5numpy_ndarray, 1, "lineData", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_5milne_init(__pyx_self, __pyx_v_nLambda, __pyx_v_lineData);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_init(__pyx_self, __pyx_v_nLambda, __pyx_v_lineData);
 
   /* function exit code */
   goto __pyx_L0;
@@ -1549,7 +1551,7 @@ static PyObject *__pyx_pw_5milne_1init(PyObject *__pyx_self, PyObject *__pyx_arg
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, PyArrayObject *__pyx_v_lineData) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, PyArrayObject *__pyx_v_lineData) {
   PyArrayObject *__pyx_v_waveOut = 0;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_lineData;
   __Pyx_Buffer __pyx_pybuffer_lineData;
@@ -1582,7 +1584,7 @@ static PyObject *__pyx_pf_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __
   }
   __pyx_pybuffernd_lineData.diminfo[0].strides = __pyx_pybuffernd_lineData.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_lineData.diminfo[0].shape = __pyx_pybuffernd_lineData.rcbuffer->pybuffer.shape[0];
 
-  /* "milne.pyx":14
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":14
  * 
  * 	cdef:
  * 		ar[double,ndim=1] waveOut = empty(nLambda, order='F')             # <<<<<<<<<<<<<<
@@ -1620,7 +1622,7 @@ static PyObject *__pyx_pf_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __
   __pyx_v_waveOut = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "milne.pyx":16
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":16
  * 		ar[double,ndim=1] waveOut = empty(nLambda, order='F')
  * 
  * 	c_setline(&nLambda, &lineData[0], <double*> waveOut.data)             # <<<<<<<<<<<<<<
@@ -1639,7 +1641,7 @@ static PyObject *__pyx_pf_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __
   }
   c_setline((&__pyx_v_nLambda), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_lineData.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_lineData.diminfo[0].strides))), ((double *)__pyx_v_waveOut->data));
 
-  /* "milne.pyx":18
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":18
  * 	c_setline(&nLambda, &lineData[0], <double*> waveOut.data)
  * 
  * 	return waveOut             # <<<<<<<<<<<<<<
@@ -1651,7 +1653,7 @@ static PyObject *__pyx_pf_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __
   __pyx_r = ((PyObject *)__pyx_v_waveOut);
   goto __pyx_L0;
 
-  /* "milne.pyx":11
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":11
  * 	void c_milnesynthmany(int *nLambda, int *nModels, double *modelIn, double *muIn, double *stokesOut)
  * 
  * def init(int nLambda, ar[double,ndim=1] lineData):             # <<<<<<<<<<<<<<
@@ -1670,7 +1672,7 @@ static PyObject *__pyx_pf_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_lineData.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_waveOut.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("milne.init", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.init", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -1683,7 +1685,7 @@ static PyObject *__pyx_pf_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __
   return __pyx_r;
 }
 
-/* "milne.pyx":20
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":20
  * 	return waveOut
  * 
  * def addLine(ar[double,ndim=1] lineData):             # <<<<<<<<<<<<<<
@@ -1692,9 +1694,9 @@ static PyObject *__pyx_pf_5milne_init(CYTHON_UNUSED PyObject *__pyx_self, int __
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_3addLine(PyObject *__pyx_self, PyObject *__pyx_v_lineData); /*proto*/
-static PyMethodDef __pyx_mdef_5milne_3addLine = {"addLine", (PyCFunction)__pyx_pw_5milne_3addLine, METH_O, 0};
-static PyObject *__pyx_pw_5milne_3addLine(PyObject *__pyx_self, PyObject *__pyx_v_lineData) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_3addLine(PyObject *__pyx_self, PyObject *__pyx_v_lineData); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_3addLine = {"addLine", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_3addLine, METH_O, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_3addLine(PyObject *__pyx_self, PyObject *__pyx_v_lineData) {
   CYTHON_UNUSED int __pyx_lineno = 0;
   CYTHON_UNUSED const char *__pyx_filename = NULL;
   CYTHON_UNUSED int __pyx_clineno = 0;
@@ -1702,7 +1704,7 @@ static PyObject *__pyx_pw_5milne_3addLine(PyObject *__pyx_self, PyObject *__pyx_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("addLine (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_lineData), __pyx_ptype_5numpy_ndarray, 1, "lineData", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_5milne_2addLine(__pyx_self, ((PyArrayObject *)__pyx_v_lineData));
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_2addLine(__pyx_self, ((PyArrayObject *)__pyx_v_lineData));
 
   /* function exit code */
   goto __pyx_L0;
@@ -1713,7 +1715,7 @@ static PyObject *__pyx_pw_5milne_3addLine(PyObject *__pyx_self, PyObject *__pyx_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_2addLine(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_lineData) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_2addLine(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_lineData) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_lineData;
   __Pyx_Buffer __pyx_pybuffer_lineData;
   PyObject *__pyx_r = NULL;
@@ -1734,7 +1736,7 @@ static PyObject *__pyx_pf_5milne_2addLine(CYTHON_UNUSED PyObject *__pyx_self, Py
   }
   __pyx_pybuffernd_lineData.diminfo[0].strides = __pyx_pybuffernd_lineData.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_lineData.diminfo[0].shape = __pyx_pybuffernd_lineData.rcbuffer->pybuffer.shape[0];
 
-  /* "milne.pyx":22
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":22
  * def addLine(ar[double,ndim=1] lineData):
  * 
  * 	c_addline(&lineData[0])             # <<<<<<<<<<<<<<
@@ -1753,7 +1755,7 @@ static PyObject *__pyx_pf_5milne_2addLine(CYTHON_UNUSED PyObject *__pyx_self, Py
   }
   c_addline((&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_lineData.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_lineData.diminfo[0].strides))));
 
-  /* "milne.pyx":24
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":24
  * 	c_addline(&lineData[0])
  * 
  * 	return             # <<<<<<<<<<<<<<
@@ -1764,7 +1766,7 @@ static PyObject *__pyx_pf_5milne_2addLine(CYTHON_UNUSED PyObject *__pyx_self, Py
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
 
-  /* "milne.pyx":20
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":20
  * 	return waveOut
  * 
  * def addLine(ar[double,ndim=1] lineData):             # <<<<<<<<<<<<<<
@@ -1778,7 +1780,7 @@ static PyObject *__pyx_pf_5milne_2addLine(CYTHON_UNUSED PyObject *__pyx_self, Py
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_lineData.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("milne.addLine", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.addLine", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -1789,7 +1791,7 @@ static PyObject *__pyx_pf_5milne_2addLine(CYTHON_UNUSED PyObject *__pyx_self, Py
   return __pyx_r;
 }
 
-/* "milne.pyx":26
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":26
  * 	return
  * 
  * def synth(int nLambda, ar[double,ndim=1] modelIn, double muIn):             # <<<<<<<<<<<<<<
@@ -1798,9 +1800,9 @@ static PyObject *__pyx_pf_5milne_2addLine(CYTHON_UNUSED PyObject *__pyx_self, Py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_5synth(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5milne_5synth = {"synth", (PyCFunction)__pyx_pw_5milne_5synth, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5milne_5synth(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5synth(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_5synth = {"synth", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_5synth, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5synth(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   int __pyx_v_nLambda;
   PyArrayObject *__pyx_v_modelIn = 0;
   double __pyx_v_muIn;
@@ -1857,12 +1859,12 @@ static PyObject *__pyx_pw_5milne_5synth(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("synth", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.synth", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.synth", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_modelIn), __pyx_ptype_5numpy_ndarray, 1, "modelIn", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_5milne_4synth(__pyx_self, __pyx_v_nLambda, __pyx_v_modelIn, __pyx_v_muIn);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_4synth(__pyx_self, __pyx_v_nLambda, __pyx_v_modelIn, __pyx_v_muIn);
 
   /* function exit code */
   goto __pyx_L0;
@@ -1873,7 +1875,7 @@ static PyObject *__pyx_pw_5milne_5synth(PyObject *__pyx_self, PyObject *__pyx_ar
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, PyArrayObject *__pyx_v_modelIn, double __pyx_v_muIn) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, PyArrayObject *__pyx_v_modelIn, double __pyx_v_muIn) {
   PyArrayObject *__pyx_v_stokesOut = 0;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_modelIn;
   __Pyx_Buffer __pyx_pybuffer_modelIn;
@@ -1906,7 +1908,7 @@ static PyObject *__pyx_pf_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int 
   }
   __pyx_pybuffernd_modelIn.diminfo[0].strides = __pyx_pybuffernd_modelIn.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_modelIn.diminfo[0].shape = __pyx_pybuffernd_modelIn.rcbuffer->pybuffer.shape[0];
 
-  /* "milne.pyx":29
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":29
  * 
  * 	cdef:
  * 		ar[double,ndim=2] stokesOut = empty((4,nLambda), order='F')             # <<<<<<<<<<<<<<
@@ -1952,7 +1954,7 @@ static PyObject *__pyx_pf_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int 
   __pyx_v_stokesOut = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "milne.pyx":31
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":31
  * 		ar[double,ndim=2] stokesOut = empty((4,nLambda), order='F')
  * 
  * 	c_milnesynth(&nLambda, &modelIn[0], &muIn, <double*> stokesOut.data)             # <<<<<<<<<<<<<<
@@ -1971,7 +1973,7 @@ static PyObject *__pyx_pf_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int 
   }
   c_milnesynth((&__pyx_v_nLambda), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_modelIn.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_modelIn.diminfo[0].strides))), (&__pyx_v_muIn), ((double *)__pyx_v_stokesOut->data));
 
-  /* "milne.pyx":33
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":33
  * 	c_milnesynth(&nLambda, &modelIn[0], &muIn, <double*> stokesOut.data)
  * 
  * 	return stokesOut             # <<<<<<<<<<<<<<
@@ -1983,7 +1985,7 @@ static PyObject *__pyx_pf_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int 
   __pyx_r = ((PyObject *)__pyx_v_stokesOut);
   goto __pyx_L0;
 
-  /* "milne.pyx":26
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":26
  * 	return
  * 
  * def synth(int nLambda, ar[double,ndim=1] modelIn, double muIn):             # <<<<<<<<<<<<<<
@@ -2002,7 +2004,7 @@ static PyObject *__pyx_pf_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int 
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_modelIn.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_stokesOut.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("milne.synth", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.synth", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -2015,7 +2017,7 @@ static PyObject *__pyx_pf_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int 
   return __pyx_r;
 }
 
-/* "milne.pyx":35
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":35
  * 	return stokesOut
  * 
  * def synthGroup(int nLambda, int nModels, ar[double,ndim=2] modelIn, double muIn):             # <<<<<<<<<<<<<<
@@ -2024,9 +2026,9 @@ static PyObject *__pyx_pf_5milne_4synth(CYTHON_UNUSED PyObject *__pyx_self, int 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_7synthGroup(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5milne_7synthGroup = {"synthGroup", (PyCFunction)__pyx_pw_5milne_7synthGroup, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5milne_7synthGroup(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_7synthGroup(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_7synthGroup = {"synthGroup", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_7synthGroup, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_7synthGroup(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   int __pyx_v_nLambda;
   int __pyx_v_nModels;
   PyArrayObject *__pyx_v_modelIn = 0;
@@ -2092,12 +2094,12 @@ static PyObject *__pyx_pw_5milne_7synthGroup(PyObject *__pyx_self, PyObject *__p
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("synthGroup", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.synthGroup", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.synthGroup", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_modelIn), __pyx_ptype_5numpy_ndarray, 1, "modelIn", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_5milne_6synthGroup(__pyx_self, __pyx_v_nLambda, __pyx_v_nModels, __pyx_v_modelIn, __pyx_v_muIn);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_6synthGroup(__pyx_self, __pyx_v_nLambda, __pyx_v_nModels, __pyx_v_modelIn, __pyx_v_muIn);
 
   /* function exit code */
   goto __pyx_L0;
@@ -2108,7 +2110,7 @@ static PyObject *__pyx_pw_5milne_7synthGroup(PyObject *__pyx_self, PyObject *__p
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, int __pyx_v_nModels, PyArrayObject *__pyx_v_modelIn, double __pyx_v_muIn) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_nLambda, int __pyx_v_nModels, PyArrayObject *__pyx_v_modelIn, double __pyx_v_muIn) {
   PyArrayObject *__pyx_v_stokesOut = 0;
   PyArrayObject *__pyx_v_model = 0;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_model;
@@ -2153,7 +2155,7 @@ static PyObject *__pyx_pf_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self,
   }
   __pyx_pybuffernd_modelIn.diminfo[0].strides = __pyx_pybuffernd_modelIn.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_modelIn.diminfo[0].shape = __pyx_pybuffernd_modelIn.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_modelIn.diminfo[1].strides = __pyx_pybuffernd_modelIn.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_modelIn.diminfo[1].shape = __pyx_pybuffernd_modelIn.rcbuffer->pybuffer.shape[1];
 
-  /* "milne.pyx":38
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":38
  * 
  * 	cdef:
  * 		ar[double,ndim=3] stokesOut = empty((4,nLambda,nModels), order='F')             # <<<<<<<<<<<<<<
@@ -2204,7 +2206,7 @@ static PyObject *__pyx_pf_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_v_stokesOut = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "milne.pyx":42
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":42
  * 
  * 	# Make sure that the 2D array is C_CONTIGUOUS
  * 	model = ascontiguousarray(modelIn)             # <<<<<<<<<<<<<<
@@ -2260,7 +2262,7 @@ static PyObject *__pyx_pf_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_v_model = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "milne.pyx":44
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":44
  * 	model = ascontiguousarray(modelIn)
  * 
  * 	c_milnesynthmany(&nLambda, &nModels, &model[0,0], &muIn, <double*> stokesOut.data)             # <<<<<<<<<<<<<<
@@ -2284,7 +2286,7 @@ static PyObject *__pyx_pf_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self,
   }
   c_milnesynthmany((&__pyx_v_nLambda), (&__pyx_v_nModels), (&(*__Pyx_BufPtrCContig2d(double *, __pyx_pybuffernd_model.rcbuffer->pybuffer.buf, __pyx_t_11, __pyx_pybuffernd_model.diminfo[0].strides, __pyx_t_12, __pyx_pybuffernd_model.diminfo[1].strides))), (&__pyx_v_muIn), ((double *)__pyx_v_stokesOut->data));
 
-  /* "milne.pyx":46
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":46
  * 	c_milnesynthmany(&nLambda, &nModels, &model[0,0], &muIn, <double*> stokesOut.data)
  * 
  * 	return stokesOut             # <<<<<<<<<<<<<<
@@ -2296,7 +2298,7 @@ static PyObject *__pyx_pf_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_r = ((PyObject *)__pyx_v_stokesOut);
   goto __pyx_L0;
 
-  /* "milne.pyx":35
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":35
  * 	return stokesOut
  * 
  * def synthGroup(int nLambda, int nModels, ar[double,ndim=2] modelIn, double muIn):             # <<<<<<<<<<<<<<
@@ -2316,7 +2318,7 @@ static PyObject *__pyx_pf_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self,
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_modelIn.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_stokesOut.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("milne.synthGroup", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.synthGroup", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -2331,7 +2333,7 @@ static PyObject *__pyx_pf_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self,
   return __pyx_r;
 }
 
-/* "milne.pyx":59
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":59
  * 	"""
  * 
  * 	def __init__(self, nLambda, lineInfo):             # <<<<<<<<<<<<<<
@@ -2340,9 +2342,9 @@ static PyObject *__pyx_pf_5milne_6synthGroup(CYTHON_UNUSED PyObject *__pyx_self,
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_5milne_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5milne_5milne_1__init__ = {"__init__", (PyCFunction)__pyx_pw_5milne_5milne_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5milne_5milne_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_5milne_1__init__ = {"__init__", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_5milne_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_nLambda = 0;
   PyObject *__pyx_v_lineInfo = 0;
@@ -2399,18 +2401,18 @@ static PyObject *__pyx_pw_5milne_5milne_1__init__(PyObject *__pyx_self, PyObject
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.milne.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5milne_5milne___init__(__pyx_self, __pyx_v_self, __pyx_v_nLambda, __pyx_v_lineInfo);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_5milne___init__(__pyx_self, __pyx_v_self, __pyx_v_nLambda, __pyx_v_lineInfo);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nLambda, PyObject *__pyx_v_lineInfo) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nLambda, PyObject *__pyx_v_lineInfo) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2423,7 +2425,7 @@ static PyObject *__pyx_pf_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "milne.pyx":60
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":60
  * 
  * 	def __init__(self, nLambda, lineInfo):
  * 		self.lineInfo = lineInfo             # <<<<<<<<<<<<<<
@@ -2432,7 +2434,7 @@ static PyObject *__pyx_pf_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_s
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lineInfo, __pyx_v_lineInfo) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":61
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":61
  * 	def __init__(self, nLambda, lineInfo):
  * 		self.lineInfo = lineInfo
  * 		self.nLambda = nLambda             # <<<<<<<<<<<<<<
@@ -2441,7 +2443,7 @@ static PyObject *__pyx_pf_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_s
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_nLambda, __pyx_v_nLambda) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":62
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":62
  * 		self.lineInfo = lineInfo
  * 		self.nLambda = nLambda
  * 		self.wavelength = init(nLambda, lineInfo)             # <<<<<<<<<<<<<<
@@ -2480,7 +2482,7 @@ static PyObject *__pyx_pf_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_s
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_wavelength, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":59
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":59
  * 	"""
  * 
  * 	def __init__(self, nLambda, lineInfo):             # <<<<<<<<<<<<<<
@@ -2496,7 +2498,7 @@ static PyObject *__pyx_pf_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("milne.milne.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2504,7 +2506,7 @@ static PyObject *__pyx_pf_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "milne.pyx":65
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":65
  * 
  * 
  * 	def synth(self, model, mu=1.0):             # <<<<<<<<<<<<<<
@@ -2513,10 +2515,10 @@ static PyObject *__pyx_pf_5milne_5milne___init__(CYTHON_UNUSED PyObject *__pyx_s
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_5milne_3synth(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_5milne_5milne_2synth[] = "\n\t\tSynthesize a spectral line using the Milne-Eddington model\n\t\t";
-static PyMethodDef __pyx_mdef_5milne_5milne_3synth = {"synth", (PyCFunction)__pyx_pw_5milne_5milne_3synth, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5milne_5milne_2synth};
-static PyObject *__pyx_pw_5milne_5milne_3synth(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_3synth(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_8pyiacsun_7radtran_5milne_5milne_2synth[] = "\n\t\tSynthesize a spectral line using the Milne-Eddington model\n\t\t";
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_5milne_3synth = {"synth", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_5milne_3synth, METH_VARARGS|METH_KEYWORDS, __pyx_doc_8pyiacsun_7radtran_5milne_5milne_2synth};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_3synth(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_model = 0;
   PyObject *__pyx_v_mu = 0;
@@ -2576,18 +2578,18 @@ static PyObject *__pyx_pw_5milne_5milne_3synth(PyObject *__pyx_self, PyObject *_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("synth", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.milne.synth", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.synth", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5milne_5milne_2synth(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_mu);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_5milne_2synth(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_mu);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_5milne_2synth(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_2synth(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu) {
   PyObject *__pyx_v_stokes = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -2602,7 +2604,7 @@ static PyObject *__pyx_pf_5milne_5milne_2synth(CYTHON_UNUSED PyObject *__pyx_sel
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("synth", 0);
 
-  /* "milne.pyx":69
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":69
  * 		Synthesize a spectral line using the Milne-Eddington model
  * 		"""
  * 		stokes = synth(self.nLambda, model, mu)             # <<<<<<<<<<<<<<
@@ -2646,7 +2648,7 @@ static PyObject *__pyx_pf_5milne_5milne_2synth(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_v_stokes = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "milne.pyx":71
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":71
  * 		stokes = synth(self.nLambda, model, mu)
  * 
  * 		return stokes             # <<<<<<<<<<<<<<
@@ -2658,7 +2660,7 @@ static PyObject *__pyx_pf_5milne_5milne_2synth(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_r = __pyx_v_stokes;
   goto __pyx_L0;
 
-  /* "milne.pyx":65
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":65
  * 
  * 
  * 	def synth(self, model, mu=1.0):             # <<<<<<<<<<<<<<
@@ -2673,7 +2675,7 @@ static PyObject *__pyx_pf_5milne_5milne_2synth(CYTHON_UNUSED PyObject *__pyx_sel
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("milne.milne.synth", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.synth", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_stokes);
@@ -2682,7 +2684,7 @@ static PyObject *__pyx_pf_5milne_5milne_2synth(CYTHON_UNUSED PyObject *__pyx_sel
   return __pyx_r;
 }
 
-/* "milne.pyx":73
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":73
  * 		return stokes
  * 
  * 	def synthGroup(self, model, mu=1.0):             # <<<<<<<<<<<<<<
@@ -2691,10 +2693,10 @@ static PyObject *__pyx_pf_5milne_5milne_2synth(CYTHON_UNUSED PyObject *__pyx_sel
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_5milne_5synthGroup(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_5milne_5milne_4synthGroup[] = "\n\t\tSynthesize many spectral line using the Milne-Eddington model\n\t\t";
-static PyMethodDef __pyx_mdef_5milne_5milne_5synthGroup = {"synthGroup", (PyCFunction)__pyx_pw_5milne_5milne_5synthGroup, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5milne_5milne_4synthGroup};
-static PyObject *__pyx_pw_5milne_5milne_5synthGroup(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_5synthGroup(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_8pyiacsun_7radtran_5milne_5milne_4synthGroup[] = "\n\t\tSynthesize many spectral line using the Milne-Eddington model\n\t\t";
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_5milne_5synthGroup = {"synthGroup", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_5milne_5synthGroup, METH_VARARGS|METH_KEYWORDS, __pyx_doc_8pyiacsun_7radtran_5milne_5milne_4synthGroup};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_5synthGroup(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_model = 0;
   PyObject *__pyx_v_mu = 0;
@@ -2754,18 +2756,18 @@ static PyObject *__pyx_pw_5milne_5milne_5synthGroup(PyObject *__pyx_self, PyObje
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("synthGroup", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.milne.synthGroup", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.synthGroup", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5milne_5milne_4synthGroup(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_mu);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_5milne_4synthGroup(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_mu);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu) {
   PyObject *__pyx_v_nModels = NULL;
   PyObject *__pyx_v_stokes = NULL;
   PyObject *__pyx_r = NULL;
@@ -2781,7 +2783,7 @@ static PyObject *__pyx_pf_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("synthGroup", 0);
 
-  /* "milne.pyx":77
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":77
  * 		Synthesize many spectral line using the Milne-Eddington model
  * 		"""
  * 		nModels = model.shape[1]             # <<<<<<<<<<<<<<
@@ -2796,7 +2798,7 @@ static PyObject *__pyx_pf_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__py
   __pyx_v_nModels = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "milne.pyx":78
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":78
  * 		"""
  * 		nModels = model.shape[1]
  * 		stokes = synthGroup(self.nLambda, nModels, model, mu)             # <<<<<<<<<<<<<<
@@ -2843,7 +2845,7 @@ static PyObject *__pyx_pf_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__py
   __pyx_v_stokes = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "milne.pyx":80
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":80
  * 		stokes = synthGroup(self.nLambda, nModels, model, mu)
  * 
  * 		return stokes             # <<<<<<<<<<<<<<
@@ -2855,7 +2857,7 @@ static PyObject *__pyx_pf_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__py
   __pyx_r = __pyx_v_stokes;
   goto __pyx_L0;
 
-  /* "milne.pyx":73
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":73
  * 		return stokes
  * 
  * 	def synthGroup(self, model, mu=1.0):             # <<<<<<<<<<<<<<
@@ -2870,7 +2872,7 @@ static PyObject *__pyx_pf_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__py
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("milne.milne.synthGroup", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.synthGroup", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_nModels);
@@ -2880,7 +2882,7 @@ static PyObject *__pyx_pf_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "milne.pyx":82
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":82
  * 		return stokes
  * 
  * 	def __perturbParameter(self, model, index, relativeChange):             # <<<<<<<<<<<<<<
@@ -2889,9 +2891,9 @@ static PyObject *__pyx_pf_5milne_5milne_4synthGroup(CYTHON_UNUSED PyObject *__py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_5milne_7__perturbParameter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5milne_5milne_7__perturbParameter = {"__perturbParameter", (PyCFunction)__pyx_pw_5milne_5milne_7__perturbParameter, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5milne_5milne_7__perturbParameter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_7__perturbParameter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_5milne_7__perturbParameter = {"__perturbParameter", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_5milne_7__perturbParameter, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_7__perturbParameter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_model = 0;
   PyObject *__pyx_v_index = 0;
@@ -2957,18 +2959,18 @@ static PyObject *__pyx_pw_5milne_5milne_7__perturbParameter(PyObject *__pyx_self
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__perturbParameter", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.milne.__perturbParameter", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.__perturbParameter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5milne_5milne_6__perturbParameter(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_index, __pyx_v_relativeChange);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_5milne_6__perturbParameter(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_index, __pyx_v_relativeChange);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_index, PyObject *__pyx_v_relativeChange) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_index, PyObject *__pyx_v_relativeChange) {
   PyObject *__pyx_v_newModel = NULL;
   PyObject *__pyx_v_change = NULL;
   PyObject *__pyx_r = NULL;
@@ -2983,7 +2985,7 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__perturbParameter", 0);
 
-  /* "milne.pyx":84
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":84
  * 	def __perturbParameter(self, model, index, relativeChange):
  * 
  * 		newModel = np.copy(model)             # <<<<<<<<<<<<<<
@@ -3023,7 +3025,7 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
   __pyx_v_newModel = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "milne.pyx":85
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":85
  * 
  * 		newModel = np.copy(model)
  * 		if (model[index] == 0):             # <<<<<<<<<<<<<<
@@ -3039,7 +3041,7 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_5) {
 
-    /* "milne.pyx":86
+    /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":86
  * 		newModel = np.copy(model)
  * 		if (model[index] == 0):
  * 			change = relativeChange             # <<<<<<<<<<<<<<
@@ -3049,7 +3051,7 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
     __Pyx_INCREF(__pyx_v_relativeChange);
     __pyx_v_change = __pyx_v_relativeChange;
 
-    /* "milne.pyx":85
+    /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":85
  * 
  * 		newModel = np.copy(model)
  * 		if (model[index] == 0):             # <<<<<<<<<<<<<<
@@ -3059,7 +3061,7 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
     goto __pyx_L3;
   }
 
-  /* "milne.pyx":88
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":88
  * 			change = relativeChange
  * 		else:
  * 			change = model[index] * relativeChange             # <<<<<<<<<<<<<<
@@ -3077,7 +3079,7 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
   }
   __pyx_L3:;
 
-  /* "milne.pyx":90
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":90
  * 			change = model[index] * relativeChange
  * 
  * 		newModel[index] += change             # <<<<<<<<<<<<<<
@@ -3095,7 +3097,7 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":92
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":92
  * 		newModel[index] += change
  * 
  * 		return newModel, change             # <<<<<<<<<<<<<<
@@ -3115,7 +3117,7 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "milne.pyx":82
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":82
  * 		return stokes
  * 
  * 	def __perturbParameter(self, model, index, relativeChange):             # <<<<<<<<<<<<<<
@@ -3129,7 +3131,7 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("milne.milne.__perturbParameter", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.__perturbParameter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_newModel);
@@ -3139,7 +3141,7 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "milne.pyx":94
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":94
  * 		return newModel, change
  * 
  * 	def __perturbManyParameters(self, model, index, relativeChange):             # <<<<<<<<<<<<<<
@@ -3148,9 +3150,9 @@ static PyObject *__pyx_pf_5milne_5milne_6__perturbParameter(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_5milne_9__perturbManyParameters(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5milne_5milne_9__perturbManyParameters = {"__perturbManyParameters", (PyCFunction)__pyx_pw_5milne_5milne_9__perturbManyParameters, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5milne_5milne_9__perturbManyParameters(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_9__perturbManyParameters(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_5milne_9__perturbManyParameters = {"__perturbManyParameters", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_5milne_9__perturbManyParameters, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_9__perturbManyParameters(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_model = 0;
   PyObject *__pyx_v_index = 0;
@@ -3216,18 +3218,18 @@ static PyObject *__pyx_pw_5milne_5milne_9__perturbManyParameters(PyObject *__pyx
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__perturbManyParameters", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.milne.__perturbManyParameters", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.__perturbManyParameters", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5milne_5milne_8__perturbManyParameters(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_index, __pyx_v_relativeChange);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_5milne_8__perturbManyParameters(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_index, __pyx_v_relativeChange);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_index, PyObject *__pyx_v_relativeChange) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_index, PyObject *__pyx_v_relativeChange) {
   PyObject *__pyx_v_newModel = NULL;
   PyObject *__pyx_v_change = NULL;
   PyObject *__pyx_v_ind = NULL;
@@ -3243,7 +3245,7 @@ static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED P
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__perturbManyParameters", 0);
 
-  /* "milne.pyx":96
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":96
  * 	def __perturbManyParameters(self, model, index, relativeChange):
  * 
  * 		newModel = np.array(model)             # <<<<<<<<<<<<<<
@@ -3283,7 +3285,7 @@ static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED P
   __pyx_v_newModel = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "milne.pyx":97
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":97
  * 
  * 		newModel = np.array(model)
  * 		change = relativeChange * np.ones(model.shape[1])             # <<<<<<<<<<<<<<
@@ -3332,7 +3334,7 @@ static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED P
   __pyx_v_change = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "milne.pyx":99
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":99
  * 		change = relativeChange * np.ones(model.shape[1])
  * 
  * 		ind = np.nonzero(model[index,:])             # <<<<<<<<<<<<<<
@@ -3384,7 +3386,7 @@ static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED P
   __pyx_v_ind = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "milne.pyx":100
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":100
  * 
  * 		ind = np.nonzero(model[index,:])
  * 		change[ind] = newModel[index,ind] * relativeChange             # <<<<<<<<<<<<<<
@@ -3408,7 +3410,7 @@ static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED P
   if (unlikely(PyObject_SetItem(__pyx_v_change, __pyx_v_ind, __pyx_t_4) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "milne.pyx":102
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":102
  * 		change[ind] = newModel[index,ind] * relativeChange
  * 
  * 		newModel[index,:] += change             # <<<<<<<<<<<<<<
@@ -3432,7 +3434,7 @@ static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED P
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "milne.pyx":104
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":104
  * 		newModel[index,:] += change
  * 
  * 		return newModel, change             # <<<<<<<<<<<<<<
@@ -3452,7 +3454,7 @@ static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED P
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "milne.pyx":94
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":94
  * 		return newModel, change
  * 
  * 	def __perturbManyParameters(self, model, index, relativeChange):             # <<<<<<<<<<<<<<
@@ -3467,7 +3469,7 @@ static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED P
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("milne.milne.__perturbManyParameters", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.__perturbManyParameters", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_newModel);
@@ -3478,7 +3480,7 @@ static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "milne.pyx":106
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":106
  * 		return newModel, change
  * 
  * 	def varChange(self, p):             # <<<<<<<<<<<<<<
@@ -3487,9 +3489,9 @@ static PyObject *__pyx_pf_5milne_5milne_8__perturbManyParameters(CYTHON_UNUSED P
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_5milne_11varChange(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5milne_5milne_11varChange = {"varChange", (PyCFunction)__pyx_pw_5milne_5milne_11varChange, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5milne_5milne_11varChange(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_11varChange(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_5milne_11varChange = {"varChange", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_5milne_11varChange, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_11varChange(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_p = 0;
   int __pyx_lineno = 0;
@@ -3537,18 +3539,18 @@ static PyObject *__pyx_pw_5milne_5milne_11varChange(PyObject *__pyx_self, PyObje
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("varChange", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.milne.varChange", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.varChange", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5milne_5milne_10varChange(__pyx_self, __pyx_v_self, __pyx_v_p);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_5milne_10varChange(__pyx_self, __pyx_v_self, __pyx_v_p);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_p) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_p) {
   PyObject *__pyx_v_model = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3560,7 +3562,7 @@ static PyObject *__pyx_pf_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("varChange", 0);
 
-  /* "milne.pyx":107
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":107
  * 
  * 	def varChange(self, p):
  * 		model = p             # <<<<<<<<<<<<<<
@@ -3570,7 +3572,7 @@ static PyObject *__pyx_pf_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__py
   __Pyx_INCREF(__pyx_v_p);
   __pyx_v_model = __pyx_v_p;
 
-  /* "milne.pyx":108
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":108
  * 	def varChange(self, p):
  * 		model = p
  * 		model[6] = p[6] - p[5]             # <<<<<<<<<<<<<<
@@ -3588,7 +3590,7 @@ static PyObject *__pyx_pf_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__py
   if (unlikely(__Pyx_SetItemInt(__pyx_v_model, 6, __pyx_t_3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "milne.pyx":109
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":109
  * 		model = p
  * 		model[6] = p[6] - p[5]
  * 		model[8] = (p[8] / p[7])**2             # <<<<<<<<<<<<<<
@@ -3609,7 +3611,7 @@ static PyObject *__pyx_pf_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__py
   if (unlikely(__Pyx_SetItemInt(__pyx_v_model, 8, __pyx_t_2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 109; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "milne.pyx":111
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":111
  * 		model[8] = (p[8] / p[7])**2
  * 
  * 		return model             # <<<<<<<<<<<<<<
@@ -3621,7 +3623,7 @@ static PyObject *__pyx_pf_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__py
   __pyx_r = __pyx_v_model;
   goto __pyx_L0;
 
-  /* "milne.pyx":106
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":106
  * 		return newModel, change
  * 
  * 	def varChange(self, p):             # <<<<<<<<<<<<<<
@@ -3634,7 +3636,7 @@ static PyObject *__pyx_pf_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__py
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("milne.milne.varChange", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.varChange", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_model);
@@ -3643,7 +3645,7 @@ static PyObject *__pyx_pf_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "milne.pyx":113
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":113
  * 		return model
  * 
  * 	def varInvChange(self, p):             # <<<<<<<<<<<<<<
@@ -3652,9 +3654,9 @@ static PyObject *__pyx_pf_5milne_5milne_10varChange(CYTHON_UNUSED PyObject *__py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_5milne_13varInvChange(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5milne_5milne_13varInvChange = {"varInvChange", (PyCFunction)__pyx_pw_5milne_5milne_13varInvChange, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5milne_5milne_13varInvChange(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_13varInvChange(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_5milne_13varInvChange = {"varInvChange", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_5milne_13varInvChange, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_13varInvChange(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_p = 0;
   int __pyx_lineno = 0;
@@ -3702,18 +3704,18 @@ static PyObject *__pyx_pw_5milne_5milne_13varInvChange(PyObject *__pyx_self, PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("varInvChange", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.milne.varInvChange", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.varInvChange", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5milne_5milne_12varInvChange(__pyx_self, __pyx_v_self, __pyx_v_p);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_5milne_12varInvChange(__pyx_self, __pyx_v_self, __pyx_v_p);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_p) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_p) {
   PyObject *__pyx_v_model = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3728,7 +3730,7 @@ static PyObject *__pyx_pf_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("varInvChange", 0);
 
-  /* "milne.pyx":114
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":114
  * 
  * 	def varInvChange(self, p):
  * 		model = p             # <<<<<<<<<<<<<<
@@ -3738,7 +3740,7 @@ static PyObject *__pyx_pf_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *_
   __Pyx_INCREF(__pyx_v_p);
   __pyx_v_model = __pyx_v_p;
 
-  /* "milne.pyx":115
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":115
  * 	def varInvChange(self, p):
  * 		model = p
  * 		model[6] = p[5] + p[6]             # <<<<<<<<<<<<<<
@@ -3756,7 +3758,7 @@ static PyObject *__pyx_pf_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *_
   if (unlikely(__Pyx_SetItemInt(__pyx_v_model, 6, __pyx_t_3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "milne.pyx":116
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":116
  * 		model = p
  * 		model[6] = p[5] + p[6]
  * 		model[8] = p[7] * np.sqrt(p[8])             # <<<<<<<<<<<<<<
@@ -3805,7 +3807,7 @@ static PyObject *__pyx_pf_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *_
   if (unlikely(__Pyx_SetItemInt(__pyx_v_model, 8, __pyx_t_4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "milne.pyx":118
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":118
  * 		model[8] = p[7] * np.sqrt(p[8])
  * 
  * 		return model             # <<<<<<<<<<<<<<
@@ -3817,7 +3819,7 @@ static PyObject *__pyx_pf_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *_
   __pyx_r = __pyx_v_model;
   goto __pyx_L0;
 
-  /* "milne.pyx":113
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":113
  * 		return model
  * 
  * 	def varInvChange(self, p):             # <<<<<<<<<<<<<<
@@ -3833,7 +3835,7 @@ static PyObject *__pyx_pf_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *_
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("milne.milne.varInvChange", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.varInvChange", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_model);
@@ -3842,7 +3844,7 @@ static PyObject *__pyx_pf_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "milne.pyx":120
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":120
  * 		return model
  * 
  * 	def synthDerivatives(self, model, mu=1.0, relativeChange=1e-3):             # <<<<<<<<<<<<<<
@@ -3851,10 +3853,10 @@ static PyObject *__pyx_pf_5milne_5milne_12varInvChange(CYTHON_UNUSED PyObject *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_5milne_15synthDerivatives(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_5milne_5milne_14synthDerivatives[] = "\n\t\tCompute the derivative of the Stokes profiles with respect to all the variables\n\t\t";
-static PyMethodDef __pyx_mdef_5milne_5milne_15synthDerivatives = {"synthDerivatives", (PyCFunction)__pyx_pw_5milne_5milne_15synthDerivatives, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5milne_5milne_14synthDerivatives};
-static PyObject *__pyx_pw_5milne_5milne_15synthDerivatives(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_15synthDerivatives(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_8pyiacsun_7radtran_5milne_5milne_14synthDerivatives[] = "\n\t\tCompute the derivative of the Stokes profiles with respect to all the variables\n\t\t";
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_5milne_15synthDerivatives = {"synthDerivatives", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_5milne_15synthDerivatives, METH_VARARGS|METH_KEYWORDS, __pyx_doc_8pyiacsun_7radtran_5milne_5milne_14synthDerivatives};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_15synthDerivatives(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_model = 0;
   PyObject *__pyx_v_mu = 0;
@@ -3924,18 +3926,18 @@ static PyObject *__pyx_pw_5milne_5milne_15synthDerivatives(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("synthDerivatives", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.milne.synthDerivatives", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.synthDerivatives", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5milne_5milne_14synthDerivatives(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_mu, __pyx_v_relativeChange);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_5milne_14synthDerivatives(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_mu, __pyx_v_relativeChange);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu, PyObject *__pyx_v_relativeChange) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu, PyObject *__pyx_v_relativeChange) {
   PyObject *__pyx_v_stokes = NULL;
   PyObject *__pyx_v_stokesDeriv = NULL;
   long __pyx_v_i;
@@ -3957,7 +3959,7 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("synthDerivatives", 0);
 
-  /* "milne.pyx":125
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":125
  * 		"""
  * 
  * 		stokes = synth(self.nLambda, model, mu)             # <<<<<<<<<<<<<<
@@ -4001,7 +4003,7 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
   __pyx_v_stokes = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "milne.pyx":127
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":127
  * 		stokes = synth(self.nLambda, model, mu)
  * 
  * 		stokesDeriv = np.zeros((9,4,self.nLambda))             # <<<<<<<<<<<<<<
@@ -4055,7 +4057,7 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
   __pyx_v_stokesDeriv = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "milne.pyx":129
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":129
  * 		stokesDeriv = np.zeros((9,4,self.nLambda))
  * 
  * 		for i in range(9):             # <<<<<<<<<<<<<<
@@ -4065,7 +4067,7 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
   for (__pyx_t_7 = 0; __pyx_t_7 < 9; __pyx_t_7+=1) {
     __pyx_v_i = __pyx_t_7;
 
-    /* "milne.pyx":130
+    /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":130
  * 
  * 		for i in range(9):
  * 			newModel, change = self.__perturbParameter(model, i, relativeChange)             # <<<<<<<<<<<<<<
@@ -4161,7 +4163,7 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
     __Pyx_XDECREF_SET(__pyx_v_change, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "milne.pyx":131
+    /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":131
  * 		for i in range(9):
  * 			newModel, change = self.__perturbParameter(model, i, relativeChange)
  * 			stokesNew = synth(self.nLambda, newModel, mu)             # <<<<<<<<<<<<<<
@@ -4205,7 +4207,7 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
     __Pyx_XDECREF_SET(__pyx_v_stokesNew, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "milne.pyx":133
+    /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":133
  * 			stokesNew = synth(self.nLambda, newModel, mu)
  * 
  * 			stokesDeriv[i,:,:] = (stokesNew - stokes) / change             # <<<<<<<<<<<<<<
@@ -4235,7 +4237,7 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
 
-  /* "milne.pyx":135
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":135
  * 			stokesDeriv[i,:,:] = (stokesNew - stokes) / change
  * 
  * 		return stokes, stokesDeriv             # <<<<<<<<<<<<<<
@@ -4255,7 +4257,7 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "milne.pyx":120
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":120
  * 		return model
  * 
  * 	def synthDerivatives(self, model, mu=1.0, relativeChange=1e-3):             # <<<<<<<<<<<<<<
@@ -4270,7 +4272,7 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("milne.milne.synthDerivatives", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.synthDerivatives", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_stokes);
@@ -4283,7 +4285,7 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "milne.pyx":137
+/* "pyiacsun/radtran/sourceMilne/pymilne.pyx":137
  * 		return stokes, stokesDeriv
  * 
  * 	def synthGroupDerivatives(self, model, mu=1.0, relativeChange=1e-3):             # <<<<<<<<<<<<<<
@@ -4292,10 +4294,10 @@ static PyObject *__pyx_pf_5milne_5milne_14synthDerivatives(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5milne_5milne_17synthGroupDerivatives(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_5milne_5milne_16synthGroupDerivatives[] = "\n\t\tCompute the derivative of the Stokes profiles with respect to all the variables\n\t\t";
-static PyMethodDef __pyx_mdef_5milne_5milne_17synthGroupDerivatives = {"synthGroupDerivatives", (PyCFunction)__pyx_pw_5milne_5milne_17synthGroupDerivatives, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5milne_5milne_16synthGroupDerivatives};
-static PyObject *__pyx_pw_5milne_5milne_17synthGroupDerivatives(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_17synthGroupDerivatives(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_8pyiacsun_7radtran_5milne_5milne_16synthGroupDerivatives[] = "\n\t\tCompute the derivative of the Stokes profiles with respect to all the variables\n\t\t";
+static PyMethodDef __pyx_mdef_8pyiacsun_7radtran_5milne_5milne_17synthGroupDerivatives = {"synthGroupDerivatives", (PyCFunction)__pyx_pw_8pyiacsun_7radtran_5milne_5milne_17synthGroupDerivatives, METH_VARARGS|METH_KEYWORDS, __pyx_doc_8pyiacsun_7radtran_5milne_5milne_16synthGroupDerivatives};
+static PyObject *__pyx_pw_8pyiacsun_7radtran_5milne_5milne_17synthGroupDerivatives(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_model = 0;
   PyObject *__pyx_v_mu = 0;
@@ -4365,18 +4367,18 @@ static PyObject *__pyx_pw_5milne_5milne_17synthGroupDerivatives(PyObject *__pyx_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("synthGroupDerivatives", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("milne.milne.synthGroupDerivatives", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.synthGroupDerivatives", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5milne_5milne_16synthGroupDerivatives(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_mu, __pyx_v_relativeChange);
+  __pyx_r = __pyx_pf_8pyiacsun_7radtran_5milne_5milne_16synthGroupDerivatives(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_mu, __pyx_v_relativeChange);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu, PyObject *__pyx_v_relativeChange) {
+static PyObject *__pyx_pf_8pyiacsun_7radtran_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_mu, PyObject *__pyx_v_relativeChange) {
   PyObject *__pyx_v_nModels = NULL;
   PyObject *__pyx_v_stokes = NULL;
   PyObject *__pyx_v_stokesDeriv = NULL;
@@ -4399,7 +4401,7 @@ static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("synthGroupDerivatives", 0);
 
-  /* "milne.pyx":141
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":141
  * 		Compute the derivative of the Stokes profiles with respect to all the variables
  * 		"""
  * 		nModels = model.shape[1]             # <<<<<<<<<<<<<<
@@ -4414,7 +4416,7 @@ static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED Py
   __pyx_v_nModels = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "milne.pyx":143
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":143
  * 		nModels = model.shape[1]
  * 
  * 		stokes = synthGroup(self.nLambda, nModels, model, mu)             # <<<<<<<<<<<<<<
@@ -4461,7 +4463,7 @@ static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED Py
   __pyx_v_stokes = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "milne.pyx":145
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":145
  * 		stokes = synthGroup(self.nLambda, nModels, model, mu)
  * 
  * 		stokesDeriv = np.zeros((9,4,self.nLambda,nModels))             # <<<<<<<<<<<<<<
@@ -4518,7 +4520,7 @@ static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED Py
   __pyx_v_stokesDeriv = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "milne.pyx":147
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":147
  * 		stokesDeriv = np.zeros((9,4,self.nLambda,nModels))
  * 
  * 		for i in range(9):             # <<<<<<<<<<<<<<
@@ -4528,7 +4530,7 @@ static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED Py
   for (__pyx_t_7 = 0; __pyx_t_7 < 9; __pyx_t_7+=1) {
     __pyx_v_i = __pyx_t_7;
 
-    /* "milne.pyx":148
+    /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":148
  * 
  * 		for i in range(9):
  * 			newModel, change = self.__perturbManyParameters(model, i, relativeChange)             # <<<<<<<<<<<<<<
@@ -4624,7 +4626,7 @@ static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED Py
     __Pyx_XDECREF_SET(__pyx_v_change, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "milne.pyx":150
+    /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":150
  * 			newModel, change = self.__perturbManyParameters(model, i, relativeChange)
  * 
  * 			stokesNew = synthGroup(self.nLambda, nModels, newModel, mu)             # <<<<<<<<<<<<<<
@@ -4671,7 +4673,7 @@ static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED Py
     __Pyx_XDECREF_SET(__pyx_v_stokesNew, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "milne.pyx":153
+    /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":153
  * 
  * # Automatic broadcast "change"
  * 			stokesDeriv[i,:,:,:] = (stokesNew - stokes) / change             # <<<<<<<<<<<<<<
@@ -4704,7 +4706,7 @@ static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "milne.pyx":155
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":155
  * 			stokesDeriv[i,:,:,:] = (stokesNew - stokes) / change
  * 
  * 		return stokes, stokesDeriv             # <<<<<<<<<<<<<<
@@ -4722,7 +4724,7 @@ static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED Py
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "milne.pyx":137
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":137
  * 		return stokes, stokesDeriv
  * 
  * 	def synthGroupDerivatives(self, model, mu=1.0, relativeChange=1e-3):             # <<<<<<<<<<<<<<
@@ -4737,7 +4739,7 @@ static PyObject *__pyx_pf_5milne_5milne_16synthGroupDerivatives(CYTHON_UNUSED Py
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("milne.milne.synthGroupDerivatives", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pyiacsun.radtran.milne.milne.synthGroupDerivatives", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_nModels);
@@ -6972,6 +6974,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_perturbManyParameters, __pyx_k_perturbManyParameters, sizeof(__pyx_k_perturbManyParameters), 0, 0, 1, 1},
   {&__pyx_n_s_perturbParameter, __pyx_k_perturbParameter, sizeof(__pyx_k_perturbParameter), 0, 0, 1, 1},
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
+  {&__pyx_n_s_pyiacsun_radtran_milne, __pyx_k_pyiacsun_radtran_milne, sizeof(__pyx_k_pyiacsun_radtran_milne), 0, 0, 1, 1},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_relativeChange, __pyx_k_relativeChange, sizeof(__pyx_k_relativeChange), 0, 0, 1, 1},
@@ -7009,7 +7012,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "milne.pyx":99
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":99
  * 		change = relativeChange * np.ones(model.shape[1])
  * 
  * 		ind = np.nonzero(model[index,:])             # <<<<<<<<<<<<<<
@@ -7020,7 +7023,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice_);
   __Pyx_GIVEREF(__pyx_slice_);
 
-  /* "milne.pyx":102
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":102
  * 		change[ind] = newModel[index,ind] * relativeChange
  * 
  * 		newModel[index,:] += change             # <<<<<<<<<<<<<<
@@ -7031,7 +7034,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__2);
   __Pyx_GIVEREF(__pyx_slice__2);
 
-  /* "milne.pyx":133
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":133
  * 			stokesNew = synth(self.nLambda, newModel, mu)
  * 
  * 			stokesDeriv[i,:,:] = (stokesNew - stokes) / change             # <<<<<<<<<<<<<<
@@ -7045,7 +7048,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__4);
   __Pyx_GIVEREF(__pyx_slice__4);
 
-  /* "milne.pyx":153
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":153
  * 
  * # Automatic broadcast "change"
  * 			stokesDeriv[i,:,:,:] = (stokesNew - stokes) / change             # <<<<<<<<<<<<<<
@@ -7128,7 +7131,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "milne.pyx":11
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":11
  * 	void c_milnesynthmany(int *nLambda, int *nModels, double *modelIn, double *muIn, double *stokesOut)
  * 
  * def init(int nLambda, ar[double,ndim=1] lineData):             # <<<<<<<<<<<<<<
@@ -7140,7 +7143,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__14);
   __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_init, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":20
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":20
  * 	return waveOut
  * 
  * def addLine(ar[double,ndim=1] lineData):             # <<<<<<<<<<<<<<
@@ -7152,7 +7155,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__16);
   __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_addLine, 20, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":26
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":26
  * 	return
  * 
  * def synth(int nLambda, ar[double,ndim=1] modelIn, double muIn):             # <<<<<<<<<<<<<<
@@ -7164,7 +7167,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__18);
   __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_synth, 26, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":35
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":35
  * 	return stokesOut
  * 
  * def synthGroup(int nLambda, int nModels, ar[double,ndim=2] modelIn, double muIn):             # <<<<<<<<<<<<<<
@@ -7176,7 +7179,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__20);
   __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(4, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_synthGroup, 35, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":59
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":59
  * 	"""
  * 
  * 	def __init__(self, nLambda, lineInfo):             # <<<<<<<<<<<<<<
@@ -7188,7 +7191,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__22);
   __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_init_2, 59, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":65
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":65
  * 
  * 
  * 	def synth(self, model, mu=1.0):             # <<<<<<<<<<<<<<
@@ -7203,7 +7206,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
 
-  /* "milne.pyx":73
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":73
  * 		return stokes
  * 
  * 	def synthGroup(self, model, mu=1.0):             # <<<<<<<<<<<<<<
@@ -7218,7 +7221,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
 
-  /* "milne.pyx":82
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":82
  * 		return stokes
  * 
  * 	def __perturbParameter(self, model, index, relativeChange):             # <<<<<<<<<<<<<<
@@ -7230,7 +7233,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__30);
   __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(4, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_perturbParameter, 82, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":94
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":94
  * 		return newModel, change
  * 
  * 	def __perturbManyParameters(self, model, index, relativeChange):             # <<<<<<<<<<<<<<
@@ -7242,7 +7245,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__32);
   __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_perturbManyParameters, 94, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":106
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":106
  * 		return newModel, change
  * 
  * 	def varChange(self, p):             # <<<<<<<<<<<<<<
@@ -7254,7 +7257,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__34);
   __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_varChange, 106, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":113
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":113
  * 		return model
  * 
  * 	def varInvChange(self, p):             # <<<<<<<<<<<<<<
@@ -7266,7 +7269,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__36);
   __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_scratch_Dropbox_GIT_pyiacsun_py, __pyx_n_s_varInvChange, 113, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "milne.pyx":120
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":120
  * 		return model
  * 
  * 	def synthDerivatives(self, model, mu=1.0, relativeChange=1e-3):             # <<<<<<<<<<<<<<
@@ -7281,7 +7284,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
 
-  /* "milne.pyx":137
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":137
  * 		return stokes, stokesDeriv
  * 
  * 	def synthGroupDerivatives(self, model, mu=1.0, relativeChange=1e-3):             # <<<<<<<<<<<<<<
@@ -7383,14 +7386,14 @@ PyMODINIT_FUNC PyInit_milne(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_milne) {
+  if (__pyx_module_is_main_pyiacsun__radtran__milne) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "milne")) {
-      if (unlikely(PyDict_SetItemString(modules, "milne", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pyiacsun.radtran.milne")) {
+      if (unlikely(PyDict_SetItemString(modules, "pyiacsun.radtran.milne", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -7422,7 +7425,7 @@ PyMODINIT_FUNC PyInit_milne(void)
   if (__Pyx_patch_abc() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
 
-  /* "milne.pyx":2
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":2
  * from numpy cimport ndarray as ar
  * from numpy import empty, ascontiguousarray             # <<<<<<<<<<<<<<
  * import numpy as np
@@ -7449,7 +7452,7 @@ PyMODINIT_FUNC PyInit_milne(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "milne.pyx":3
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":3
  * from numpy cimport ndarray as ar
  * from numpy import empty, ascontiguousarray
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -7461,177 +7464,177 @@ PyMODINIT_FUNC PyInit_milne(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 3; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "milne.pyx":11
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":11
  * 	void c_milnesynthmany(int *nLambda, int *nModels, double *modelIn, double *muIn, double *stokesOut)
  * 
  * def init(int nLambda, ar[double,ndim=1] lineData):             # <<<<<<<<<<<<<<
  * 
  * 	cdef:
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5milne_1init, NULL, __pyx_n_s_milne); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_1init, NULL, __pyx_n_s_pyiacsun_radtran_milne); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_init, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "milne.pyx":20
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":20
  * 	return waveOut
  * 
  * def addLine(ar[double,ndim=1] lineData):             # <<<<<<<<<<<<<<
  * 
  * 	c_addline(&lineData[0])
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5milne_3addLine, NULL, __pyx_n_s_milne); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_3addLine, NULL, __pyx_n_s_pyiacsun_radtran_milne); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_addLine, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "milne.pyx":26
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":26
  * 	return
  * 
  * def synth(int nLambda, ar[double,ndim=1] modelIn, double muIn):             # <<<<<<<<<<<<<<
  * 
  * 	cdef:
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5milne_5synth, NULL, __pyx_n_s_milne); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_5synth, NULL, __pyx_n_s_pyiacsun_radtran_milne); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_synth, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "milne.pyx":35
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":35
  * 	return stokesOut
  * 
  * def synthGroup(int nLambda, int nModels, ar[double,ndim=2] modelIn, double muIn):             # <<<<<<<<<<<<<<
  * 
  * 	cdef:
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5milne_7synthGroup, NULL, __pyx_n_s_milne); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_7synthGroup, NULL, __pyx_n_s_pyiacsun_radtran_milne); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_synthGroup, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "milne.pyx":48
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":48
  * 	return stokesOut
  * 
  * class milne:             # <<<<<<<<<<<<<<
  * 	"""
  * 	Class that synthesizes spectral lines using Milne Eddington.
  */
-  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_milne, __pyx_n_s_milne, (PyObject *) NULL, __pyx_n_s_milne, __pyx_kp_s_Class_that_synthesizes_spectral); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_milne, __pyx_n_s_milne, (PyObject *) NULL, __pyx_n_s_pyiacsun_radtran_milne, __pyx_kp_s_Class_that_synthesizes_spectral); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "milne.pyx":59
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":59
  * 	"""
  * 
  * 	def __init__(self, nLambda, lineInfo):             # <<<<<<<<<<<<<<
  * 		self.lineInfo = lineInfo
  * 		self.nLambda = nLambda
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5milne_5milne_1__init__, 0, __pyx_n_s_milne___init, NULL, __pyx_n_s_milne, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_5milne_1__init__, 0, __pyx_n_s_milne___init, NULL, __pyx_n_s_pyiacsun_radtran_milne, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_init_2, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":65
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":65
  * 
  * 
  * 	def synth(self, model, mu=1.0):             # <<<<<<<<<<<<<<
  * 		"""
  * 		Synthesize a spectral line using the Milne-Eddington model
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5milne_5milne_3synth, 0, __pyx_n_s_milne_synth, NULL, __pyx_n_s_milne, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_5milne_3synth, 0, __pyx_n_s_milne_synth, NULL, __pyx_n_s_pyiacsun_radtran_milne, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__26);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_synth, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":73
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":73
  * 		return stokes
  * 
  * 	def synthGroup(self, model, mu=1.0):             # <<<<<<<<<<<<<<
  * 		"""
  * 		Synthesize many spectral line using the Milne-Eddington model
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5milne_5milne_5synthGroup, 0, __pyx_n_s_milne_synthGroup, NULL, __pyx_n_s_milne, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_5milne_5synthGroup, 0, __pyx_n_s_milne_synthGroup, NULL, __pyx_n_s_pyiacsun_radtran_milne, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__29);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_synthGroup, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":82
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":82
  * 		return stokes
  * 
  * 	def __perturbParameter(self, model, index, relativeChange):             # <<<<<<<<<<<<<<
  * 
  * 		newModel = np.copy(model)
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5milne_5milne_7__perturbParameter, 0, __pyx_n_s_milne___perturbParameter, NULL, __pyx_n_s_milne, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_5milne_7__perturbParameter, 0, __pyx_n_s_milne___perturbParameter, NULL, __pyx_n_s_pyiacsun_radtran_milne, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_milne__perturbParameter, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":94
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":94
  * 		return newModel, change
  * 
  * 	def __perturbManyParameters(self, model, index, relativeChange):             # <<<<<<<<<<<<<<
  * 
  * 		newModel = np.array(model)
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5milne_5milne_9__perturbManyParameters, 0, __pyx_n_s_milne___perturbManyParameters, NULL, __pyx_n_s_milne, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_5milne_9__perturbManyParameters, 0, __pyx_n_s_milne___perturbManyParameters, NULL, __pyx_n_s_pyiacsun_radtran_milne, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_milne__perturbManyParameters, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":106
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":106
  * 		return newModel, change
  * 
  * 	def varChange(self, p):             # <<<<<<<<<<<<<<
  * 		model = p
  * 		model[6] = p[6] - p[5]
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5milne_5milne_11varChange, 0, __pyx_n_s_milne_varChange, NULL, __pyx_n_s_milne, __pyx_d, ((PyObject *)__pyx_codeobj__35)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_5milne_11varChange, 0, __pyx_n_s_milne_varChange, NULL, __pyx_n_s_pyiacsun_radtran_milne, __pyx_d, ((PyObject *)__pyx_codeobj__35)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_varChange, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":113
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":113
  * 		return model
  * 
  * 	def varInvChange(self, p):             # <<<<<<<<<<<<<<
  * 		model = p
  * 		model[6] = p[5] + p[6]
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5milne_5milne_13varInvChange, 0, __pyx_n_s_milne_varInvChange, NULL, __pyx_n_s_milne, __pyx_d, ((PyObject *)__pyx_codeobj__37)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_5milne_13varInvChange, 0, __pyx_n_s_milne_varInvChange, NULL, __pyx_n_s_pyiacsun_radtran_milne, __pyx_d, ((PyObject *)__pyx_codeobj__37)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_varInvChange, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":120
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":120
  * 		return model
  * 
  * 	def synthDerivatives(self, model, mu=1.0, relativeChange=1e-3):             # <<<<<<<<<<<<<<
  * 		"""
  * 		Compute the derivative of the Stokes profiles with respect to all the variables
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5milne_5milne_15synthDerivatives, 0, __pyx_n_s_milne_synthDerivatives, NULL, __pyx_n_s_milne, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_5milne_15synthDerivatives, 0, __pyx_n_s_milne_synthDerivatives, NULL, __pyx_n_s_pyiacsun_radtran_milne, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__40);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_synthDerivatives, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":137
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":137
  * 		return stokes, stokesDeriv
  * 
  * 	def synthGroupDerivatives(self, model, mu=1.0, relativeChange=1e-3):             # <<<<<<<<<<<<<<
  * 		"""
  * 		Compute the derivative of the Stokes profiles with respect to all the variables
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5milne_5milne_17synthGroupDerivatives, 0, __pyx_n_s_milne_synthGroupDerivatives, NULL, __pyx_n_s_milne, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_8pyiacsun_7radtran_5milne_5milne_17synthGroupDerivatives, 0, __pyx_n_s_milne_synthGroupDerivatives, NULL, __pyx_n_s_pyiacsun_radtran_milne, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__43);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_synthGroupDerivatives, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "milne.pyx":48
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":48
  * 	return stokesOut
  * 
  * class milne:             # <<<<<<<<<<<<<<
@@ -7644,7 +7647,7 @@ PyMODINIT_FUNC PyInit_milne(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "milne.pyx":1
+  /* "pyiacsun/radtran/sourceMilne/pymilne.pyx":1
  * from numpy cimport ndarray as ar             # <<<<<<<<<<<<<<
  * from numpy import empty, ascontiguousarray
  * import numpy as np
@@ -7670,11 +7673,11 @@ PyMODINIT_FUNC PyInit_milne(void)
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init milne", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init pyiacsun.radtran.milne", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init milne");
+    PyErr_SetString(PyExc_ImportError, "init pyiacsun.radtran.milne");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

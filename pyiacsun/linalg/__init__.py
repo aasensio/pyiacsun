@@ -1,3 +1,3 @@
-from . import cholInvert
-from . import fsvd
-from . import optimalSVHT
+from .cholInvert import * 
+from .fsvd import * 
+from .optimalSVHT import * 
