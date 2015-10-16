@@ -18,11 +18,11 @@ from distutils.unixccompiler import UnixCCompiler
 from setuptools import find_packages, setup
 from setuptools.extension import Extension
 
-import inspect
 import os
 import platform
 from subprocess import Popen, PIPE
 import sys
+import numpy
 
 
 def _compile(self, obj, src, ext, cc_args, extra_postargs, pp_opts):
@@ -98,7 +98,8 @@ DOCSTRING = __doc__.strip().split("\n")
 libMilne = MyExtension('pyiacsun.radtran.milne',
                   libraries=["gfortran"],
                   library_dirs=get_libgfortran_dir(),
-                  sources=[path+'/pymilne.pyx', path+'/vars.f90', path+'/maths.f90', path+'/atomic.f90', path+'/milne.f90'])
+                  sources=[path+'/pymilne.pyx', path+'/vars.f90', path+'/maths.f90', path+'/atomic.f90', path+'/milne.f90'],
+                  include_dirs=[numpy.get_include()])
 
 # path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), pathGlobal+"sourceLTE")
 path = pathGlobal+"sourceLTE"
@@ -111,7 +112,8 @@ libLTE = MyExtension('pyiacsun.radtran.lte',
                   libraries=["gfortran"],
                   library_dirs=get_libgfortran_dir(),
                   sources=[path+'/pylte.pyx', path+'/vars.f90', path+'/partition.f90', path+'/maths.f90', path+'/background.f90', 
-                  path+'/hydros.f90', path+'/synth.f90', path+'/lte.f90'])
+                  path+'/hydros.f90', path+'/synth.f90', path+'/lte.f90'],
+                  include_dirs=[numpy.get_include()])
 
 setup_config = dict(
     name='pyiacsun',
