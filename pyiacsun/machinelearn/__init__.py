@@ -1,2 +1,2 @@
-from . import gpAndres
-from . import rvm
+from .gpAndres import *
+from .rvm import *

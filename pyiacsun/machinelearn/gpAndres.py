@@ -37,8 +37,7 @@ class GaussianProcess:
 # Returns the marginal likelihood for a Gaussian process
 	def marginalLikelihood(self, pars, *args):
 		xInput = self.xInput
-		yInput = args[0]
-		sigmaNoise = args[1]
+		yInput, sigmaNoise = args
 			
 		lambdaGP = np.exp(pars[0])
 		sigmaGP = np.exp(pars[1])
@@ -65,9 +64,8 @@ class GaussianProcess:
 		return likelihood, jac
 	
 	def fit(self, y, sigmaNoise):
-		x0 = [np.log(self.lambdaGP), np.log(self.sigmaGP)]
-		args = [y, sigmaNoise]
-		res = opt.minimize(self.marginalLikelihood, x0, method='BFGS', jac=True, args=args)
+		x0 = [np.log(self.lambdaGP), np.log(self.sigmaGP)]		
+		res = opt.minimize(self.marginalLikelihood, x0, method='BFGS', jac=True, args=(y, sigmaNoise))
 		self.lambdaGP, self.sigmaGP = np.exp(res.x)
 		self.yNoise = y
 		
@@ -79,12 +77,14 @@ class GaussianProcess:
 		self.CInv, logD = cholInvert(C)
 		
 	def predict(self, xStar):
-		nx = len(x)
-		predicted = np.zeros(nx)
-		for i in range(nx):
-			KStar = self.sigmaGP * np.exp(-0.5 * self.lambdaGP * (xStar[i]-self.xInput)**2)
-			predicted[i] = np.dot(KStar,np.dot(self.CInv, self.yNoise))
-		return predicted
+		K_XStar_XStar, _, _ = self.covariance(xStar[np.newaxis,:]-xStar[:,np.newaxis], [self.lambdaGP, self.sigmaGP])
+		K_XStar_X, _, _ = self.covariance(xStar[:,np.newaxis]-self.xInput[np.newaxis,:], [self.lambdaGP, self.sigmaGP])
+		K_X_XStar, _, _ = self.covariance(self.xInput[:,np.newaxis]-xStar[np.newaxis,:], [self.lambdaGP, self.sigmaGP])
+		
+		predicted = K_XStar_X.dot(self.CInv).dot(self.yNoise)
+		covariance = K_XStar_XStar - K_XStar_X.dot(self.CInv).dot(K_X_XStar)
+		
+		return predicted, covariance
 
 if __name__ == "__main__":
 	
@@ -97,7 +97,7 @@ if __name__ == "__main__":
 
 	gp = GaussianProcess(x)
 	gp.fit(y, sigmaNoise)
-	res = gp.predict(x)
+	res, variance = gp.predict(x)
 
 	pl.plot(x, yNoise)
 	pl.plot(x, res)
