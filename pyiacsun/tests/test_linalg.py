@@ -10,7 +10,7 @@ def test_fsvd():
     U2, S2, V2 = np.linalg.svd(A)
     U, S, V = pyiacsun.linalg.fsvd(A, 9, 3, usePowerMethod=True)
 
-    npt.assert_equal(S, S2)
+    npt.assert_equal(S, S2, rtol=1e-6)
 
 def test_cholinvert():
     A = np.array([[4,12,-16],[12,37,-43],[-16,-43,98]])
