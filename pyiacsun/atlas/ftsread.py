@@ -7,14 +7,14 @@ def ftsread(ini, endi, ftsdir=None):
     """
     Extract spectral data from the Kitt Peak FTS-Spectral-Atlas
     as provided by H. Neckel, Hamburg.
-    
+
     OUTPUT: Array with stepwidth 2mA. It is based on (interpolated)
     Fourier-Transform-Spectra from the Kitt Peak Observatory
     taken by J. Brault et al.
-    
+
     CALL: [atlas,xlam] = ftsread(ini = waveIni ,endi = waveEndi)
     with a wavelength range (3290 - 12508 A).
-    
+
     Args:
         ini (int): Initial wavelength
         endi (int): Final wavelength
@@ -27,13 +27,9 @@ def ftsread(ini, endi, ftsdir=None):
     import os
     from struct import unpack
     import numpy as np
-    import sys
-    
+
     # Atlas directory
     if ftsdir is None:
-        # sdir = '/usr/pkg/rsi/idl_local/data'
-        # Path from __init__.py
-        sdir = sys.path[0]
         ftsdir = str(__file__).split('/')
         sdir = '/'.join(ftsdir[0:-2])+'/data'
     else:
