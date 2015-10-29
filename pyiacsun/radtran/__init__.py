@@ -1,6 +1,6 @@
 from .voigt import *
 try:
-    from . import milne
+    from .milne import * 
 except:
     print("milne could not be imported")
 
