@@ -4,6 +4,14 @@ pyiacsun.radtran package
 Submodules
 ----------
 
+pyiacsun.radtran.LTEnodes module
+--------------------------------
+
+.. automodule:: pyiacsun.radtran.LTEnodes
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pyiacsun.radtran.voigt module
 -----------------------------
 

@@ -180,7 +180,7 @@ contains
 				(atmosphere%nhtot * atmosphere%abundance)
 												
 ! Doppler width
-			lineList%transition(i)%dopplerWidth = dsqrt(atmosphere%microturbulence**2.d0 + 2.d0 * PK * atmosphere%T / (weight * UMA))
+			lineList%transition(i)%dopplerWidth = dsqrt((1e5*atmosphere%microturbulence)**2.d0 + 2.d0 * PK * atmosphere%T / (weight * UMA))
 			lineList%transition(i)%deltaNu = lineList%transition(i)%dopplerWidth * lineList%transition(i)%frequency0 / PC
 			
 ! Background opacity

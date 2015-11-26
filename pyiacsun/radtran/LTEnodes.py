@@ -39,6 +39,23 @@ def _interpolateNodes(logTau, variable, nodes):
         out = variable + np.polyval(coeff, logTau)
     return out
 
+def nodePositions(logTau, nodes):
+    nDepth = logTau.shape[0]
+    positions = []
+
+    for n in nodes:
+        if (len(n) == 0):
+            positions.append([])
+
+        if (len(n) == 1):
+            positions.append([int(nDepth/2)])
+    
+        if (len(n) >= 2):
+            pos = np.linspace(0, nDepth-1, len(n), dtype=int)
+            positions.append(pos)
+
+    return positions
+
 
 def synthLTENodes(referenceAtmos, nodes, responseFunction=False, deltaRT=0.01):
     """
@@ -71,6 +88,8 @@ def synthLTENodes(referenceAtmos, nodes, responseFunction=False, deltaRT=0.01):
 
     atmosPerturbed = np.copy(referenceAtmos)
 
+    typicalValues = [500.0, 1.0, 1.0, 200.0, 50.0, 50.0]
+
     RF = []
 
 # Compute the response functions if needed
@@ -79,10 +98,7 @@ def synthLTENodes(referenceAtmos, nodes, responseFunction=False, deltaRT=0.01):
             RFNode = []
             for indexNode in range(len(nodes[indexPar])):
                 nodesNew = copy.deepcopy(nodes)
-                if (nodes[indexPar][indexNode] == 0):                    
-                    nodesNew[indexPar][indexNode] += deltaRT
-                else:
-                    nodesNew[indexPar][indexNode] *= (1.0+deltaRT)
+                nodesNew[indexPar][indexNode] += deltaRT * typicalValues[indexPar]
 
                 delta = nodesNew[indexPar][indexNode] - nodes[indexPar][indexNode]
 

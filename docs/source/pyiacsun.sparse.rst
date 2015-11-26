@@ -35,14 +35,6 @@ pyiacsun.sparse.probar module
     :undoc-members:
     :show-inheritance:
 
-pyiacsun.sparse.setup module
-----------------------------
-
-.. automodule:: pyiacsun.sparse.setup
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 pyiacsun.sparse.zeroSR1 module
 ------------------------------
 

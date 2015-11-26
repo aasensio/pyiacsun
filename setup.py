@@ -87,8 +87,6 @@ CCompiler.language_map['.f90'] = "c"
 UnixCCompiler.src_extensions.append(".f90")
 
 # Milne-Eddington
-# Import the version string.
-# path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), pathGlobal+"sourceMilne")
 path = pathGlobal+"sourceMilne"
 with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
   VERSION = fh.read().strip()
@@ -101,7 +99,7 @@ libMilne = MyExtension('pyiacsun.radtran.milne',
                   sources=[path+'/pymilne.pyx', path+'/vars.f90', path+'/maths.f90', path+'/atomic.f90', path+'/milne.f90'],
                   include_dirs=[numpy.get_include()])
 
-# path = os.path.join(os.path.abspath(os.path.dirname(inspect.getfile(inspect.currentframe()))), pathGlobal+"sourceLTE")
+# LTE
 path = pathGlobal+"sourceLTE"
 with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
   VERSION = fh.read().strip()
@@ -113,6 +111,20 @@ libLTE = MyExtension('pyiacsun.radtran.lte',
                   library_dirs=get_libgfortran_dir(),
                   sources=[path+'/pylte.pyx', path+'/vars.f90', path+'/partition.f90', path+'/maths.f90', path+'/background.f90', 
                   path+'/hydros.f90', path+'/synth.f90', path+'/lte.f90'],
+                  include_dirs=[numpy.get_include()])
+
+# Hazel
+path = pathGlobal+"sourceHazel"
+with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
+  VERSION = fh.read().strip()
+
+DOCSTRING = __doc__.strip().split("\n")
+
+libHazel = MyExtension('pyiacsun.radtran.hazel',
+                  libraries=["gfortran"],
+                  library_dirs=get_libgfortran_dir(),
+                  sources=[path+'/pyhazel.pyx', path+'/vars.f90', path+'/singleton.f90', path+'/maths.f90', path+'/allen.f90', 
+                  path+'/svd.f90', path+'/io.f90', path+'/SEE.f90', path+'/rt_coef.f90', path+'/synth.f90', path+'/hazel.f90'],
                   include_dirs=[numpy.get_include()])
 
 setup_config = dict(
@@ -129,7 +141,7 @@ setup_config = dict(
         'numpy',
     ],
     # packages=["pyiacsun.atlas"], #, "pyiacsun.linalg", "pyiacsun.plot", "pyiacsun.sparse", "pyiacsun.util"], #.radtran.milne", "pyiacsun.radtran.lte"],
-    ext_modules=[libMilne, libLTE],
+    ext_modules=[libMilne, libLTE, libHazel],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
@@ -158,7 +170,7 @@ if __name__ == "__main__":
     # Attempt to remove the mod files once again.
     for filename in ["vars.mod", "atomic_functions.mod", "math_functions.mod", "math_vars.mod", "milnemod.mod", "atomicpartitionmodule.mod",
         "constants_mod.mod", "globalmodule.mod", "ltemod.mod", "synthmodule.mod", "backgroundopacitymodule.mod", "general_routines_mod.mod", 
-        "hydrostaticmodule.mod", "mathsmodule.mod"]:
+        "hydrostaticmodule.mod", "mathsmodule.mod", "see.mod", "singleton.mod", "svd.mod", "synth.mod", "rt_coef.mod", "maths.mod", "io.mod", "pyhazelmod.mod", "allen.mod"]:
         try:
             os.remove(filename)
         except:

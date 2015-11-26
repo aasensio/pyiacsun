@@ -12,6 +12,14 @@ pyiacsun.hazel.genNetCDF module
     :undoc-members:
     :show-inheritance:
 
+pyiacsun.hazel.i0Allen module
+-----------------------------
+
+.. automodule:: pyiacsun.hazel.i0Allen
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pyiacsun.hazel.visHazel module
 ------------------------------
 

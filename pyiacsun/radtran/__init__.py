@@ -6,6 +6,11 @@ except:
 
 try:
     from .lte import * 
+    from .LTEnodes import *
 except:
     print("lte could not be imported")
-from .LTEnodes import *
+
+try:
+    from .hazel import * 
+except:
+    print("hazel could not be imported")

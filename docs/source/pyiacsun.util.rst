@@ -12,6 +12,14 @@ pyiacsun.util.blink module
     :undoc-members:
     :show-inheritance:
 
+pyiacsun.util.contHSRA module
+-----------------------------
+
+.. automodule:: pyiacsun.util.contHSRA
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pyiacsun.util.cursor module
 ---------------------------
 
@@ -48,6 +56,14 @@ pyiacsun.util.intAllen module
 -----------------------------
 
 .. automodule:: pyiacsun.util.intAllen
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.util.lineMin module
+----------------------------
+
+.. automodule:: pyiacsun.util.lineMin
     :members:
     :undoc-members:
     :show-inheritance:
