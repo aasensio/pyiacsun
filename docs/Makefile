@@ -4,6 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = /usr/pkg/python/Python-3.4.3/bin/sphinx-build
+SPHINXBUILD = sphinx-build
 PAPER         =
 BUILDDIR      = _build
 

@@ -1,2 +1,2 @@
-/usr/pkg/python/Python-2.7.9/bin/sphinx-apidoc -f -o source ../pyiacsun
+sphinx-apidoc -f -o source ../pyiacsun
 make html
