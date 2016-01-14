@@ -27,10 +27,26 @@ pyiacsun.sparse.iht module
     :undoc-members:
     :show-inheritance:
 
-pyiacsun.sparse.probar module
------------------------------
+pyiacsun.sparse.iswt module
+---------------------------
 
-.. automodule:: pyiacsun.sparse.probar
+.. automodule:: pyiacsun.sparse.iswt
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.sparse.iuwt module
+---------------------------
+
+.. automodule:: pyiacsun.sparse.iuwt
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.sparse.wavelet module
+------------------------------
+
+.. automodule:: pyiacsun.sparse.wavelet
     :members:
     :undoc-members:
     :show-inheritance:

@@ -7,6 +7,7 @@ except:
 try:
     from .lte import * 
     from .LTEnodes import *
+    from .LTEfull import *
 except:
     print("lte could not be imported")
 

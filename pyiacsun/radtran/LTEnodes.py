@@ -2,7 +2,6 @@ from __future__ import print_function
 import numpy as np
 from .lte import *
 import copy
-from ipdb import set_trace as stop
 
 def initLTENodes(atmos, lines, wavelengthAxis):
     """

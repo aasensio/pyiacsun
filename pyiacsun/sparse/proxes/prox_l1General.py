@@ -3,7 +3,7 @@ import numpy as np
 from . import prox_l1
 from . import prox_l0
 
-def prox_l1General(x, A, At, lambdaPar, y = None, mu=1.0, verbose=False, threshold='soft'):
+def prox_l1General(x, A, At, lambdaPar, y = None, mu=1.0, verbose=False, threshold='soft', rtol=1e-5, maxIteration=500):
 		"""
 		Proximal projection on the condition |W^* T|_1
 		It solves the problem by returning
@@ -20,6 +20,9 @@ def prox_l1General(x, A, At, lambdaPar, y = None, mu=1.0, verbose=False, thresho
 		    lambdaPar (float): regularization parameter
 		    y (function): reference vector that is substracted to A*sol
 		    mu (float): norm of the operator
+		    verbose (bool, optional): verbose or not
+		    threshold (str, optional): 'soft', 'hard' or a function that performs the thresholding. The function
+		    							accepts the vector and the thresholding parameter
 		"""
 
 		u_l1 = np.zeros(A(x).shape)
@@ -50,14 +53,16 @@ def prox_l1General(x, A, At, lambdaPar, y = None, mu=1.0, verbose=False, thresho
 			if (threshold == 'soft'):
 				dummy = prox_l1(res - y, lambdaPar * muInv) + y
 			if (threshold == 'hard'):
-				dummy = prox_l0(res - y, lambdaPar * muInv) + y				
+				dummy = prox_l0(res - y, lambdaPar * muInv) + y
+			if (hasattr(threshold, '__call__')):
+				dummy = threshold(res - y, lambdaPar * muInv) + y
 			
 			u_l1 = 1.0 / muInv * (res - dummy)
 			sol = x - At(u_l1)
 			
-			if (rel_obj < 1e-5):
+			if (rel_obj < rtol):
 				break
-			if (iteration > 500):
+			if (iteration > maxIteration):
 				break
 			
 			prev_obj = norm_obj
