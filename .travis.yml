@@ -12,6 +12,11 @@ sudo: false
 #    tags: true
 #    repo: aasensio/pyiacsun
 
+addons:
+  apt:
+    packages:
+    - gfortran
+
 python:
   - 3.3
   - 3.4
@@ -34,7 +39,6 @@ before_install:
 - travis_retry pip install $PIP_DEPS
 
 install:
-- sudo apt-get install gfortran
 - python setup.py install --record installed_files.txt
 
 script:
