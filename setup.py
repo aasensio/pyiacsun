@@ -1,14 +1,17 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Python bindings for MILNE-EDDINGTON f90 Library.
+Python routines from the Solar Physics group at the Instituto de Astrofisica de Canarias.
 For more information see: https://github.com/aasensio/pyiacsun
 ::
-    Main Changes in 1.0
+    Main Changes in 0.1
     ---------------------
     * Working version
 :copyright:
     A. Asensio Ramos
+    C. Diaz Baso
+    A. Pastor Yabar
+    H. Socas-Navarro
 :license:
     GNU General Public License (GPL)
 """
@@ -86,12 +89,12 @@ pathGlobal = "pyiacsun/radtran/"
 CCompiler.language_map['.f90'] = "c"
 UnixCCompiler.src_extensions.append(".f90")
 
+with open("VERSION.txt", "rt") as fh:
+  VERSION = fh.read().strip()
+DOCSTRING = __doc__.strip().split("\n")
+
 # Milne-Eddington
 path = pathGlobal+"sourceMilne"
-with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
-  VERSION = fh.read().strip()
-
-DOCSTRING = __doc__.strip().split("\n")
 
 libMilne = MyExtension('pyiacsun.radtran.milne',
                   libraries=["gfortran"],
@@ -101,10 +104,6 @@ libMilne = MyExtension('pyiacsun.radtran.milne',
 
 # LTE
 path = pathGlobal+"sourceLTE"
-with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
-  VERSION = fh.read().strip()
-
-DOCSTRING = __doc__.strip().split("\n")
 
 libLTE = MyExtension('pyiacsun.radtran.lte',
                   libraries=["gfortran"],
@@ -115,10 +114,6 @@ libLTE = MyExtension('pyiacsun.radtran.lte',
 
 # Hazel
 path = pathGlobal+"sourceHazel"
-with open(os.path.join(path, "VERSION.txt"), "rt") as fh:
-  VERSION = fh.read().strip()
-
-DOCSTRING = __doc__.strip().split("\n")
 
 libHazel = MyExtension('pyiacsun.radtran.hazel',
                   libraries=["gfortran"],
