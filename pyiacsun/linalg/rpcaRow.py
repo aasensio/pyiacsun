@@ -3,7 +3,6 @@ from __future__ import print_function
 __all__ = ['rpcaRow']
 
 import numpy as np
-from ipdb import set_trace as stop
 
 def _proxLowRank(X, mu):
     """Summary
@@ -145,34 +144,3 @@ def rpcaRow(X, lamb, Omega=None, tolerance=1e-5):
         loop += 1
 
     return LNew, CNew
-
-
-# Example
-
-# nl = 50
-# nobs = 200
-# rank = 3
-# ncorr = 12
-
-# x = np.random.randn(nobs,rank)
-# y = np.random.randn(rank,nl)
-
-# LObs = x.dot(y)
-# CObs = np.zeros_like(LObs)
-
-# ind = np.random.permutation(nobs)
-# for i in range(ncorr):
-#     CObs[ind[i],:] = np.random.randn(nl)
-
-#     MObs = LObs + CObs #+ 1e-4 * np.random.randn(nobs, nl)
-# pl.close('all')
-# f, ax = pl.subplots(ncols=3, nrows=2, figsize=(8,18))
-
-# ax[0,0].imshow(LObs)
-# ax[1,0].imshow(LNew)
-
-# ax[0,1].imshow(CObs)
-# ax[1,1].imshow(CNew)
-
-# ax[0,2].imshow(MObs)
-# ax[1,2].imshow(LNew + CNew)
