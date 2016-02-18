@@ -1,0 +1,627 @@
+nose.config: INFO: Ignoring files matching ['^\\.', '^_', '^setup\\.py$']
+nose.plugins.manager: DEBUG: Configuring plugins
+nose.plugins.manager: DEBUG: Plugins enabled: [<nose.plugins.capture.Capture object at 0x7fa17d5d07f0>, <nose.plugins.logcapture.LogCapture object at 0x7fa17d5d0860>, <nose.plugins.deprecated.Deprecated object at 0x7fa17d6ef780>, <nose.plugins.skip.Skip object at 0x7fa17b13ba58>]
+nose.core: DEBUG: configured Config(addPaths=True, args=(), configSection='nosetests', debug='nose,nose.importer', debugLog='nose_debug', env={}, exclude=None, files=[], firstPackageWins=False, getTestCaseNamesCompat=False, ignoreFiles=[re.compile('^\\.'), re.compile('^_'), re.compile('^setup\\.py$')], ignoreFilesDefaultStrings=['^\\.', '^_', '^setup\\.py$'], include=None, includeExe=False, logStream=<_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf_8'>, loggingConfig=None, options=<Values at 0x7fa17ac2e780: {'enable_plugin_doctest': None, 'logcapture_filters': None, 'cover_branches': None, 'version': False, 'logcapture_format': '%(name)s: %(levelname)s: %(message)s', 'firstPackageWins': False, 'doctestOptions': None, 'logcapture_clear': False, 'noSkip': False, 'doctest_result_var': None, 'debug': 'nose,nose.importer', 'enable_plugin_id': None, 'cover_inclusive': None, 'cover_xml': None, 'debugBoth': False, 'cover_tests': None, 'cover_min_percentage': None, 'verbosity': 1, 'capture': True, 'includeExe': False, 'doctestFixtures': None, 'xunit_file': 'nosetests.xml', 'py3where': None, 'ignoreFiles': [], 'where': None, 'showPlugins': False, 'exclude': [], 'cover_html_dir': 'cover', 'multiprocess_timeout': 10, 'collect_only': None, 'debugFailures': False, 'debugLog': 'nose_debug', 'addPaths': True, 'debugErrors': False, 'logcapture': True, 'testIdFile': '.noseids', 'detailedErrors': None, 'attr': None, 'logcapture_level': 'NOTSET', 'noDeprecated': False, 'doctest_tests': None, 'enable_plugin_xunit': None, 'multiprocess_workers': 0, 'enable_plugin_isolation': None, 'enable_plugin_coverage': None, 'byteCompile': True, 'xunit_testsuite_name': 'nosetests', 'failed': False, 'doctestExtension': None, 'traverseNamespace': False, 'cover_xml_file': 'coverage.xml', 'testNames': None, 'cover_packages': None, 'files': None, 'cover_html': None, 'testMatch': '(?:^|[\\b_\\./-])[Tt]est', 'multiprocess_restartworker': False, 'logcapture_datefmt': None, 'eval_attr': None, 'enable_plugin_allmodules': None, 'loggingConfig': None, 'cover_erase': None, 'include': [], 'stopOnError': False}>, parser=<optparse.OptionParser object at 0x7fa186426390>, parserClass=<class 'optparse.OptionParser'>, plugins=<nose.plugins.manager.DefaultPluginManager object at 0x7fa186421668>, py3where=(), runOnInit=True, srcDirs=('lib', 'src'), stopOnError=False, stream=<_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf_8'>, testMatch=re.compile('(?:^|[\\b_\\./-])[Tt]est'), testMatchPat='(?:^|[\\b_\\./-])[Tt]est', testNames=[], traverseNamespace=False, verbosity=1, where=(), worker=False, workingDir='/scratch/Dropbox/GIT/pyiacsun')
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.core: DEBUG: test loader is <nose.loader.TestLoader object at 0x7fa17e1bc198>
+nose.core: DEBUG: defaultTest .
+nose.core: DEBUG: Test names are ['.']
+nose.core: DEBUG: createTests called with None
+nose.loader: DEBUG: load from . (None)
+nose.selector: DEBUG: Test name . resolved to file ., module None, call None
+nose.selector: DEBUG: Final resolution of test name .: file /scratch/Dropbox/GIT/pyiacsun module None call None
+nose.suite: DEBUG: Create suite for [<nose.suite.LazySuite tests=generator (140331526056816)>]
+nose.suite: DEBUG: tests [<nose.suite.LazySuite tests=generator (140331526056816)>] context None
+nose.suite: DEBUG: wrap [<nose.suite.LazySuite tests=generator (140331526056816)>]
+nose.suite: DEBUG: wrapping <nose.suite.LazySuite tests=generator (140331526056816)>
+nose.suite: DEBUG: Context suite for [<nose.suite.LazySuite tests=generator (140331526056816)>] (None) (140331719273888)
+nose.core: DEBUG: runTests called
+nose.suite: DEBUG: suite 140331719273888 (<nose.suite.ContextSuite context=None>) run called, tests: <generator object _get_wrapped_tests at 0x7fa17b0d12b0>
+nose.suite: DEBUG: suite 140331719273888 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa17b0d12b0>
+nose.suite: DEBUG: tests in 140331719273888?
+nose.suite: DEBUG: precache is [<nose.suite.LazySuite tests=generator (140331526056816)>]
+nose.suite: DEBUG: precache is []
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/LICENSE? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/README.md? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/VERSION.txt? False
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/build? False
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/dist? False
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/docs? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/nose_debug? False
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun module pyiacsun call None
+nose.importer: DEBUG: Import pyiacsun from /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: find module part pyiacsun (pyiacsun) in ['/scratch/Dropbox/GIT/pyiacsun']
+nose.loader: DEBUG: Load from module <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.selector: DEBUG: wantModule <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>? False
+nose.loader: DEBUG: Load tests from module path /scratch/Dropbox/GIT/pyiacsun/pyiacsun?
+nose.loader: DEBUG: path: /scratch/Dropbox/GIT/pyiacsun/pyiacsun os.path.realpath(/scratch/Dropbox/GIT/pyiacsun/pyiacsun): /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: __init__.pyc matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas module pyiacsun.atlas call None
+nose.importer: DEBUG: Import pyiacsun.atlas from /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: find module part pyiacsun (pyiacsun) in ['/scratch/Dropbox/GIT/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun as <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: find module part atlas (pyiacsun.atlas) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun.atlas as <module 'pyiacsun.atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas
+nose.loader: DEBUG: Load from module <module 'pyiacsun.atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas/__init__.py'>
+nose.selector: DEBUG: wantModule <module 'pyiacsun.atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas/__init__.py'>? False
+nose.loader: DEBUG: Load tests from module path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas?
+nose.loader: DEBUG: path: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas os.path.realpath(/scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas): /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: __init__.pyc matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas/ftsread.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas/ftsread.pyc? False
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa16a695978>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa16a695978> context <module 'pyiacsun.atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas/__init__.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa16a695978> (<module 'pyiacsun.atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas/__init__.py'>) (140331251750896)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.atlas> has context pyiacsun.atlas
+nose.suite: DEBUG: get ancestry <module 'pyiacsun.atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas/__init__.py'>
+nose.suite: DEBUG:  <module 'pyiacsun.atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/atlas/__init__.py'> ancestors ['pyiacsun']
+nose: DEBUG: __import__ pyiacsun
+nose: DEBUG: resolve: [], pyiacsun, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.atlas> has ancestor pyiacsun
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/data? False
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel module pyiacsun.hazel call None
+nose.importer: DEBUG: Import pyiacsun.hazel from /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: find module part pyiacsun (pyiacsun) in ['/scratch/Dropbox/GIT/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun as <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: find module part hazel (pyiacsun.hazel) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun.hazel as <module 'pyiacsun.hazel' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel
+nose.loader: DEBUG: Load from module <module 'pyiacsun.hazel' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/__init__.py'>
+nose.selector: DEBUG: wantModule <module 'pyiacsun.hazel' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/__init__.py'>? False
+nose.loader: DEBUG: Load tests from module path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel?
+nose.loader: DEBUG: path: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel os.path.realpath(/scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel): /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: __init__.pyc matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/genNetCDF.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/genNetCDF.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/hazel.ui? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/i0Allen.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/i0Allen.pyc? False
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/source? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/visHazel.py? None
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa16a695978>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa16a695978> context <module 'pyiacsun.hazel' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/__init__.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa16a695978> (<module 'pyiacsun.hazel' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/__init__.py'>) (140331526057208)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.hazel> has context pyiacsun.hazel
+nose.suite: DEBUG: get ancestry <module 'pyiacsun.hazel' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/__init__.py'>
+nose.suite: DEBUG:  <module 'pyiacsun.hazel' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/hazel/__init__.py'> ancestors ['pyiacsun']
+nose: DEBUG: __import__ pyiacsun
+nose: DEBUG: resolve: [], pyiacsun, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.hazel> has ancestor pyiacsun
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg module pyiacsun.linalg call None
+nose.importer: DEBUG: Import pyiacsun.linalg from /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: find module part pyiacsun (pyiacsun) in ['/scratch/Dropbox/GIT/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun as <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: find module part linalg (pyiacsun.linalg) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun.linalg as <module 'pyiacsun.linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg
+nose.loader: DEBUG: Load from module <module 'pyiacsun.linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/__init__.py'>
+nose.selector: DEBUG: wantModule <module 'pyiacsun.linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/__init__.py'>? False
+nose.loader: DEBUG: Load tests from module path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg?
+nose.loader: DEBUG: path: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg os.path.realpath(/scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg): /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: __init__.pyc matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/cholInvert.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/cholInvert.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/fsvd.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/fsvd.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/optimalSVHT.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/optimalSVHT.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/rpcaRow.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/rpcaRow.pyc? False
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa16a695978>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa16a695978> context <module 'pyiacsun.linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/__init__.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa16a695978> (<module 'pyiacsun.linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/__init__.py'>) (140331241331680)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.linalg> has context pyiacsun.linalg
+nose.suite: DEBUG: get ancestry <module 'pyiacsun.linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/__init__.py'>
+nose.suite: DEBUG:  <module 'pyiacsun.linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/linalg/__init__.py'> ancestors ['pyiacsun']
+nose: DEBUG: __import__ pyiacsun
+nose: DEBUG: resolve: [], pyiacsun, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.linalg> has ancestor pyiacsun
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn module pyiacsun.machinelearn call None
+nose.importer: DEBUG: Import pyiacsun.machinelearn from /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: find module part pyiacsun (pyiacsun) in ['/scratch/Dropbox/GIT/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun as <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: find module part machinelearn (pyiacsun.machinelearn) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun.machinelearn as <module 'pyiacsun.machinelearn' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn
+nose.loader: DEBUG: Load from module <module 'pyiacsun.machinelearn' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/__init__.py'>
+nose.selector: DEBUG: wantModule <module 'pyiacsun.machinelearn' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/__init__.py'>? False
+nose.loader: DEBUG: Load tests from module path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn?
+nose.loader: DEBUG: path: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn os.path.realpath(/scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn): /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: __init__.pyc matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/gpAndres.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/gpAndres.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/rvm.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/rvm.pyc? False
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa16a695978>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa16a695978> context <module 'pyiacsun.machinelearn' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/__init__.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa16a695978> (<module 'pyiacsun.machinelearn' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/__init__.py'>) (140331241331456)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.machinelearn> has context pyiacsun.machinelearn
+nose.suite: DEBUG: get ancestry <module 'pyiacsun.machinelearn' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/__init__.py'>
+nose.suite: DEBUG:  <module 'pyiacsun.machinelearn' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/machinelearn/__init__.py'> ancestors ['pyiacsun']
+nose: DEBUG: __import__ pyiacsun
+nose: DEBUG: resolve: [], pyiacsun, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.machinelearn> has ancestor pyiacsun
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot module pyiacsun.plot call None
+nose.importer: DEBUG: Import pyiacsun.plot from /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: find module part pyiacsun (pyiacsun) in ['/scratch/Dropbox/GIT/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun as <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: find module part plot (pyiacsun.plot) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun.plot as <module 'pyiacsun.plot' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot
+nose.loader: DEBUG: Load from module <module 'pyiacsun.plot' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot/__init__.py'>
+nose.selector: DEBUG: wantModule <module 'pyiacsun.plot' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot/__init__.py'>? False
+nose.loader: DEBUG: Load tests from module path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot?
+nose.loader: DEBUG: path: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot os.path.realpath(/scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot): /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: __init__.pyc matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot/tvframe.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot/tvframe.pyc? False
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa16a695978>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa16a695978> context <module 'pyiacsun.plot' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot/__init__.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa16a695978> (<module 'pyiacsun.plot' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot/__init__.py'>) (140331241331736)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.plot> has context pyiacsun.plot
+nose.suite: DEBUG: get ancestry <module 'pyiacsun.plot' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot/__init__.py'>
+nose.suite: DEBUG:  <module 'pyiacsun.plot' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/plot/__init__.py'> ancestors ['pyiacsun']
+nose: DEBUG: __import__ pyiacsun
+nose: DEBUG: resolve: [], pyiacsun, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.plot> has ancestor pyiacsun
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran module pyiacsun.radtran call None
+nose.importer: DEBUG: Import pyiacsun.radtran from /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: find module part pyiacsun (pyiacsun) in ['/scratch/Dropbox/GIT/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun as <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: find module part radtran (pyiacsun.radtran) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun.radtran as <module 'pyiacsun.radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran
+nose.loader: DEBUG: Load from module <module 'pyiacsun.radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/__init__.py'>
+nose.selector: DEBUG: wantModule <module 'pyiacsun.radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/__init__.py'>? False
+nose.loader: DEBUG: Load tests from module path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran?
+nose.loader: DEBUG: path: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran os.path.realpath(/scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran): /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/LTEfull.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/LTEnodes.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/README.md? False
+nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: __init__.pyc matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/sourceHazel? False
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/sourceLTE? False
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/sourceMilne? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/voigt.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/voigt.pyc? False
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa16a695978>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa16a695978> context <module 'pyiacsun.radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/__init__.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa16a695978> (<module 'pyiacsun.radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/__init__.py'>) (140331241330056)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.radtran> has context pyiacsun.radtran
+nose.suite: DEBUG: get ancestry <module 'pyiacsun.radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/__init__.py'>
+nose.suite: DEBUG:  <module 'pyiacsun.radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/radtran/__init__.py'> ancestors ['pyiacsun']
+nose: DEBUG: __import__ pyiacsun
+nose: DEBUG: resolve: [], pyiacsun, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.radtran> has ancestor pyiacsun
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse module pyiacsun.sparse call None
+nose.importer: DEBUG: Import pyiacsun.sparse from /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: find module part pyiacsun (pyiacsun) in ['/scratch/Dropbox/GIT/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun as <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: find module part sparse (pyiacsun.sparse) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun.sparse as <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse
+nose.loader: DEBUG: Load from module <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'>
+nose.selector: DEBUG: wantModule <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'>? False
+nose.loader: DEBUG: Load tests from module path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse?
+nose.loader: DEBUG: path: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse os.path.realpath(/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse): /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: __init__.pyc matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/alps.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/alps.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/fasta.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/fasta.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/iht.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/iht.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/iswt.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/iswt.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/iuwt.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/iuwt.pyc? False
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes module pyiacsun.sparse.proxes call None
+nose.importer: DEBUG: Import pyiacsun.sparse.proxes from /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: find module part pyiacsun (pyiacsun) in ['/scratch/Dropbox/GIT/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun as <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: find module part sparse (pyiacsun.sparse) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun.sparse as <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse
+nose.importer: DEBUG: find module part proxes (pyiacsun.sparse.proxes) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse']
+nose.importer: DEBUG: sys.modules has pyiacsun.sparse.proxes as <module 'pyiacsun.sparse.proxes' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes
+nose.loader: DEBUG: Load from module <module 'pyiacsun.sparse.proxes' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/__init__.py'>
+nose.selector: DEBUG: wantModule <module 'pyiacsun.sparse.proxes' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/__init__.py'>? False
+nose.loader: DEBUG: Load tests from module path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes?
+nose.loader: DEBUG: path: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes os.path.realpath(/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes): /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: __init__.pyc matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/prox_l0.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/prox_l0.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/prox_l1.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/prox_l1.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/prox_l1General.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/prox_l1General.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/prox_l2General.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/prox_l2General.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/prox_xlim.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/prox_xlim.pyc? False
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa169ca5d30>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa169ca5d30> context <module 'pyiacsun.sparse.proxes' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/__init__.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa169ca5d30> (<module 'pyiacsun.sparse.proxes' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/__init__.py'>) (140331241332128)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.sparse.proxes> has context pyiacsun.sparse.proxes
+nose.suite: DEBUG: get ancestry <module 'pyiacsun.sparse.proxes' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/__init__.py'>
+nose.suite: DEBUG:  <module 'pyiacsun.sparse.proxes' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/__init__.py'> ancestors ['pyiacsun', 'sparse']
+nose: DEBUG: __import__ pyiacsun.sparse
+nose: DEBUG: resolve: ['sparse'], pyiacsun.sparse, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.sparse.proxes> has ancestor pyiacsun.sparse
+nose.suite: DEBUG:  <module 'pyiacsun.sparse.proxes' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/proxes/__init__.py'> ancestors ['pyiacsun']
+nose: DEBUG: __import__ pyiacsun
+nose: DEBUG: resolve: [], pyiacsun, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.sparse.proxes> has ancestor pyiacsun
+nose.selector: INFO: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/wavelet.py is executable; skipped
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/wavelet.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/zeroSR1.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/zeroSR1.pyc? False
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa16a695978>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa16a695978> context <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa16a695978> (<module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'>) (140331241331848)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.sparse> has context pyiacsun.sparse
+nose.suite: DEBUG: get ancestry <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'>
+nose.suite: DEBUG:  <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'> ancestors ['pyiacsun']
+nose: DEBUG: __import__ pyiacsun
+nose: DEBUG: resolve: [], pyiacsun, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.sparse> has ancestor pyiacsun
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util module pyiacsun.util call None
+nose.importer: DEBUG: Import pyiacsun.util from /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.importer: DEBUG: find module part pyiacsun (pyiacsun) in ['/scratch/Dropbox/GIT/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun as <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: find module part util (pyiacsun.util) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun']
+nose.importer: DEBUG: sys.modules has pyiacsun.util as <module 'pyiacsun.util' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/__init__.py'>
+nose.importer: DEBUG: module already loaded? mod: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util new: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util
+nose.loader: DEBUG: Load from module <module 'pyiacsun.util' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/__init__.py'>
+nose.selector: DEBUG: wantModule <module 'pyiacsun.util' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/__init__.py'>? False
+nose.loader: DEBUG: Load tests from module path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util?
+nose.loader: DEBUG: path: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util os.path.realpath(/scratch/Dropbox/GIT/pyiacsun/pyiacsun/util): /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun
+nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: __init__.pyc matches ignoreFiles pattern; skipped
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/blink.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/blink.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/contHSRA.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/contHSRA.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/cursor.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/cursor.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/deriv.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/deriv.pyc? False
+nose.selector: INFO: /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/fvoigt.py is executable; skipped
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/gauss_weights.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/gauss_weights.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/imviewer.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/imviewer.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/intAllen.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/intAllen.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/lineMin.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/lineMin.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/nearest.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/nearest.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/pb0r.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/prof.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/prof4.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/progressbar.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/progressbar.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/rebin.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/rebin.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/splinequad.py? None
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/splinequad.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/tv.py? None
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa16a695978>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa16a695978> context <module 'pyiacsun.util' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/__init__.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa16a695978> (<module 'pyiacsun.util' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/__init__.py'>) (140331241331624)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.util> has context pyiacsun.util
+nose.suite: DEBUG: get ancestry <module 'pyiacsun.util' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/__init__.py'>
+nose.suite: DEBUG:  <module 'pyiacsun.util' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/util/__init__.py'> ancestors ['pyiacsun']
+nose: DEBUG: __import__ pyiacsun
+nose: DEBUG: resolve: [], pyiacsun, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>, <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun.util> has ancestor pyiacsun
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests? True
+nose.suite: DEBUG: Create suite for <function TestLoader.loadTestsFromDir.<locals>.<lambda> at 0x7fa16a6986a8>
+nose.suite: DEBUG: tests <function TestLoader.loadTestsFromDir.<locals>.<lambda> at 0x7fa16a6986a8> context None
+nose.suite: DEBUG: wrap <function TestLoader.loadTestsFromDir.<locals>.<lambda> at 0x7fa16a6986a8>
+nose.suite: DEBUG: I won't wrap
+nose.suite: DEBUG: Context suite for <function TestLoader.loadTestsFromDir.<locals>.<lambda> at 0x7fa16a6986a8> (None) (140331262203608)
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa17ac472b0>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa17ac472b0> context <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa17ac472b0> (<module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>) (140331526158096)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=pyiacsun> has context pyiacsun
+nose.suite: DEBUG: get ancestry <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: suite 140331526158096 (<nose.suite.ContextSuite context=pyiacsun>) run called, tests: <generator object _get_wrapped_tests at 0x7fa17b0d1360>
+nose.suite: DEBUG: suite 140331526158096 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa17b0d1360>
+nose.suite: DEBUG: tests in 140331526158096?
+nose.suite: DEBUG: ancestor <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'> may need setup
+nose.suite: DEBUG: ancestor <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'> does need setup
+nose.suite: DEBUG: <nose.suite.ContextSuite context=pyiacsun> setup context <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: completed suite setup
+nose.suite: DEBUG: precache is [<nose.suite.ContextSuite context=pyiacsun.atlas>, <nose.suite.ContextSuite context=pyiacsun.hazel>, <nose.suite.ContextSuite context=pyiacsun.linalg>, <nose.suite.ContextSuite context=pyiacsun.machinelearn>, <nose.suite.ContextSuite context=pyiacsun.plot>, <nose.suite.ContextSuite context=pyiacsun.radtran>, <nose.suite.ContextSuite context=pyiacsun.sparse>, <nose.suite.ContextSuite context=pyiacsun.util>, <nose.suite.ContextSuite context=None>]
+nose.suite: DEBUG: suite 140331251750896 (<nose.suite.ContextSuite context=pyiacsun.atlas>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: suite 140331251750896 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: tests in 140331251750896?
+nose.suite: DEBUG: suite 140331251750896 has no tests
+nose.suite: DEBUG: precache is []
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+nose.suite: DEBUG: suite 140331526057208 (<nose.suite.ContextSuite context=pyiacsun.hazel>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: suite 140331526057208 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: tests in 140331526057208?
+nose.suite: DEBUG: suite 140331526057208 has no tests
+nose.suite: DEBUG: precache is []
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+nose.suite: DEBUG: suite 140331241331680 (<nose.suite.ContextSuite context=pyiacsun.linalg>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: suite 140331241331680 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: tests in 140331241331680?
+nose.suite: DEBUG: suite 140331241331680 has no tests
+nose.suite: DEBUG: precache is []
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+nose.suite: DEBUG: suite 140331241331456 (<nose.suite.ContextSuite context=pyiacsun.machinelearn>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: suite 140331241331456 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: tests in 140331241331456?
+nose.suite: DEBUG: suite 140331241331456 has no tests
+nose.suite: DEBUG: precache is []
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+nose.suite: DEBUG: suite 140331241331736 (<nose.suite.ContextSuite context=pyiacsun.plot>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: suite 140331241331736 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: tests in 140331241331736?
+nose.suite: DEBUG: suite 140331241331736 has no tests
+nose.suite: DEBUG: precache is []
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+nose.suite: DEBUG: suite 140331241330056 (<nose.suite.ContextSuite context=pyiacsun.radtran>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: suite 140331241330056 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: tests in 140331241330056?
+nose.suite: DEBUG: suite 140331241330056 has no tests
+nose.suite: DEBUG: precache is []
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+nose.suite: DEBUG: suite 140331241331848 (<nose.suite.ContextSuite context=pyiacsun.sparse>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: suite 140331241331848 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: tests in 140331241331848?
+nose.suite: DEBUG: ancestor <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'> may need setup
+nose.suite: DEBUG: ancestor <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'> may need setup
+nose.suite: DEBUG: ancestor <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'> does need setup
+nose.suite: DEBUG: <nose.suite.ContextSuite context=pyiacsun.sparse> setup context <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'>
+nose.suite: DEBUG: completed suite setup
+nose.suite: DEBUG: precache is [<nose.suite.ContextSuite context=pyiacsun.sparse.proxes>]
+nose.suite: DEBUG: suite 140331241332128 (<nose.suite.ContextSuite context=pyiacsun.sparse.proxes>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9570>
+nose.suite: DEBUG: suite 140331241332128 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9570>
+nose.suite: DEBUG: tests in 140331241332128?
+nose.suite: DEBUG: suite 140331241332128 has no tests
+nose.suite: DEBUG: precache is []
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: ancestor <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'> may need teardown
+nose.suite: DEBUG: <nose.suite.ContextSuite context=pyiacsun.sparse> setup ancestor <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'>
+nose.suite: DEBUG: <nose.suite.ContextSuite context=pyiacsun.sparse> teardown context <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'>
+nose.suite: DEBUG: ancestor <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'> may need teardown
+nose.suite: DEBUG: <nose.suite.ContextSuite context=pyiacsun> setup ancestor <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: ancestor <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'> may need teardown
+nose.suite: DEBUG: ancestor <module 'pyiacsun.sparse' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/sparse/__init__.py'> already torn down
+nose.suite: DEBUG: suite 140331241331624 (<nose.suite.ContextSuite context=pyiacsun.util>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: suite 140331241331624 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: tests in 140331241331624?
+nose.suite: DEBUG: suite 140331241331624 has no tests
+nose.suite: DEBUG: precache is []
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+nose.suite: DEBUG: suite 140331262203608 (<nose.suite.ContextSuite context=None>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: suite 140331262203608 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9410>
+nose.suite: DEBUG: tests in 140331262203608?
+nose.loader: DEBUG: load from dir /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests
+nose.importer: DEBUG: insert /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests into sys.path
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py module test_atlas call None
+nose.importer: DEBUG: Import test_atlas from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests
+nose.importer: DEBUG: find module part test_atlas (test_atlas) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests']
+nose.loader: DEBUG: Load from module <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'>
+nose.selector: DEBUG: wantModule <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'>? True
+nose.selector: DEBUG: wantFunction <function test_atlas at 0x7fa169c2bd90>? True
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa17ac47400>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa17ac47400> context <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa17ac47400> (<module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'>) (140331241331960)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=test_atlas> has context test_atlas
+nose.suite: DEBUG: get ancestry <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'>
+nose.suite: DEBUG: precache is [<nose.suite.ContextSuite context=test_atlas>]
+nose.suite: DEBUG: suite 140331241331960 (<nose.suite.ContextSuite context=test_atlas>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9468>
+nose.suite: DEBUG: suite 140331241331960 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9468>
+nose.suite: DEBUG: tests in 140331241331960?
+nose.suite: DEBUG: ancestor <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'> may need setup
+nose.suite: DEBUG: ancestor <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'> does need setup
+nose.suite: DEBUG: <nose.suite.ContextSuite context=test_atlas> setup context <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'>
+nose.suite: DEBUG: completed suite setup
+nose.suite: DEBUG: precache is [test_atlas.test_atlas]
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: ancestor <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'> may need teardown
+nose.suite: DEBUG: <nose.suite.ContextSuite context=test_atlas> setup ancestor <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'>
+nose.suite: DEBUG: <nose.suite.ContextSuite context=test_atlas> teardown context <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'>
+nose.suite: DEBUG: ancestor <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'> may need teardown
+nose.suite: DEBUG: ancestor <module 'test_atlas' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.py'> already torn down
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_atlas.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py module test_linalg call None
+nose.importer: DEBUG: Import test_linalg from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests
+nose.importer: DEBUG: find module part test_linalg (test_linalg) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests']
+nose.loader: DEBUG: Load from module <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'>
+nose.selector: DEBUG: wantModule <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'>? True
+nose.selector: DEBUG: wantFunction <function test_cholinvert at 0x7fa169c391e0>? True
+nose.selector: DEBUG: wantFunction <function test_fsvd at 0x7fa169c2bf28>? True
+nose.selector: DEBUG: wantFunction <function test_svht at 0x7fa169c39268>? True
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa169ca5dd8>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa169ca5dd8> context <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa169ca5dd8> (<module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'>) (140331241332632)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=test_linalg> has context test_linalg
+nose.suite: DEBUG: get ancestry <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'>
+nose.suite: DEBUG: suite 140331241332632 (<nose.suite.ContextSuite context=test_linalg>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9468>
+nose.suite: DEBUG: suite 140331241332632 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9468>
+nose.suite: DEBUG: tests in 140331241332632?
+nose.suite: DEBUG: ancestor <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'> may need setup
+nose.suite: DEBUG: ancestor <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'> does need setup
+nose.suite: DEBUG: <nose.suite.ContextSuite context=test_linalg> setup context <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'>
+nose.suite: DEBUG: completed suite setup
+nose.suite: DEBUG: precache is [test_linalg.test_fsvd, test_linalg.test_cholinvert, test_linalg.test_svht]
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: ancestor <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'> may need teardown
+nose.suite: DEBUG: <nose.suite.ContextSuite context=test_linalg> setup ancestor <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'>
+nose.suite: DEBUG: <nose.suite.ContextSuite context=test_linalg> teardown context <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'>
+nose.suite: DEBUG: ancestor <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'> may need teardown
+nose.suite: DEBUG: ancestor <module 'test_linalg' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.py'> already torn down
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_linalg.pyc? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py? True
+nose.loader: DEBUG: load from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py (None)
+nose.selector: DEBUG: Test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py resolved to file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py, module None, call None
+nose.selector: DEBUG: Final resolution of test name /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py: file /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py module test_radtran call None
+nose.importer: DEBUG: Import test_radtran from /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests
+nose.importer: DEBUG: Add path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests
+nose.importer: DEBUG: find module part test_radtran (test_radtran) in ['/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests']
+nose.loader: DEBUG: Load from module <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'>
+nose.selector: DEBUG: wantModule <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'>? True
+nose.selector: DEBUG: wantFunction <function test_lte at 0x7fa169c39488>? True
+nose.selector: DEBUG: wantFunction <function test_milne at 0x7fa169c392f0>? True
+nose.selector: DEBUG: wantFunction <function test_voigt at 0x7fa169c39378>? True
+nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7fa169ca5dd8>
+nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7fa169ca5dd8> context <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'>
+nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7fa169ca5dd8> (<module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'>) (140331240874952)
+nose.suite: DEBUG: suite <nose.suite.ContextSuite context=test_radtran> has context test_radtran
+nose.suite: DEBUG: get ancestry <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'>
+nose.suite: DEBUG: suite 140331240874952 (<nose.suite.ContextSuite context=test_radtran>) run called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9468>
+nose.suite: DEBUG: suite 140331240874952 setUp called, tests: <generator object _get_wrapped_tests at 0x7fa169ca9468>
+nose.suite: DEBUG: tests in 140331240874952?
+nose.suite: DEBUG: ancestor <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'> may need setup
+nose.suite: DEBUG: ancestor <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'> does need setup
+nose.suite: DEBUG: <nose.suite.ContextSuite context=test_radtran> setup context <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'>
+nose.suite: DEBUG: completed suite setup
+nose.suite: DEBUG: precache is [test_radtran.test_voigt, test_radtran.test_milne, test_radtran.test_lte]
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: ancestor <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'> may need teardown
+nose.suite: DEBUG: <nose.suite.ContextSuite context=test_radtran> setup ancestor <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'>
+nose.suite: DEBUG: <nose.suite.ContextSuite context=test_radtran> teardown context <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'>
+nose.suite: DEBUG: ancestor <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'> may need teardown
+nose.suite: DEBUG: ancestor <module 'test_radtran' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.py'> already torn down
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests/test_radtran.pyc? False
+nose.importer: DEBUG: Remove path /scratch/Dropbox/GIT/pyiacsun/pyiacsun/tests
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: ancestor <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'> may need teardown
+nose.suite: DEBUG: <nose.suite.ContextSuite context=pyiacsun> setup ancestor <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: <nose.suite.ContextSuite context=pyiacsun> teardown context <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'>
+nose.suite: DEBUG: ancestor <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'> may need teardown
+nose.suite: DEBUG: ancestor <module 'pyiacsun' from '/scratch/Dropbox/GIT/pyiacsun/pyiacsun/__init__.py'> already torn down
+nose.selector: DEBUG: wantDirectory /scratch/Dropbox/GIT/pyiacsun/pyiacsun.egg-info? False
+nose.selector: DEBUG: wantFile /scratch/Dropbox/GIT/pyiacsun/requirements.txt? False
+nose.selector: DEBUG: setup.py matches ignoreFiles pattern; skipped
+nose.suite: DEBUG: context teardown
+nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)

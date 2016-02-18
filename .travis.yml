@@ -15,7 +15,7 @@ before_install:
 install:
   - conda install --yes python=$TRAVIS_PYTHON_VERSION pip numpy scipy nose matplotlib 
   - pip install pep8 python-coveralls PyWavelets
-  - python setup.py install
+  - python setup.py build_ext --inplace
 #  - pip install .
 script:
   - nosetests -v --with-coverage --cover-package=pyiacsun
