@@ -10,7 +10,7 @@ def test_voigt():
 	voigt = pyiacsun.radtran.voigt(1.0, 0.1)
 	npt.assert_equal(voigt, 0.37317014831126744)
 
-def todo_test_milne():
+def todo_milne():
 	lambda0 = 6301.5080
 	JUp = 2.0
 	JLow = 2.0
