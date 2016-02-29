@@ -1,8 +1,8 @@
 from __future__ import print_function
 import numpy as np
 from .lte import *
-import copy
-from ipdb import set_trace as stop
+
+__all__ = ['initLTE', 'synthLTE']
 
 def initLTE(atmos, lines, wavelengthAxis):
     """

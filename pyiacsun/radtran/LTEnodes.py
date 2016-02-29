@@ -3,6 +3,7 @@ import numpy as np
 from .lte import *
 import copy
 
+__all__ = ['initLTENodes', 'nodePositions', 'synthLTENodes']
 def initLTENodes(atmos, lines, wavelengthAxis):
     """
     Initialize the LTE synthesis module using nodes

@@ -26,15 +26,19 @@ import platform
 from subprocess import Popen, PIPE
 import sys
 import numpy
+import glob
 
 
 def _compile(self, obj, src, ext, cc_args, extra_postargs, pp_opts):
     compiler_so = self.compiler_so
     arch = platform.architecture()[0].lower()
-    if ext == ".f90":
+    if (ext == ".f" or ext == ".f90"):
         if sys.platform == 'darwin' or sys.platform == 'linux':
             compiler_so = ["gfortran"]
-            cc_args = ["-O", "-fPIC", "-c", "-ffree-form", "-ffree-line-length-none"]
+            if (ext == ".f90"):
+                cc_args = ["-O3", "-fPIC", "-c", "-ffree-form", "-ffree-line-length-none"]
+            if (ext == ".f"):
+                cc_args = ["-O3", "-fPIC", "-c", "-fno-automatic", "-ffixed-line-length-none"]
             # Force architecture of shared library.
             if arch == "32bit":
                 cc_args.append("-m32")
@@ -88,6 +92,8 @@ pathGlobal = "pyiacsun/radtran/"
 # Monkey patch the compilers to treat Fortran files like C files.
 CCompiler.language_map['.f90'] = "c"
 UnixCCompiler.src_extensions.append(".f90")
+CCompiler.language_map['.f'] = "c"
+UnixCCompiler.src_extensions.append(".f")
 
 with open("VERSION.txt", "rt") as fh:
   VERSION = fh.read().strip()
@@ -122,6 +128,18 @@ libHazel = MyExtension('pyiacsun.radtran.hazel',
                   path+'/svd.f90', path+'/io.f90', path+'/SEE.f90', path+'/rt_coef.f90', path+'/synth.f90', path+'/hazel.f90'],
                   include_dirs=[numpy.get_include()])
 
+# SIR
+path = pathGlobal+"sourceSIR/"
+listFiles = glob.glob(path+'*.f*')
+listFiles.append(path+'pySIR.pyx')
+
+libSIR = MyExtension('pyiacsun.radtran.sir',
+                  libraries=["gfortran"],
+                  library_dirs=get_libgfortran_dir(),
+                  sources=listFiles,
+                  include_dirs=[numpy.get_include()])
+
+
 setup_config = dict(
     name='pyiacsun',
     version=VERSION,
@@ -136,7 +154,7 @@ setup_config = dict(
         'numpy',
     ],
     # packages=["pyiacsun.atlas"], #, "pyiacsun.linalg", "pyiacsun.plot", "pyiacsun.sparse", "pyiacsun.util"], #.radtran.milne", "pyiacsun.radtran.lte"],
-    ext_modules=[libMilne, libLTE, libHazel],
+    ext_modules=[libMilne, libLTE, libHazel, libSIR],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
@@ -165,7 +183,7 @@ if __name__ == "__main__":
     # Attempt to remove the mod files once again.
     for filename in ["vars.mod", "atomic_functions.mod", "math_functions.mod", "math_vars.mod", "milnemod.mod", "atomicpartitionmodule.mod",
         "constants_mod.mod", "globalmodule.mod", "ltemod.mod", "synthmodule.mod", "backgroundopacitymodule.mod", "general_routines_mod.mod", 
-        "hydrostaticmodule.mod", "mathsmodule.mod", "see.mod", "singleton.mod", "svd.mod", "synth.mod", "rt_coef.mod", "maths.mod", "io.mod", "pyhazelmod.mod", "allen.mod"]:
+        "hydrostaticmodule.mod", "mathsmodule.mod", "see.mod", "singleton.mod", "svd.mod", "synth.mod", "rt_coef.mod", "maths.mod", "io.mod", "pyhazelmod.mod", "allen.mod", "sirmod.mod"]:
         try:
             os.remove(filename)
         except:

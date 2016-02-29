@@ -15,3 +15,8 @@ try:
     from .hazel import * 
 except:
     print("hazel could not be imported")
+
+try:
+    from .pySIR import *
+except:
+    print("SIR could not be imported")
