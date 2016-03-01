@@ -19,16 +19,13 @@ c_______________________________________________________________
 
         real*4 stok(kld4)
         real*4 rt(kldt4),rp(kldt4),rh(kldt4),rv(kldt4)
-        real*4 rg(kldt4),rf(kldt4),rm(kldt4)
+        real*4 rg(kldt4),rf(kldt4),rmic(kldt4)
+        real*4 rmac(kld4)
                
         call leyendo !carga en commons toda la informacion necesaria
               
-        call StokesFRsub(stok,rt,rp,rh,rv,rg,rf,rm)
-        
-c        do i=1,58692
-c          print*,rg(i)
-c        end do  
-c        
+        call StokesFRsub(stok,rt,rp,rh,rv,rg,rf,rmic,rmac)
+                
         call escribe_stokes(stok)        
 
         end

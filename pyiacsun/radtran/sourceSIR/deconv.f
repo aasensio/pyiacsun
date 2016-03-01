@@ -38,7 +38,6 @@ c descomponemos vin en datos para cada linea: v1
 	kk=0
    
 c rellenamos hasta 'ntot' con ceros
-
 	do j=1,nlins
 	  n2=npass(j)
 	  i1=(ntot-n2)/2
@@ -71,7 +70,6 @@ c	   print*,'_____: dlamda0s(',j,')=',dlamda0s(j),' sigma=',sigma,' paso=',paso
 	    do i3=i1+1,i2
 		v2(i3)=v1(i3-i1)
 	    end do
-
 
 	    do i=1,ntot/2
 		frec=(i-1)/(paso*ntot)
@@ -119,16 +117,16 @@ c ntot=numero de puntos que quiero
 
 	parameter (m1=1024,m2=2*m1,nmx=401)
 	real*4 dlamda0(*),dlamda(*)
-	real x(nmx),y(nmx)
+        real*4 x(nmx), y(nmx)
 	
 	real*4 entrada(m2)
 	real*4 ftrans(4*kl,m2)
-	real xa(11),ya(11)
+	real*4 xa(11),ya(11)
 	integer npas(*)
 
         character*100 filtro,control
-
-	common/filtro/filtro
+    
+        common/filtro/filtro,x,y,num
 	common/canal/icanal
 	common/nombrecontrol/control
 	common/ftransformada/ftrans
@@ -136,12 +134,13 @@ c ntot=numero de puntos que quiero
         ngrado=2        !interpolo con parabolas
 	n2=int(ngrado/2)
 
+
 c leemos el fichero filtro
-	open(55,file=filtro,status='old',err=100)
-	do ii=1,nmx
-           read(55,*,end=127,err=101)x(ii),y(ii)
-	end do
-127	num=ii-1
+c 	open(55,file=filtro,status='old',err=100)
+c 	do ii=1,nmx
+c            read(55,*,end=127,err=101)x(ii),y(ii)
+c 	end do
+c 127	num=ii-1
 
 	if(num.eq.nmx-1)print*,'The psf file is being truncated (it has more than 401 wavelengths!)'
 

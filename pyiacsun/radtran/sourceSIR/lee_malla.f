@@ -11,9 +11,12 @@ c nble  : numero de blends de cada linea
 	subroutine lee_malla(mallaobs)
 	
 	include 'PARAMETER'  !por kl
+	parameter (kl4=4*kl,kld4=4*kld)
 	
 	integer ntl,nlin(kl),npas(kl),nble(kl)
 	real*4 dlamda(kld)
+	integer ntls,nlins(kl4),npass(kl4)
+	real*4 dlamdas(kld4)       
 	integer nd(kl)
         integer blanco,ifail,ierror,ntonto,jj,k
 	real*4 dini,dipa,difi,errpasos,numeropasos
@@ -22,6 +25,7 @@ c nble  : numero de blends de cada linea
 	character*80 men1,men2,men3
      
         common/Malla/ntl,nlin,npas,nble,dlamda  !common para StokesFRsub
+        common/Malla4/ntls,nlins,npass,dlamdas  !common para StokesFRsub
 
 	men1=' '
 	men2=' '
@@ -77,6 +81,30 @@ c	print*,'Number of wavelengths in the wavelength grid: ',nli
 
 c	print*,'lee_malla',ntl,nlin(ntl),npas(ntl),nble(ntl),dlamda(1)
 	
+	
+        ntls=0
+        nb=0
+        k4c=0
+	do i=1,4
+	   jj=0
+	   k3c=0
+	   do k=1,ntl
+              do jble=1,nble(k)   
+                 nb=nb+1
+                 jj=jj+1
+                 nlins(nb)=nlin(jj)
+	       end do
+               ntls=ntls+1
+	       npass(ntls)=npas(k)
+	       do l=1,npas(k)
+	           k3c=k3c+1
+	           k4c=k4c+1
+	           dlamdas(k4c)=dlamda(k3c)
+	       end do 
+	    end do   
+	end do
+	
+
 	return
 
 c       -------------------------------------------------------------------------

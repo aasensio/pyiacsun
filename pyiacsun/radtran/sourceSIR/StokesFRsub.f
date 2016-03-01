@@ -14,17 +14,21 @@ c _________________________________________________________________
 c
 c ist=1 (i); =2 (q); =3 (u); =4 (v)
 
-        subroutine StokesFRsub(stok,rt,rp,rh,rv,rg,rf,rm)
+        subroutine StokesFRsub(stok,rt,rp,rh,rv,rg,rf,rm,rmac)
 
         include 'PARAMETER'         !incluye kt,kn,kl,kld
 
         parameter (kt4=4*kt,kt16=16*kt,kt7=7*kt,kt8=8*kt+2)
-        parameter (kld4=4*kld) 
+        parameter (kl4=4*kl,kld4=4*kld) 
 
         real*4 melectron,mhidrogeno
 
 c para las funciones respuesta
         real*4 rt(*),rp(*),rh(*),rv(*),rg(*),rf(*),rm(*)
+        real*4 rmac(*)
+        real*4 rtlin(kld4),rplin(kld4),rhlin(kld4)
+        real*4 rvlin(kld4),rglin(kld4),rflin(kld4)
+        real*4 rmlin(kld4)
         real*4 rt4(4,kt),rp4(4,kt),rh4(4,kt)
         real*4 rv4(4,kt),rg4(4,kt),rf4(4,kt)
         real*4 rm4(4,kt)
@@ -42,7 +46,7 @@ c para la atmosfera
         real*4 vof(kt),tau(kt),taue(kt)
         real*4 voffset,xmu
         real*4 continuoh,conhsra    !,dplnck,dtplanck
-        integer*4 mnodos(18)
+        integer*4 mnodos(18),ifiltro
 
 c para la matriz de absorcion y sus derivadas
         real*4 dab(kt16),tk(kt16),pk(kt16)
@@ -59,8 +63,9 @@ c para la malla
         real*4 wlengt,wlengt1,lambda,dlamdaii,wvac,wc,c
         integer ist(4),ntau
         integer ntl,nlin(kl),npas(kl),nble(kl)
-        real*4 dlamda(kld)
-
+        real*4 dlamda(kld),dlamda0(kl)
+        integer ntls,nlins(kl4),npass(kl4)
+        real*4 dlamdas(kld4),dlamda0s(kl4)
 c para los parametros atomicos y coeficientes de absorcion
         real*4 loggf,nair,mvdop,meta0,ma
         real*4 y(kt),dyt(kt),dyp(kt),alpha(kt),www
@@ -82,6 +87,7 @@ c para las presiones parciales
         real*4 pg(99),dpg(99),ddpg(99),pi(10),dpi(10),ddpi(10)
         real*4 pt(kt,10),dpt(kt,10),ddpt(kt,10)
         real*4 pgas(kt),dpgas(kt),ddpgas(kt)      !,ro(kt),ck5_ro(kt)
+        real*4 macro
 
 c para la inclusion de RP en RT
         real*4 ax(kt),bx(kt),cx(kt),dx(kt),d1x(kt),d2x(kt),fx(kt)
@@ -90,16 +96,18 @@ c para la inclusion de RP en RT
         
 c para hermite
         real*4 deltae(kt),deltai(kt),delt2i(kt)
-
+        
 c lugares comunes de memoria
         common/Atmosmodel/atmosmodel,ntau                  !se carga en lee_model.f
         common/Malla/ntl,nlin,npas,nble,dlamda             !se carga en lee_malla.f
+        common/Malla4/ntls,nlins,npass,dlamdas             !se carga en lee_malla.f
         common/yder/y,dyt,dyp,alpha                        !se carga aqui coef.abs.cont.y su der.t,p 
         common/segunda/tau,taue,deltae,deltai,delt2i       !se carga aqui (para hermite y rnorma)
         common/piis/piis                                   !1./sqrt(3.1415926) se carga aqui (para mvoigt)
         common/offset/voffset                              !se carga en lee_model 
         common/anguloheliocent/xmu                         !se carga en lee_model
         common/numeronodos/mnodos                          !se carga en lee_model
+        common/ifiltro/ifiltro
 
         data iprimera/0/
                  
@@ -139,6 +147,8 @@ c nble es el numero de componentes de cada linea
         
         ists=ist(1)+ist(2)+ist(3)+ist(4)
         ntotal4=ntotal*ists
+        
+        macro=atmosmodel(8*ntau+1)
         
         if(iprimera.eq.0)then
            do i=1,ntau
@@ -316,7 +326,7 @@ c datos de la linea
               end if   
               gf=1.e1**(loggf)
               if(ible.eq.1)wlengt1=wlengt
-c              dlamda0(iln)=wlengt
+              dlamda0(iln)=wlengt
               continuoh=conhsra(wlengt1)
 
 c parametros atomicos
@@ -1041,16 +1051,64 @@ c rt(tau1:i(l1,l2,...),q(l1,..),....v(l1....);tau2:i......)
               end do  
  
               stok(ikk4)=svec(isv)/continuoh
+              rmac(ikk4)=svec(isv)/continuoh !lo copiamos para convolucionarlo con la derivada de la macro
               end if
             end do
-
 9         continue      !fin del do en lambda
 999     continue        !fin del do en lineas
+
+
+c convolucionamos con la macro (y la PSF si existe)
+        if (ifiltro .eq. 1 .or. macro .gt. 0)then
+           k1=0
+	   do i=1,4
+      	      do klin=1,ntl
+	         k1=k1+1
+	         dlamda0s(k1)=dlamda0(klin)
+	      end do
+	   end do
+	      
+           call deconv(stok,1,ntls,npass,dlamda0s,dlamdas,macro)
+           call deconv2(rmac,1,ntls,npass,dlamda0s,dlamdas,macro)
+
+           call deconRF(mnodos(1),rt,dlamda0s,ntotal4,macro)
+           call deconRF(mnodos(2),rp,dlamda0s,ntotal4,macro)
+           call deconRF(mnodos(3),rm,dlamda0s,ntotal4,macro)
+           call deconRF(mnodos(4),rh,dlamda0s,ntotal4,macro)
+           call deconRF(mnodos(5),rv,dlamda0s,ntotal4,macro)
+           call deconRF(mnodos(6),rg,dlamda0s,ntotal4,macro)
+           call deconRF(mnodos(7),rf,dlamda0s,ntotal4,macro)
+        end if
+        
         return
         end
 c __________________________________________________________________________
+        subroutine deconRF(mnod,RF,dlamda0s,ntotal4,macro) 
+        include 'PARAMETER'         !incluye kt,kn,kl,kld
 
+        parameter (kl4=4*kl,kld4=4*kld) 
+        integer ntls,nlins(kl4),npass(kl4)
+        real*4 dlamda0s(*),dlamdas(kld4),macro,RF(*)
+        real*4 RFlin(kld4)
+        
+        common/Malla4/ntls,nlins,npass,dlamdas             !se carga en lee_malla.f
+        
+        do i=1,mnod
+          k1=(i-1)*ntotal4
+          k2=k1+ntotal4
+          do j=k1,k2
+            RFlin(j-k1+1)=RF(j)
+          end do  
+          call deconv(RFlin,1,ntls,npass,dlamda0s,dlamdas,macro)
+          do j=k1,k2
+            RF(j)=RFlin(j-k1+1)
+          end do
+        end do   
+        
+        return
+        end
 
+c __________________________________________________________________________
 c matabs rutina que llena la matriz de absorcion
         subroutine matabs(fi,fq,fu,fv,fq1,fu1,fv1,dab)
 

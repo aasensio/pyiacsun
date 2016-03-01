@@ -2,17 +2,17 @@ c DECONV2 convoluciona vin con la derivada de una gaussiana de
 c "velocidad" s con respecto a s 
 c  y con el filtro leido del fichero "filter.dat"(col. 1 ldo, col2 trans.)
 c da el resultado en vin
-c isign (=1 convolucion),(=-1 deconvolucion),(0= return)
+c isigno (=1 convolucion),(=-1 deconvolucion),(0= return)
 c n es el numero de puntos
 
-	subroutine deconv2(vin,isign,nlins,npass,dlamda0s,dlamdas,s)
+	subroutine deconv2(vin,isigno,nlins,npass,dlamda0s,dlamdas,s)
 
 	parameter(m1=1024)   !m1 MUST be an integer power of 2!!!
 
 	real*4 vin(*),dlamda0s(*),dlamdas(*)
 	real*4 frec,ex,cota,paso,sigma,pi,c,s
 	real v1(m1),v2(m1),expo(m1)
-	integer npass(*),ifiltro
+	integer npass(*),ifiltro,isigno
 	common/ifiltro/ifiltro
 	data ivez/0/
 
@@ -22,7 +22,7 @@ c n es el numero de puntos
 	pi=3.141590    !dlamda0 vendra dada en a
 	cota=26.
         
-	if(isign.eq.0)return
+	if(isigno.eq.0)return
 
 c descomponemos vin en datos para cada linea: v1
 	k1=0
@@ -68,14 +68,14 @@ c rellenamos hasta 'ntot' con ceros
 		frec=(i-1)/(paso*ntot)
 	        ex=2.*pi*pi*sigma*sigma*frec*frec
 		if(ex.gt.cota)ex=cota
-	        expo(i)=exp(-1.*isign*ex)
+	        expo(i)=exp(-1.*isigno*ex)
 		expo(i)=-expo(i)*2.*ex/s   !esto es por la derivada
 	    end do
 	    do i=ntot/2+1,ntot
 		frec=(ntot-(i-1))/(paso*ntot)
 	        ex=2.*pi*pi*sigma*sigma*frec*frec
 		if(ex.gt.cota)ex=cota
-	        expo(i)=exp(-1.*isign*ex)
+	        expo(i)=exp(-1.*isigno*ex)
 		expo(i)=-expo(i)*2.*ex/s   !esto es por la derivada
 	    end do
 

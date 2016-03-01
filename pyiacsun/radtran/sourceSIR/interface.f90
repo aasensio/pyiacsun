@@ -15,10 +15,12 @@ contains
 
 	subroutine c_init(nLambda) bind(c)
 	integer(c_int), intent(out) :: nLambda
-	integer :: i, j
+
+	integer :: i, j, ifiltro
 	integer ntl,nlin(kl),npas(kl),nble(kl)
 	real*4 dlamda(kld)
 	common/Malla/ntl,nlin,npas,nble,dlamda
+	common/ifiltro/ifiltro
 
 		call leyendo
 
@@ -30,19 +32,111 @@ contains
 	    	end do
 		end do
 
+		ifiltro = 0
+		
 	end subroutine c_init
 
+	subroutine c_setpsf(nPSF, xPSF, yPSF) bind(c)
+	integer(c_int), intent(in) :: nPSF
+	real(c_float), intent(in) :: xPSF(nPSF), yPSF(nPSF)
+	integer :: i, j
+	integer, parameter :: nmx=401
+	real*4 x(nmx), y(nmx)
+	character*100 filtro
+	integer ifiltro, num
+	common/filtro/filtro,x,y,num                 !para pasar el nombre de la PSF
+    common/ifiltro/ifiltro
+    	
+		ifiltro = 1
+    	do i = 1, nPSF
+    		x(i) = xPSF(i)
+    		y(i) = yPSF(i)
+    	enddo
+    	num = nPSF
+	
+	end subroutine c_setpsf
 
-	subroutine c_synth(nDepth, nLambda, macroturbulence, filling, stray, model, stokes, RFt, RFp, RFh, RFv, RFg, RFf, RFm) bind(c)
+
+	subroutine c_synth(nDepth, nLambda, macroturbulence, filling, stray, model, stokes) bind(c)
 	integer(c_int), intent(in) :: nDepth, nLambda
 	real(c_float), intent(in) :: model(8,ndepth)
 	real(c_float), intent(in) :: macroturbulence, filling, stray
 	real(c_float), intent(out) :: stokes(5,nLambda)
-	real(c_float), intent(out), dimension(4,nLambda,nDepth) :: RFt, RFp, RFh, RFv, RFg, RFf, RFm
+	
+	real*4 stok(kld4)
+    real*4 rt(kldt4),rp(kldt4),rh(kldt4),rv(kldt4)
+    real*4 rg(kldt4),rf(kldt4),rm(kldt4), rmac(kld4)
+    integer ist(4),i,k,ntot, j, l, itau
+	integer ntl,nlin(kl),npas(kl),nble(kl)
+	real*4 dlamda(kld)
+	character*100 Stokesfilename
+	integer*4 mnodos(18), ntau
+	real*4 atmosmodel(kt8), pesostray
+	real*4 voffset,xmu
+	common/Malla/ntl,nlin,npas,nble,dlamda  !common para StokesFRsub
+    common/OutputStokes/Stokesfilename
+
+    common/Atmosmodel/atmosmodel,ntau !common para StokesFRsub
+	common/numeronodos/mnodos         !para StokesFRsub
+    common/offset/voffset             !para StokesFRsub
+    common/anguloheliocent/xmu        !para StokesFRsub
+
+	    ntau = nDepth
+
+! offset de velocidad para perturbaciones relativas necesitamos que la velocidad sea siempre positiva        
+		voffset=-15.e5    !cm/s
+	    xmu=1.            !coseno del angulo heliocentrico	
+
+! Put the model in vectorized form
+		atmosmodel(8*ntau+1) = macroturbulence
+		atmosmodel(8*ntau+2) = filling
+		pesostray = stray
+		do i = 1, ntau
+			do j = 0, 7
+				atmosmodel(i+j*ntau) = model(j+1,i)				
+			enddo
+		enddo
+
+! pasamos los angulos a radianes
+		call taulinea(0,1.,1,0.,atmosmodel,ntau)
+	
+! definimos los nodos en todos los puntos (excepto para ls presion elctronica)
+		do i=1,8                 
+        	mnodos(i)=0
+		end do  
+    	mnodos(2)=0  
+
+		call StokesFRsub(stok,rt,rp,rh,rv,rg,rf,rm,rmac)
+				 	
+! contamos el numero de puntos	
+		ntot=0
+		do i=1,ntl
+        	do j=1,npas(i)
+	      		ntot=ntot+1
+	    	end do
+		end do
+
+! Output Stokes parameters
+		stokes(1,:) = dlamda(1:ntot)
+		stokes(2,:) = stok(1:ntot)
+		stokes(3,:) = stok(ntot+1:2*ntot)
+		stokes(4,:) = stok(2*ntot+1:3*ntot)
+		stokes(5,:) = stok(3*ntot+1:4*ntot)
+        
+	end subroutine c_synth
+
+
+	subroutine c_synthrf(nDepth, nLambda, macroturbulence, filling, stray, model, stokes, RFt, RFp, RFh, RFv, RFg, RFf, RFmic, RFmac) bind(c)
+	integer(c_int), intent(in) :: nDepth, nLambda
+	real(c_float), intent(in) :: model(8,ndepth)
+	real(c_float), intent(in) :: macroturbulence, filling, stray
+	real(c_float), intent(out) :: stokes(5,nLambda)
+	real(c_float), intent(out), dimension(4,nLambda,nDepth) :: RFt, RFp, RFh, RFv, RFg, RFf, RFmic
+	real(c_float), intent(out), dimension(4,nLambda) :: RFmac
 
 	real*4 stok(kld4)
     real*4 rt(kldt4),rp(kldt4),rh(kldt4),rv(kldt4)
-    real*4 rg(kldt4),rf(kldt4),rm(kldt4)
+    real*4 rg(kldt4),rf(kldt4),rm(kldt4), rmac(kld4)
     integer ist(4),i,k,ntot, j, l, itau
 	integer ntl,nlin(kl),npas(kl),nble(kl)
 	real*4 dlamda(kld)
@@ -83,7 +177,7 @@ contains
 		end do  
     	mnodos(2)=0  
 
-		call StokesFRsub(stok,rt,rp,rh,rv,rg,rf,rm)
+		call StokesFRsub(stok,rt,rp,rh,rv,rg,rf,rm,rmac)
 		
 		 	
 ! contamos el numero de puntos	
@@ -95,7 +189,7 @@ contains
 		end do
 
 ! Output Stokes parameters
-		stokes(1,:) = dlamda
+		stokes(1,:) = dlamda(1:ntot)
 		stokes(2,:) = stok(1:ntot)
 		stokes(3,:) = stok(ntot+1:2*ntot)
 		stokes(4,:) = stok(2*ntot+1:3*ntot)
@@ -133,13 +227,18 @@ contains
 			RFf(3,:,itau) = rf(2*ntot+1+4*ntot*(itau-1):3*ntot+4*ntot*(itau-1))
 			RFf(4,:,itau) = rf(3*ntot+1+4*ntot*(itau-1):4*ntot+4*ntot*(itau-1))
 
-			RFm(1,:,itau) = rm(1+4*ntot*(itau-1):ntot+4*ntot*(itau-1))
-			RFm(2,:,itau) = rm(ntot+1+4*ntot*(itau-1):2*ntot+4*ntot*(itau-1))
-			RFm(3,:,itau) = rm(2*ntot+1+4*ntot*(itau-1):3*ntot+4*ntot*(itau-1))
-			RFm(4,:,itau) = rm(3*ntot+1+4*ntot*(itau-1):4*ntot+4*ntot*(itau-1))
+			RFmic(1,:,itau) = rm(1+4*ntot*(itau-1):ntot+4*ntot*(itau-1))
+			RFmic(2,:,itau) = rm(ntot+1+4*ntot*(itau-1):2*ntot+4*ntot*(itau-1))
+			RFmic(3,:,itau) = rm(2*ntot+1+4*ntot*(itau-1):3*ntot+4*ntot*(itau-1))
+			RFmic(4,:,itau) = rm(3*ntot+1+4*ntot*(itau-1):4*ntot+4*ntot*(itau-1))
 			
 		enddo
+
+		RFmac(1,:) = rmac(1:ntot)
+		RFmac(2,:) = rmac(ntot+1:2*ntot)
+		RFmac(3,:) = rmac(2*ntot+1:3*ntot)
+		RFmac(4,:) = rmac(3*ntot+1:4*ntot)
         
-	end subroutine c_synth
+	end subroutine c_synthrf
 
 end module sirMod
