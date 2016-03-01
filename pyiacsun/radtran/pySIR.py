@@ -65,7 +65,7 @@ def initializeSIR(lines):
         
     return init()    
 
-def synthesizeSIR(model):
+def synthesizeSIR(model, macroturbulence=0.0, fillingFactor=1.0, stray=0.0):
     """Carry out the synthesis and returns the Stokes parameters and the response 
     functions to all physical variables at all depths
     
@@ -79,13 +79,16 @@ def synthesizeSIR(model):
             - Line-of-sight velocity [km/s]
             - Magnetic field inclination [deg]
             - Magnetic field azimuth [deg]
+        macroturbulence (float, optional): macroturbulence velocity [km/s]. Default: 0
+        fillingFactor (float, optional): filling factor. Default: 1
+        stray (float, optional): stray light in %. Default: 0
     
     Returns:
         stokes: (float array) Stokes parameters, with the first index containing the wavelength displacement and the remaining
                                 containing I, Q, U and V. Size (5,nLambda)
         rf: (float array) Response functions to T, Pe, vmic, B, v, theta, phi. Size (4,nLambda,nDepth)
     """
-    stokes, rf = sir.synth(out, 0.0, 1.0, 0.0)
+    stokes, rf = sir.synth(model, macroturbulence, fillingFactor, stray)
 
     return stokes, rf
 

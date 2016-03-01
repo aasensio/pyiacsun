@@ -95,10 +95,11 @@ contains
 		end do
 
 ! Output Stokes parameters
-		stokes(1,:) = stok(1:ntot)
-		stokes(2,:) = stok(ntot+1:2*ntot)
-		stokes(3,:) = stok(2*ntot+1:3*ntot)
-		stokes(4,:) = stok(3*ntot+1:4*ntot)
+		stokes(1,:) = dlamda
+		stokes(2,:) = stok(1:ntot)
+		stokes(3,:) = stok(ntot+1:2*ntot)
+		stokes(4,:) = stok(2*ntot+1:3*ntot)
+		stokes(5,:) = stok(3*ntot+1:4*ntot)
 
 ! Output response functions
 		do itau = 1, ntau
