@@ -21,7 +21,7 @@ def listLinesSIR():
 
     print("Available lines:")
     for l in lines[:-1]:
-        print(l)
+        print(l[:-1])
 
 def initializeSIR(lines):
     """Initialize the SIR synthesis code for a set of spectral lines
