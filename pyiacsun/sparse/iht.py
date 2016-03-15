@@ -8,7 +8,7 @@ def AIHT(x, A, AT, m, M, thresh):
 	Accelerated iterative Hard thresholding algorithm that keeps exactly M elements 
 	in each iteration. This algorithm includes an additional double
 	overrelaxation step that significantly improves convergence speed without
-	destroiing any of the theoretical guarantees of the IHT algorithm
+	destroying any of the theoretical guarantees of the IHT algorithm
 	detrived in [1], [2] and [3].
 	
 	This algorithm is used to solve the problem A*z=x

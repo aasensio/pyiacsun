@@ -57,8 +57,8 @@ contains
 	end subroutine c_setpsf
 
 
-	subroutine c_synth(nDepth, nLambda, macroturbulence, filling, stray, model, stokes) bind(c)
-	integer(c_int), intent(in) :: nDepth, nLambda
+	subroutine c_synth(nDepth, nLambda, hydro, macroturbulence, filling, stray, model, stokes) bind(c)
+	integer(c_int), intent(in) :: nDepth, nLambda, hydro
 	real(c_float), intent(in) :: model(8,ndepth)
 	real(c_float), intent(in) :: macroturbulence, filling, stray
 	real(c_float), intent(out) :: stokes(5,nLambda)
@@ -72,6 +72,7 @@ contains
 	character*100 Stokesfilename
 	integer*4 mnodos(18), ntau
 	real*4 atmosmodel(kt8), pesostray
+	real*4 tau(kt),t(kt),pe(kt),pg(kt),z(kt),ro(kt)
 	real*4 voffset,xmu
 	common/Malla/ntl,nlin,npas,nble,dlamda  !common para StokesFRsub
     common/OutputStokes/Stokesfilename
@@ -95,6 +96,9 @@ contains
 			do j = 0, 7
 				atmosmodel(i+j*ntau) = model(j+1,i)				
 			enddo
+			tau(i) = atmosmodel(i)
+			t(i) = atmosmodel(i+ntau)
+			pe(i) = atmosmodel(i+2*ntau)
 		enddo
 
 ! pasamos los angulos a radianes
@@ -104,7 +108,17 @@ contains
 		do i=1,8                 
         	mnodos(i)=0
 		end do  
-    	mnodos(2)=0  
+    	mnodos(2)=0
+
+! Compute hydrostatic equilibrium if necessary
+    	if (minval(model(3,:)) == -1) then
+    		call equisubmu(ntau,tau,t,pe,pg,z,ro)
+ 
+        	do i=1,ntau
+            	atmosmodel(i+2*ntau)=pe(i)
+        	end do
+        endif
+
 
 		call StokesFRsub(stok,rt,rp,rh,rv,rg,rf,rm,rmac)
 				 	
@@ -142,6 +156,7 @@ contains
 	real*4 dlamda(kld)
 	character*100 Stokesfilename
 	integer*4 mnodos(18), ntau
+	real*4 tau(kt),t(kt),pe(kt),pg(kt),z(kt),ro(kt)
 	real*4 atmosmodel(kt8), pesostray
 	real*4 voffset,xmu
 	common/Malla/ntl,nlin,npas,nble,dlamda  !common para StokesFRsub
@@ -166,6 +181,9 @@ contains
 			do j = 0, 7
 				atmosmodel(i+j*ntau) = model(j+1,i)				
 			enddo
+			tau(i) = atmosmodel(i)
+			t(i) = atmosmodel(i+ntau)
+			pe(i) = atmosmodel(i+2*ntau)
 		enddo
 
 ! pasamos los angulos a radianes
@@ -177,8 +195,17 @@ contains
 		end do  
     	mnodos(2)=0  
 
-		call StokesFRsub(stok,rt,rp,rh,rv,rg,rf,rm,rmac)
-		
+! Calculate hydrostatic equilibrium if Pe is not known
+    	if (minval(model(3,:)) == -1) then
+
+    		call equisubmu(ntau,tau,t,pe,pg,z,ro)
+ 
+        	do i=1,ntau
+            	atmosmodel(i+2*ntau)=pe(i)
+        	end do
+        endif
+
+		call StokesFRsub(stok,rt,rp,rh,rv,rg,rf,rm,rmac)		
 		 	
 ! contamos el numero de puntos	
 		ntot=0

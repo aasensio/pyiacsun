@@ -50,7 +50,7 @@ def initializeSIR(lines):
     f.write("-----------------------------------------------------------------------\n")
 
     for i in range(len(lines)):
-        f.write("{0}    :  {1}, {2}, {3}".format(lines[i][0], lines[i][1], lines[i][2], lines[i][3]))
+        f.write("{0}    :  {1}, {2}, {3}\n".format(lines[i][0], lines[i][1], lines[i][2], lines[i][3]))
     f.close()
 
     if (not os.path.exists('LINEAS')):
@@ -79,10 +79,10 @@ def synthesizeSIR(model, macroturbulence=0.0, fillingFactor=1.0, stray=0.0, retu
     functions to all physical variables at all depths
     
     Args:
-        model (float array): an array of size [nDepth x 8], where the columns contain the depth stratification of:
+        model (float array): an array of size [nDepth x 7] or [nDepth x 8], where the columns contain the depth stratification of:
             - log tau
             - Temperature [K]
-            - Electron pressure [dyn cm^-2]
+            - Electron pressure [dyn cm^-2] (optional)
             - Microturbulent velocity [km/s]
             - Magnetic field strength [G]
             - Line-of-sight velocity [km/s]
@@ -99,6 +99,12 @@ def synthesizeSIR(model, macroturbulence=0.0, fillingFactor=1.0, stray=0.0, retu
         rf: (float array) Response functions to T, Pe, vmic, B, v, theta, phi, all of size (4,nLambda,nDepth), plus the RF to macroturbulence of size (4,nLambda)
                         It is not returned if returnRF=False
     """
+
+    if (model.shape[1] == 7):
+        model = np.insert(model, 2, -np.ones(model.shape[0]), axis=1)
+# Boundary condition for Pe
+        model[-1,2] = 1.11634e-01
+
     if (returnRF):
         stokes, rf = synthRF(model, macroturbulence, fillingFactor, stray)
         return stokes, rf
@@ -114,6 +120,10 @@ if (__name__ == "__main__"):
     psf = np.loadtxt('PSF.dat', dtype=np.float32)
     setPSF(psf[:,0].flatten(), psf[:,1].flatten())
     out = np.loadtxt('model.mod', dtype=np.float32, skiprows=1)[:,0:8]
+    
+# Remove Pe
+    out = np.delete(out, 2, axis=1)
+
     stokes, rf = synthesizeSIR(out)
 
     f, ax = pl.subplots(ncols=4, nrows=2, figsize=(16,6))

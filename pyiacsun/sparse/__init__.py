@@ -6,3 +6,5 @@ from .wavelet import *
 from .iswt import *
 from .iuwt import *
 from .alps import *
+from .smooth import *
+from .proxes_rank1 import *

@@ -9,6 +9,7 @@ c lee_model
 	integer ican,ntau
         integer*4 mnodos(18)	
 	real*4 atmosmodel(kt8),a(8),pesostray
+        real*4 tau(kt),t(kt),pe(kt),pg(kt),z(kt),ro(kt)
         character*100 modelname
 	
 	common/Atmosmodel/atmosmodel,ntau !common para StokesFRsub
@@ -48,6 +49,12 @@ c definimos los nodos en todos los puntos (excepto para ls presion elctronica)
           mnodos(i)=ntau
         end do  
         mnodos(2)=0  
+
+        call equisubmu(ntau,tau,t,pe,pg,z,ro)
+ 
+        do i=1,ntau
+            atmosmodel(i+2*ntau)=pe(i)
+        end do
           
         return
         

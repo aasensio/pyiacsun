@@ -94,7 +94,6 @@ class fasta(object):
 		if (self.L == 0 and self.tau != 0):
 			self.L = 1.0 / self.tau
 
-
 	def checkAdjoint(self):
 		"""Check if A and At are adjoint operators
 			
@@ -201,7 +200,7 @@ class fasta(object):
 
 				temp = Dx.dot(gradf0) + np.linalg.norm(Dx, 2)**2 / (2.0*tau0)
 
-				while ( ( (f1 - 1e-12) > (M + temp) ) and (backtrackCount < 20)):
+				while ( ( (f1 - 1e-12) > (M + temp) ) and (backtrackCount < 10)):
 					tau0 *= self.stepsizeShrink
 					x1hat = x0 - tau0 * gradf0
 					x1 = self.proxg(x1hat, tau0)
@@ -232,12 +231,12 @@ class fasta(object):
 				minObjectiveValue = newObjectiveValue
 
 			if (self.verbose):
-				print("It: {0} - resid: {1} - backtrack: {2} - tau: {3}".format(i, residual[i], backtrackCount, tau0))
-
+				if (i % 100 == 0):					
+					print("It: {0:6d} - resid: {1:12.4e} - backtrack: {2:2d} - tau: {3:12.4e}".format(i, residual[i], backtrackCount, float(tau0)))
+			
 # Check convergence
-			if ((residual[i] / (maxResidual + self.eps_r) < self.tol) or (normalizedResidual[i] < self.tol)):
-				sol = bestObjectiveIterate
-				return sol
+			if ((residual[i] / (maxResidual + self.eps_r) < self.tol) or (normalizedResidual[i] < self.tol)):				
+				return bestObjectiveIterate
 
 # Adaptive
 			if (self.adaptive and not self.accelerate):
@@ -278,3 +277,5 @@ class fasta(object):
 			if (not self.adaptive and not self.accelerate):
 				gradf1 = self.At(self.gradf(d1))
 				tau1 = np.copy(tau0)
+
+		return bestObjectiveIterate
