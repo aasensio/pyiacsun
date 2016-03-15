@@ -57,8 +57,8 @@ contains
 	end subroutine c_setpsf
 
 
-	subroutine c_synth(nDepth, nLambda, hydro, macroturbulence, filling, stray, model, stokes) bind(c)
-	integer(c_int), intent(in) :: nDepth, nLambda, hydro
+	subroutine c_synth(nDepth, nLambda, macroturbulence, filling, stray, model, stokes) bind(c)
+	integer(c_int), intent(in) :: nDepth, nLambda
 	real(c_float), intent(in) :: model(8,ndepth)
 	real(c_float), intent(in) :: macroturbulence, filling, stray
 	real(c_float), intent(out) :: stokes(5,nLambda)
