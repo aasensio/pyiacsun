@@ -109,7 +109,7 @@ def synthesizeSIR(model, macroturbulence=0.0, fillingFactor=1.0, stray=0.0, retu
         stokes, rf = synthRF(model, macroturbulence, fillingFactor, stray)
         return stokes, rf
     else:
-        stokes, rf = synth(model, macroturbulence, fillingFactor, stray)        
+        stokes = synth(model, macroturbulence, fillingFactor, stray)        
         return stokes    
     return stokes, rf
 
