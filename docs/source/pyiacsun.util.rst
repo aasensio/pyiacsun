@@ -44,6 +44,14 @@ pyiacsun.util.fvoigt module
     :undoc-members:
     :show-inheritance:
 
+pyiacsun.util.gauss_weights module
+----------------------------------
+
+.. automodule:: pyiacsun.util.gauss_weights
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pyiacsun.util.imviewer module
 -----------------------------
 
@@ -64,6 +72,14 @@ pyiacsun.util.lineMin module
 ----------------------------
 
 .. automodule:: pyiacsun.util.lineMin
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.util.nearest module
+----------------------------
+
+.. automodule:: pyiacsun.util.nearest
     :members:
     :undoc-members:
     :show-inheritance:
@@ -104,6 +120,14 @@ pyiacsun.util.rebin module
 --------------------------
 
 .. automodule:: pyiacsun.util.rebin
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.util.splinequad module
+-------------------------------
+
+.. automodule:: pyiacsun.util.splinequad
     :members:
     :undoc-members:
     :show-inheritance:

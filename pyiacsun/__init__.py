@@ -6,3 +6,4 @@ from . import radtran
 from . import sparse
 from . import util
 from . import plot
+from . import optics

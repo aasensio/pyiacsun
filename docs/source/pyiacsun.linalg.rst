@@ -28,6 +28,14 @@ pyiacsun.linalg.optimalSVHT module
     :undoc-members:
     :show-inheritance:
 
+pyiacsun.linalg.rpcaRow module
+------------------------------
+
+.. automodule:: pyiacsun.linalg.rpcaRow
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------

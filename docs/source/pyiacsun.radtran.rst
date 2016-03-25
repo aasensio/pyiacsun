@@ -4,10 +4,26 @@ pyiacsun.radtran package
 Submodules
 ----------
 
+pyiacsun.radtran.LTEfull module
+-------------------------------
+
+.. automodule:: pyiacsun.radtran.LTEfull
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pyiacsun.radtran.LTEnodes module
 --------------------------------
 
 .. automodule:: pyiacsun.radtran.LTEnodes
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.radtran.pySIR module
+-----------------------------
+
+.. automodule:: pyiacsun.radtran.pySIR
     :members:
     :undoc-members:
     :show-inheritance:

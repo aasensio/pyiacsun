@@ -12,6 +12,14 @@ pyiacsun.sparse.proxes.prox_l0 module
     :undoc-members:
     :show-inheritance:
 
+pyiacsun.sparse.proxes.prox_l0Largest module
+--------------------------------------------
+
+.. automodule:: pyiacsun.sparse.proxes.prox_l0Largest
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pyiacsun.sparse.proxes.prox_l1 module
 -------------------------------------
 
@@ -24,6 +32,14 @@ pyiacsun.sparse.proxes.prox_l1General module
 --------------------------------------------
 
 .. automodule:: pyiacsun.sparse.proxes.prox_l1General
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.sparse.proxes.prox_l2General module
+--------------------------------------------
+
+.. automodule:: pyiacsun.sparse.proxes.prox_l2General
     :members:
     :undoc-members:
     :show-inheritance:

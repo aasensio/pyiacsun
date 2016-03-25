@@ -10,6 +10,7 @@ Subpackages
     pyiacsun.hazel
     pyiacsun.linalg
     pyiacsun.machinelearn
+    pyiacsun.optics
     pyiacsun.plot
     pyiacsun.radtran
     pyiacsun.sparse

@@ -7,9 +7,27 @@ Subpackages
 .. toctree::
 
     pyiacsun.sparse.proxes
+    pyiacsun.sparse.proxes_rank1
+    pyiacsun.sparse.smooth
 
 Submodules
 ----------
+
+pyiacsun.sparse.alps module
+---------------------------
+
+.. automodule:: pyiacsun.sparse.alps
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.sparse.amp module
+--------------------------
+
+.. automodule:: pyiacsun.sparse.amp
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 pyiacsun.sparse.fasta module
 ----------------------------
