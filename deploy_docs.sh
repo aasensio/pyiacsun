@@ -19,6 +19,9 @@ cp -r _build/html/* $dir/.
 cd $dir
 git init
 
+git config user.name "Travis CI"
+git config user.email "aasensio@iac.es"
+
 touch .nojekyll  # bypass jekyll on GitHub Pages
 
 # The first and only commit to this new Git repo contains all the
