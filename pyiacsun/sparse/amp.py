@@ -44,33 +44,34 @@ def amp(A, AT, x0, eta, etaprime, b, mu, maxIter, xOK, tol):
             return xhat, err
     return xhat, err
 
-M = 200
-N = 1000
-K = 10
+if (__name__ == "__main__"):
+    M = 200
+    N = 1000
+    K = 10
 
-mu = 0.005
-sigma = 0.00001
+    mu = 0.005
+    sigma = 0.00001
 
-# Create sparse signal
-x = np.zeros(N)
-ind = np.random.permutation(N)
-x[ind[0:K]] = 1.0
+    # Create sparse signal
+    x = np.zeros(N)
+    ind = np.random.permutation(N)
+    x[ind[0:K]] = 1.0
 
-# Define matrix
-AMat = np.random.normal(size=(M,N))
-AMat /= np.linalg.norm(AMat, 2)
+    # Define matrix
+    AMat = np.random.normal(size=(M,N))
+    AMat /= np.linalg.norm(AMat, 2)
 
-# Define observation vector
-b = AMat.dot(x)
-b += np.random.normal(scale=sigma, size=b.shape)
+    # Define observation vector
+    b = AMat.dot(x)
+    b += np.random.normal(scale=sigma, size=b.shape)
 
-# Initial state
-x0 = np.zeros(N)
+    # Initial state
+    x0 = np.zeros(N)
 
-A = lambda z : AMat.dot(z)
-At = lambda z : AMat.T.dot(z)
+    A = lambda z : AMat.dot(z)
+    At = lambda z : AMat.T.dot(z)
 
-sol, err = amp(A, At, x0, eta, etaprime, b, mu, 500, x, 1e-6)
+    sol, err = amp(A, At, x0, eta, etaprime, b, mu, 500, x, 1e-6)
 
-pl.plot(sol)
-pl.plot(x, 'o')
+    pl.plot(sol)
+    pl.plot(x, 'o')

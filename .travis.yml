@@ -17,7 +17,14 @@ install:
   - pip install pep8 python-coveralls PyWavelets
   - python setup.py build_ext --inplace
 #  - pip install .
+
+env:
+  global:
+    - GH_REF: github.com/aasensio/pyiacsun.git
+    - secure: "LoY2YpbhSlRdUv0afPkBYRXQF/UFCT0+EgNWZGRYO6PA4OYzrb3mCTC1FtnOMhnpN6p1IhOozUM2Zv8q1tXMUaatqeTNEzl0qoFFoaKFyMahqdeVCYhqYrzPWXSuVkTAtoT4C5Yj3neCX/c6Jx3h0iXfrfE3pgrGyaOeQfIDDijBqWPCY317yGKYCScDM5GjK+o8uwu9gZHHlxIzJ45p+lnx1dM2kQLCZp+RrkMtFASVzYTcNLeoLjQz1ybyJlXj8n47KgGJuEEJj7/BkFsyKW63oTnXPcYnrYLk2E09BKLaQbjUTZmtN03y+6+yvRA34YDiu9qybQJKLPOIDbcM+216FPtec20fqG8qIjrCPumlYviXUrVUdoBzYlbsKwEkxbAjH15k5QFo6RIBKpHOB7/1629gNAs2piDGb2h+I/k2wdeeuYbWyQ4Kbe14jR6UYkXE8SqyVg90PIRx5QhEt5d3m8tdBgEzoY/yyfaCOlwaH0qaegblbO5h9oYgneORYX3TkKCJNhphd5F+IhoSsm07hyDle+hzeYgabJGGHeALehcgGdUmPO6lXjgrT1XgJBMDp71ii1JFqfLjV43lnEJOMX3TjALz0fB7IuG8T08aEAAY2KvQTOnCkgSTBelbuVMky24r0Vu1TJoG+eFlVjkk9j75Jz92zT81yFVHVck="
+
 script:
+  - bash ./deploy_docs.sh
   - nosetests -v --with-coverage --cover-package=pyiacsun
 after_success:
   - coveralls
