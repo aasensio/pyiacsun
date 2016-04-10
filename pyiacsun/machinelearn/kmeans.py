@@ -1,5 +1,6 @@
 import numpy as np
 
+__all__ = ['kmeans']
 
 def distancia(media, matriz):
     """Calcula la distancia euclideana desde la media hasta
