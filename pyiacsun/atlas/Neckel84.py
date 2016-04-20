@@ -1,13 +1,16 @@
 # cdiazbas@iac.es
 
 
-def Neckel87(ini, endi, atlasdir=None):
+def Neckel84(ini, endi, atlasdir=None):
     """
-    Extract spectral data from the disk-center intensity atlas:
-    Brault & Neckel (1987)
+    Extract spectral data from the original disk-center 
+    intensity atlas recorded at the Kitt-Peak National
+    Observatory: Neckel and Labs (1984)
 
     Wavelength range: 3290 - 12510 A
     Wavelength step: from 0.004 A to 0.02
+
+    CALL: atlas,xlam = Neckel84(ini = waveIni ,endi = waveEndi)
 
     Downloaded from:
     ftp://ftp.hs.uni-hamburg.de/pub/outgoing/FTS-Atlas
@@ -27,7 +30,7 @@ def Neckel87(ini, endi, atlasdir=None):
     else:
         sdir = atlasdir
 
-    file0 = np.load(sdir + '/Neckel87.npy')
+    file0 = np.load(sdir + '/Neckel84.npy')
     iniI = np.argmin(abs(ini - file0[:, 0]))
     endiI = np.argmin(abs(endi - file0[:, 0]))
 

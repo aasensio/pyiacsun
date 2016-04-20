@@ -1,19 +1,16 @@
 # cdiazbas@iac.es
-# Code: Translation of IDL ftsread:
-#       /usr/pkg/rsi/idl_local/data/ftsread.pro
 
 
 def ftsread(ini, endi, ftsdir=None):
     """
-    Extract spectral data from the Kitt Peak FTS-Spectral-Atlas
-    as provided by H. Neckel, Hamburg.
+    Extract spectral data from the interpolated disk-center 
+    intensity atlas recorded at the Kitt-Peak National
+    Observatory: Neckel and Labs (1984)
 
-    OUTPUT: Array with stepwidth 2mA. It is based on (interpolated)
-    Fourier-Transform-Spectra from the Kitt Peak Observatory
-    taken by J. Brault et al.
+    Wavelength range: 3290 - 12508 A
+    Wavelength step: 0.002 A
 
-    CALL: [atlas,xlam] = ftsread(ini = waveIni ,endi = waveEndi)
-    with a wavelength range (3290 - 12508 A).
+    CALL: atlas,xlam = ftsread(ini = waveIni ,endi = waveEndi)
 
     Args:
         ini (int): Initial wavelength
@@ -54,4 +51,4 @@ def ftsread(ini, endi, ftsdir=None):
     # Delete the tmp file
     os.remove(tdir+'/tmp')
 
-    return varFinal, lmbda
+    return varFinal/1e4, lmbda

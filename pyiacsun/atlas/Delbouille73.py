@@ -3,11 +3,14 @@
 
 def Delbouille73(ini, endi, atlasdir=None):
     """
-    Extract spectral data from the disk-center intensity atlas:
-    Delbouille L., Neven L., Roland G. (1973)
+    Extract spectral data from the original disk-center 
+    intensity atlas recorded at the Jungfraujoch Observatory:
+    Delbouille, Neven, Roland (1973)
 
     Wavelength range: 3000 - 10.000 A 
     Wavelength step (visible): 0.002 A
+
+    CALL: atlas,xlam = Delbouille73(ini = waveIni ,endi = waveEndi)
 
     Downloaded from:
     http://bass2000.obspm.fr/solar_spect.php
