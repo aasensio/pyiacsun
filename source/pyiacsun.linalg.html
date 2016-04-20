@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyiacsun.linalg package &mdash; pyiacsun 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyiacsun 1.0 documentation" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pyiacsun-linalg-package">
+<h1>pyiacsun.linalg package<a class="headerlink" href="#pyiacsun-linalg-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.linalg.cholInvert">
+<span id="pyiacsun-linalg-cholinvert-module"></span><h2>pyiacsun.linalg.cholInvert module<a class="headerlink" href="#module-pyiacsun.linalg.cholInvert" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.linalg.cholInvert.cholInvert">
+<code class="descclassname">pyiacsun.linalg.cholInvert.</code><code class="descname">cholInvert</code><span class="sig-paren">(</span><em>A</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.linalg.cholInvert.cholInvert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the inverse of a symmetric matrix using the Cholesky decomposition. The log-determinant is
+also returned</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>A</strong> &#8211; (N,N) matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">matrix inverse
+logDeterminant: logarithm of the determinant of the matrix</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">AInv</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.linalg.fsvd">
+<span id="pyiacsun-linalg-fsvd-module"></span><h2>pyiacsun.linalg.fsvd module<a class="headerlink" href="#module-pyiacsun.linalg.fsvd" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.linalg.fsvd.fsvd">
+<code class="descclassname">pyiacsun.linalg.fsvd.</code><code class="descname">fsvd</code><span class="sig-paren">(</span><em>A</em>, <em>k</em>, <em>i</em>, <em>usePowerMethod=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.linalg.fsvd.fsvd" title="Permalink to this definition">¶</a></dt>
+<dd><p>FSVD Fast Singular Value Decomposition</p>
+<p>[U,S,V] = FSVD(A,k,i,usePowerMethod) computes the truncated singular
+value decomposition of the input matrix A up to rank k using i levels of
+Krylov method as given in [1], p. 3.</p>
+<p>If usePowerMethod is given as true, then only exponent i is used (i.e.
+as power method). See [2] p.9, Randomized PCA algorithm for details.</p>
+<p>[1] Halko, N., Martinsson, P. G., Shkolnisky, Y., &amp; Tygert, M. (2010).
+An algorithm for the principal component analysis of large data sets.
+Arxiv preprint arXiv:1007.5510, 0526. Retrieved April 1, 2011, from
+http://arxiv.org/abs/1007.5510.</p>
+<p>[2] Halko, N., Martinsson, P. G., &amp; Tropp, J. A. (2009). Finding
+structure with randomness: Probabilistic algorithms for constructing
+approximate matrix decompositions. Arxiv preprint arXiv:0909.4061.
+Retrieved April 1, 2011, from http://arxiv.org/abs/0909.4061.</p>
+<p>Copyright 2011 Ismail Ari, <a class="reference external" href="http://ismailari.com">http://ismailari.com</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>A</strong> (<em>float</em>) &#8211; Matrix to be decomposed</li>
+<li><strong>k</strong> (<em>int</em>) &#8211; maximum rank of the matrix</li>
+<li><strong>i</strong> (<em>int</em>) &#8211; number of levels of the Krylov method</li>
+<li><strong>usePowerMethod</strong> (<em>bool, optional</em>) &#8211; Description</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">U, S, V -&gt; standard output of the SVD method</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.linalg.optimalSVHT">
+<span id="pyiacsun-linalg-optimalsvht-module"></span><h2>pyiacsun.linalg.optimalSVHT module<a class="headerlink" href="#module-pyiacsun.linalg.optimalSVHT" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.linalg.optimalSVHT.optimalSVHT">
+<code class="descclassname">pyiacsun.linalg.optimalSVHT.</code><code class="descname">optimalSVHT</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.linalg.optimalSVHT.optimalSVHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the optimal threshold of the singular values of a matrix, i.e., it computes the optimal number
+of singular values to keep or the optimal rank of the matrix.
+Given a matrix Y=X+sigma*Z, with Y the observed matrix, X the matrix that we want to find, Z an matrix whose elements are iid Gaussian
+random numbers with zero mean and unit variance and sigma is the standard deviation of the noise, the matrix X can be recovered in the
+least squares sense using a truncated SVD (compute the SVD of the matrix, keep only the relevant singular values and reconstruct the
+matrix). The problem is estimate the number of such singular values to keep. This function uses the theory of Gavish &amp; Donoho (2014)
+that is valid for matrices with sizes larger than its rank, i.e., for low-rank matrices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>matrix</strong> &#8211; matrix to estimate the rank</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">in case sigma is known, multiply this value with sigma and this gives the threshold
+thrUnknownNoise: returns the threshold directly
+noiseEstimation: returns the estimation of the noise
+wSVD: returns the singular values of the matrix</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">thrKnownNoise</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.linalg.rpcaRow">
+<span id="pyiacsun-linalg-rpcarow-module"></span><h2>pyiacsun.linalg.rpcaRow module<a class="headerlink" href="#module-pyiacsun.linalg.rpcaRow" title="Permalink to this headline">¶</a></h2>
+<p>Summary</p>
+<dl class="function">
+<dt id="pyiacsun.linalg.rpcaRow.rpcaRow">
+<code class="descclassname">pyiacsun.linalg.rpcaRow.</code><code class="descname">rpcaRow</code><span class="sig-paren">(</span><em>X</em>, <em>lamb</em>, <em>Omega=None</em>, <em>tolerance=1e-05</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.linalg.rpcaRow.rpcaRow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the decomposition of the matrix X on the sum of two components</p>
+<p>X = L + S</p>
+<p>where L is low-rank and S is row-sparse. It is based on the paper &#8220;Robust PCA via Outlier Pursuit&#8221; (Xu et al. 2012)
+<a class="reference external" href="http://guppy.mpe.nus.edu.sg/~mpexuh/papers/OutlierPursuit-TIT.pdf">http://guppy.mpe.nus.edu.sg/~mpexuh/papers/OutlierPursuit-TIT.pdf</a>
+<a class="reference external" href="http://guppy.mpe.nus.edu.sg/~mpexuh/publication.html">http://guppy.mpe.nus.edu.sg/~mpexuh/publication.html</a></p>
+<p class="rubric">Example</p>
+<p>nl = 50
+nobs = 200
+rank = 3
+ncorr = 12</p>
+<p>x = np.random.randn(nobs,rank)
+y = np.random.randn(rank,nl)</p>
+<p>LObs = x.dot(y)
+CObs = np.zeros_like(LObs)</p>
+<p>ind = np.random.permutation(nobs)
+for i in range(ncorr):</p>
+<blockquote>
+<div>CObs[ind[i],:] = np.random.randn(nl)</div></blockquote>
+<p>MObs = LObs + CObs #+ 1e-4 * np.random.randn(nobs, nl)</p>
+<p>L, S = rpcaRow(MObs, 0.35)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>X</strong> (<em>float</em>) &#8211; nxm matrix</li>
+<li><strong>lamb</strong> (<em>float</em>) &#8211; regularization parameter</li>
+<li><strong>Omega</strong> (<em>float, optional</em>) &#8211; matrix of active elements of the matrix. If not passed, all elements are assumed to be observed</li>
+<li><strong>tolerance</strong> (<em>float, optional</em>) &#8211; tolerance</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">L (the low-rank component) and S (the row-sparse component)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.linalg">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyiacsun.linalg" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">pyiacsun</a></h1>
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=aasensio&repo=pyiacsun&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+<h3>Navigation</h3>
+<ul class="simple">
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, A. Asensio Ramos.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/source/pyiacsun.linalg.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

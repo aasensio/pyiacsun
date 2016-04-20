@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyiacsun.util package &mdash; pyiacsun 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyiacsun 1.0 documentation" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pyiacsun-util-package">
+<h1>pyiacsun.util package<a class="headerlink" href="#pyiacsun-util-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.util.blink">
+<span id="pyiacsun-util-blink-module"></span><h2>pyiacsun.util.blink module<a class="headerlink" href="#module-pyiacsun.util.blink" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.blink.blink">
+<code class="descclassname">pyiacsun.util.blink.</code><code class="descname">blink</code><span class="sig-paren">(</span><em>ima1</em>, <em>ima2</em>, <em>interval=250</em>, <em>fig=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.blink.blink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blink two images</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ima1</strong> (<em>float</em>) &#8211; first image</li>
+<li><strong>ima2</strong> (<em>float</em>) &#8211; second image</li>
+<li><strong>interval</strong> (<em>int, optional</em>) &#8211; time step to change from one to the other</li>
+<li><strong>fig</strong> (<em>TYPE, optional</em>) &#8211; optional figure handle to do the blinking in an existing figure</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">TYPE</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.contHSRA">
+<span id="pyiacsun-util-conthsra-module"></span><h2>pyiacsun.util.contHSRA module<a class="headerlink" href="#module-pyiacsun.util.contHSRA" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.contHSRA.contHSRA">
+<code class="descclassname">pyiacsun.util.contHSRA.</code><code class="descname">contHSRA</code><span class="sig-paren">(</span><em>wavelength</em>, <em>units='frequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.contHSRA.contHSRA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the continuum spectrum of the HSRA model, obtained as a 3rd degree polynomial fit. This gives
+a maximum error of 0.125%</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>wavelength</strong> (<em>float</em>) &#8211; wavelength in Angstrom</li>
+<li><strong>units</strong> (<em>str, optional</em>) &#8211; &#8216;frequency&#8217; or &#8216;wavelength&#8217; units</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">value of the continuum in frequency units</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.cursor">
+<span id="pyiacsun-util-cursor-module"></span><h2>pyiacsun.util.cursor module<a class="headerlink" href="#module-pyiacsun.util.cursor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyiacsun.util.cursor.cursor">
+<em class="property">class </em><code class="descclassname">pyiacsun.util.cursor.</code><code class="descname">cursor</code><span class="sig-paren">(</span><em>fig</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.cursor.cursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pyiacsun.util.cursor.cursor.click">
+<code class="descname">click</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.cursor.cursor.click" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.deriv">
+<span id="pyiacsun-util-deriv-module"></span><h2>pyiacsun.util.deriv module<a class="headerlink" href="#module-pyiacsun.util.deriv" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.deriv.deriv">
+<code class="descclassname">pyiacsun.util.deriv.</code><code class="descname">deriv</code><span class="sig-paren">(</span><em>xIn</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.deriv.deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DERIV function uses three-point (quadratic) Lagrangian interpolation to compute the derivative of an evenly-spaced or unevenly-spaced array of data.
+Given three neighboring points in your data with X coordinates [x0, x1, x2] and Y coordinates [y0, y1, y2], the three-point Lagrangian interpolation polynomial is defined as:
+y = y0(x – x1)(x – x2)/[(x0 – x1)(x0 – x2)] +
+y1(x – x0)(x – x2)/[(x1 – x0)(x1 – x2)] +</p>
+<blockquote>
+<div>y2(x – x0)(x – x1)/[(x2 – x0)(x2 – x1)]</div></blockquote>
+<dl class="docutils">
+<dt>This can be rewritten as:</dt>
+<dd>y = y0(x – x1)(x – x2)/(x01x02) – y1(x – x0)(x – x2)/(x01x12) + y2(x – x0)(x – x1)/(x02x12)
+where x01 = x0 – x1, x02 = x0 – x2, and x12 = x1 – x2.</dd>
+<dt>Taking the derivative with respect to x:</dt>
+<dd>y&#8217; = y0(2x – x1 – x2)/(x01x02) – y1(2x – x0 – x2)/(x01x12) + y2(2x – x0 – x1)/(x02x12)</dd>
+<dt>Given a discrete set of X locations and Y values, the DERIV function then computes the derivative at all of the X locations. For example, for all of the X locations (except the first and last points), the derivative y&#8217; is computed by substituting in x = x1:</dt>
+<dd>y&#8217; = y0x12/(x01x02) + y1(1/x12 – 1/x01) – y2x01/(x02x12)</dd>
+<dt>The first point is computed at x = x0:</dt>
+<dd>y&#8217; = y0(x01 + x02)/(x01x02) – y1x02/(x01x12) + y2x01/(x02x12)</dd>
+<dt>The last point is computed at x = x2:</dt>
+<dd>y&#8217; = –y0x12/(x01x02) + y1x02/(x01x12) – y2(x02 + x12)/(x02x12)</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>xIn</strong> (<em>TYPE</em>) &#8211; x-axis</li>
+<li><strong>y</strong> (<em>TYPE</em>) &#8211; y-axis</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">derivatives computed along the first axis</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">TYPE</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.fvoigt">
+<span id="pyiacsun-util-fvoigt-module"></span><h2>pyiacsun.util.fvoigt module<a class="headerlink" href="#module-pyiacsun.util.fvoigt" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.fvoigt.fvoigt">
+<code class="descclassname">pyiacsun.util.fvoigt.</code><code class="descname">fvoigt</code><span class="sig-paren">(</span><em>damp</em>, <em>vv</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.fvoigt.fvoigt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract spectral data from the Kitt Peak FTS-Spectral-Atlas
+as provided by H. Neckel, Hamburg.</p>
+<dl class="docutils">
+<dt>INPUTS:</dt>
+<dd>DAMP: A scalar with the damping parameter
+VV: Wavelength axis usually in Doppler units.</dd>
+<dt>OUTPUTS:</dt>
+<dd>H: Voigt function
+F: Faraday-Voigt function</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>A rational approximation to the complex error function is used
+after Hui, Armstrong, and Wray(1978, JQSRT 19, 509). H and F are
+the real and imaginary parts of such function, respectively.
+The procedure is inspired on that in SIR (Ruiz Cobo &amp; del Toro
+Iniesta 1992, ApJ 398, 385). On its turn, that routine was taken
+from modifications by A. Wittmann (1986) to modifications by S.K.
+Solanki (1985) to an original FORTRAN routine written by J.W. Harvey
+and A. Nordlund.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.gauss_weights">
+<span id="pyiacsun-util-gauss-weights-module"></span><h2>pyiacsun.util.gauss_weights module<a class="headerlink" href="#module-pyiacsun.util.gauss_weights" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.gauss_weights.gauss_weights">
+<code class="descclassname">pyiacsun.util.gauss_weights.</code><code class="descname">gauss_weights</code><span class="sig-paren">(</span><em>interval</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.gauss_weights.gauss_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the location and weights for the integration of a function using the Gauss-Legendre function</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>interval</strong> (<em>tuple</em>) &#8211; range of integration</li>
+<li><strong>n</strong> (<em>int</em>) &#8211; order of the integration</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">position and weightrs</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">x, w</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.imviewer">
+<span id="pyiacsun-util-imviewer-module"></span><h2>pyiacsun.util.imviewer module<a class="headerlink" href="#module-pyiacsun.util.imviewer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyiacsun.util.imviewer.imviewer">
+<em class="property">class </em><code class="descclassname">pyiacsun.util.imviewer.</code><code class="descname">imviewer</code><span class="sig-paren">(</span><em>imagen</em>, <em>stokeim=0</em>, <em>stokeplot=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.imviewer.imviewer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pyiacsun.util.imviewer.imviewer.click">
+<code class="descname">click</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.imviewer.imviewer.click" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>What to do, if a click on the figure happens:</dt>
+<dd><ol class="first last arabic simple">
+<li>Check which axis</li>
+<li>Get data coord&#8217;s.</li>
+<li>Plot resulting data.</li>
+<li>Update Figure</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.intAllen">
+<span id="pyiacsun-util-intallen-module"></span><h2>pyiacsun.util.intAllen module<a class="headerlink" href="#module-pyiacsun.util.intAllen" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.intAllen.intAllen">
+<code class="descclassname">pyiacsun.util.intAllen.</code><code class="descname">intAllen</code><span class="sig-paren">(</span><em>wavelength</em>, <em>mu</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.intAllen.intAllen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the intensity at a given wavelength and mu as tabulated by Allen</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.lineMin">
+<span id="pyiacsun-util-linemin-module"></span><h2>pyiacsun.util.lineMin module<a class="headerlink" href="#module-pyiacsun.util.lineMin" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.lineMin.lineMin">
+<code class="descclassname">pyiacsun.util.lineMin.</code><code class="descname">lineMin</code><span class="sig-paren">(</span><em>spectrum</em>, <em>x=None</em>, <em>findMax=False</em>, <em>estimated=None</em>, <em>rangeAround=None</em>, <em>rangeFit=3</em>, <em>order=4</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.lineMin.lineMin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the minimum of a spectral line with subpixel precision</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>spectrum</strong> (<em>TYPE</em>) &#8211; spectrum containing spectral lines</li>
+<li><strong>x</strong> (<em>float, optional</em>) &#8211; x-axis</li>
+<li><strong>findMax</strong> (<em>bool, optional</em>) &#8211; by default, it finds the minimum. If this is set, it detects the maximum</li>
+<li><strong>estimated</strong> (<em>TYPE, optional</em>) &#8211; first estimate of the position index in the spectrum array where (default: size/2)</li>
+<li><strong>rangeAround</strong> (<em>TYPE, optional</em>) &#8211; range around the estimated position where the minimum is seeked (default: size/4)</li>
+<li><strong>rangeFit</strong> (<em>int, optional</em>) &#8211; once a crude estimation is found, range around this estimation that is used for the refinement (default: 3)</li>
+<li><strong>order</strong> (<em>int, optional</em>) &#8211; order of the polynomial used for refinement (default: 4)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Description</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">TYPE</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Deleted Args:</dt>
+<dd>x (TYPE, optional): Description</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.nearest">
+<span id="pyiacsun-util-nearest-module"></span><h2>pyiacsun.util.nearest module<a class="headerlink" href="#module-pyiacsun.util.nearest" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.nearest.nearest">
+<code class="descclassname">pyiacsun.util.nearest.</code><code class="descname">nearest</code><span class="sig-paren">(</span><em>array</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.nearest.nearest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the index of the array that is close to value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>array</strong> (<em>array</em>) &#8211; array to be tested</li>
+<li><strong>value</strong> (<em>float</em>) &#8211; value to be tested</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">index</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="pyiacsun-util-pb0r-module">
+<h2>pyiacsun.util.pb0r module<a class="headerlink" href="#pyiacsun-util-pb0r-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="pyiacsun-util-prof-module">
+<h2>pyiacsun.util.prof module<a class="headerlink" href="#pyiacsun-util-prof-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="pyiacsun-util-prof4-module">
+<h2>pyiacsun.util.prof4 module<a class="headerlink" href="#pyiacsun-util-prof4-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.util.progressbar">
+<span id="pyiacsun-util-progressbar-module"></span><h2>pyiacsun.util.progressbar module<a class="headerlink" href="#module-pyiacsun.util.progressbar" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.progressbar.progressbar">
+<code class="descclassname">pyiacsun.util.progressbar.</code><code class="descname">progressbar</code><span class="sig-paren">(</span><em>current</em>, <em>total</em>, <em>text=None</em>, <em>width=30</em>, <em>end=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.progressbar.progressbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Progress bar</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>current</strong> (<em>float</em>) &#8211; current value of the bar</li>
+<li><strong>total</strong> (<em>float</em>) &#8211; total of the bar</li>
+<li><strong>text</strong> (<em>string</em>) &#8211; additional text to show</li>
+<li><strong>width</strong> (<em>int, optional</em>) &#8211; number of spaces of the bar</li>
+<li><strong>end</strong> (<em>bool, optional</em>) &#8211; end character</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.rebin">
+<span id="pyiacsun-util-rebin-module"></span><h2>pyiacsun.util.rebin module<a class="headerlink" href="#module-pyiacsun.util.rebin" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.rebin.rebin">
+<code class="descclassname">pyiacsun.util.rebin.</code><code class="descname">rebin</code><span class="sig-paren">(</span><em>a</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.rebin.rebin" title="Permalink to this definition">¶</a></dt>
+<dd><p>rebin ndarray data into a smaller ndarray of the same rank whose dimensions
+are factors of the original dimensions. eg. An array with 6 columns and 4 rows
+can be reduced to have 6,3,2 or 1 columns and 4,2 or 1 rows.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>a</strong> (<em>array</em>) &#8211; array to be rebinned</li>
+<li><strong>*args</strong> &#8211; dimensions to rebin the array to</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>example usages:
+&gt;&gt;&gt; a=rand(6,4); b=rebin(a,3,2)
+&gt;&gt;&gt; a=rand(6); b=rebin(a,2)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.util.splinequad">
+<span id="pyiacsun-util-splinequad-module"></span><h2>pyiacsun.util.splinequad module<a class="headerlink" href="#module-pyiacsun.util.splinequad" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.util.splinequad.splinequad">
+<code class="descclassname">pyiacsun.util.splinequad.</code><code class="descname">splinequad</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.util.splinequad.splinequad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the quadrature weights when a function is interpolated with cubic splines
+The function retuns the values of the weights for a function that is evaluated in the locations x,
+so that</p>
+<p>int(f(x),x=a..b) = sum(w*f(x)), with x a partition of the interval [a,b]</p>
+<p>It is based on the formulae developed in &#8220;The use of quadrature weights in cubic spline integration&#8221;, C. M. Leung, R. W. Quan
+International Journal of Mathematical Education in Science and Technology, Volume 15, Issue 3, 1984
+<a class="reference external" href="http://www.tandfonline.com/doi/abs/10.1080/0020739840150306">http://www.tandfonline.com/doi/abs/10.1080/0020739840150306</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>array</em>) &#8211; abscissas where the function is evaluated</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">array with the weights</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="pyiacsun-util-tv-module">
+<h2>pyiacsun.util.tv module<a class="headerlink" href="#pyiacsun-util-tv-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.util">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyiacsun.util" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">pyiacsun</a></h1>
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=aasensio&repo=pyiacsun&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+<h3>Navigation</h3>
+<ul class="simple">
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, A. Asensio Ramos.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/source/pyiacsun.util.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

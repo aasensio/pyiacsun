@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyiacsun.radtran package &mdash; pyiacsun 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyiacsun 1.0 documentation" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pyiacsun-radtran-package">
+<h1>pyiacsun.radtran package<a class="headerlink" href="#pyiacsun-radtran-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.radtran.LTEfull">
+<span id="pyiacsun-radtran-ltefull-module"></span><h2>pyiacsun.radtran.LTEfull module<a class="headerlink" href="#module-pyiacsun.radtran.LTEfull" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.radtran.LTEfull.initLTE">
+<code class="descclassname">pyiacsun.radtran.LTEfull.</code><code class="descname">initLTE</code><span class="sig-paren">(</span><em>atmos</em>, <em>lines</em>, <em>wavelengthAxis</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.radtran.LTEfull.initLTE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the LTE synthesis module using nodes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>atmos</strong> (<em>float</em>) &#8211; array of size (ndepth x 7) defining the reference atmosphere. The columns are
+log(tau)   T [K]   vmic [km/s]   vmac [km/s]   B [G]    thetaB [deg]    phiB [deg]</li>
+<li><strong>lines</strong> (<em>float</em>) &#8211; array of size (nlines x 11) defining the information for the spectral lines. The columns are
+lambda0 [A]    Element    ionization state    log(gf)     Elow [cm^-1]    Lande_up    Lande_low   Jup   Jlow   sigmaABO   alphaABO</li>
+<li><strong>wavelengthAxis</strong> (<em>float</em>) &#8211; array of length nlambda that sets the wavelength axis</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.radtran.LTEfull.synthLTE">
+<code class="descclassname">pyiacsun.radtran.LTEfull.</code><code class="descname">synthLTE</code><span class="sig-paren">(</span><em>referenceAtmos</em>, <em>variablesRF=None</em>, <em>responseFunction=False</em>, <em>deltaRT=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.radtran.LTEfull.synthLTE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synthesize the Stokes profiles perturbing the reference atmosphere using nodes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>referenceAtmos</strong> (<em>float</em>) &#8211; array of size (ndepth x 7) defining the reference atmosphere. The columns are
+log(tau)   T [K]   vmic [km/s]   vmac [km/s]   B [G]    thetaB [deg]    phiB [deg]</li>
+<li><strong>variablesRF</strong> (<em>optional, list</em>) &#8211; a list containing (0/1) indicating the variables for which the response functions are obtained</li>
+<li><strong>responseFunction</strong> (<em>bool, optional</em>) &#8211; return the response functions</li>
+<li><strong>deltaRT</strong> (<em>float, optional</em>) &#8211; variation of the parameters when computing the response functions</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Stokes parameters [4 x nwavelength]
+float: continuum value [nwavelength]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.radtran.LTEnodes">
+<span id="pyiacsun-radtran-ltenodes-module"></span><h2>pyiacsun.radtran.LTEnodes module<a class="headerlink" href="#module-pyiacsun.radtran.LTEnodes" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.radtran.LTEnodes.initLTENodes">
+<code class="descclassname">pyiacsun.radtran.LTEnodes.</code><code class="descname">initLTENodes</code><span class="sig-paren">(</span><em>atmos</em>, <em>lines</em>, <em>wavelengthAxis</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.radtran.LTEnodes.initLTENodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the LTE synthesis module using nodes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>atmos</strong> (<em>float</em>) &#8211; array of size (ndepth x 7) defining the reference atmosphere. The columns are
+log(tau)   T [K]   vmic [km/s]   vmac [km/s]   B [G]    thetaB [deg]    phiB [deg]</li>
+<li><strong>lines</strong> (<em>float</em>) &#8211; array of size (nlines x 11) defining the information for the spectral lines. The columns are
+lambda0 [A]    Element    ionization state    log(gf)     Elow [cm^-1]    Lande_up    Lande_low   Jup   Jlow   sigmaABO   alphaABO</li>
+<li><strong>wavelengthAxis</strong> (<em>float</em>) &#8211; array of length nlambda that sets the wavelength axis</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.radtran.LTEnodes.nodePositions">
+<code class="descclassname">pyiacsun.radtran.LTEnodes.</code><code class="descname">nodePositions</code><span class="sig-paren">(</span><em>logTau</em>, <em>nodes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.radtran.LTEnodes.nodePositions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.radtran.LTEnodes.synthLTENodes">
+<code class="descclassname">pyiacsun.radtran.LTEnodes.</code><code class="descname">synthLTENodes</code><span class="sig-paren">(</span><em>referenceAtmos</em>, <em>nodes</em>, <em>responseFunction=False</em>, <em>deltaRT=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.radtran.LTEnodes.synthLTENodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synthesize the Stokes profiles perturbing the reference atmosphere using nodes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>referenceAtmos</strong> (<em>float</em>) &#8211; array of size (ndepth x 7) defining the reference atmosphere. The columns are
+log(tau)   T [K]   vmic [km/s]   vmac [km/s]   B [G]    thetaB [deg]    phiB [deg]</li>
+<li><strong>nodes</strong> (<em>list</em>) &#8211; <p>a list containing six sets of nodes for each physical variable. Depending on the length of each
+sublist, the perturbation will be applied using different functional forms:</p>
+<blockquote>
+<div><ul>
+<li>constant if only one node is used</li>
+<li>linear perturbing the values at the extremes if two nodes are used</li>
+<li>polynomial at equispaced positions in the log(tau) axis if more than 2 nodes are used</li>
+</ul>
+</div></blockquote>
+</li>
+<li><strong>responseFunction</strong> (<em>bool, optional</em>) &#8211; return the response functions</li>
+<li><strong>deltaRT</strong> (<em>float, optional</em>) &#8211; variation of the parameters when computing the response functions</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Stokes parameters [4 x nwavelength]
+float: continuum value [nwavelength]
+float: modified atmosphere [ndepth x 7]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="pyiacsun-radtran-pysir-module">
+<h2>pyiacsun.radtran.pySIR module<a class="headerlink" href="#pyiacsun-radtran-pysir-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.radtran.voigt">
+<span id="pyiacsun-radtran-voigt-module"></span><h2>pyiacsun.radtran.voigt module<a class="headerlink" href="#module-pyiacsun.radtran.voigt" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.radtran.voigt.voigt">
+<code class="descclassname">pyiacsun.radtran.voigt.</code><code class="descname">voigt</code><span class="sig-paren">(</span><em>l</em>, <em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.radtran.voigt.voigt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.radtran">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyiacsun.radtran" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">pyiacsun</a></h1>
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=aasensio&repo=pyiacsun&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+<h3>Navigation</h3>
+<ul class="simple">
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, A. Asensio Ramos.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/source/pyiacsun.radtran.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

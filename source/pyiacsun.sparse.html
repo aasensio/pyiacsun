@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyiacsun.sparse package &mdash; pyiacsun 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyiacsun 1.0 documentation" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pyiacsun-sparse-package">
+<h1>pyiacsun.sparse package<a class="headerlink" href="#pyiacsun-sparse-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyiacsun.sparse.proxes.html">pyiacsun.sparse.proxes package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes.html#module-pyiacsun.sparse.proxes.prox_l0">pyiacsun.sparse.proxes.prox_l0 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes.html#module-pyiacsun.sparse.proxes.prox_l0Largest">pyiacsun.sparse.proxes.prox_l0Largest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes.html#module-pyiacsun.sparse.proxes.prox_l1">pyiacsun.sparse.proxes.prox_l1 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes.html#module-pyiacsun.sparse.proxes.prox_l1General">pyiacsun.sparse.proxes.prox_l1General module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes.html#module-pyiacsun.sparse.proxes.prox_l2General">pyiacsun.sparse.proxes.prox_l2General module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes.html#module-pyiacsun.sparse.proxes.prox_xlim">pyiacsun.sparse.proxes.prox_xlim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes.html#module-pyiacsun.sparse.proxes">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html">pyiacsun.sparse.proxes_rank1 package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html#module-pyiacsun.sparse.proxes_rank1.prox_rank1_Rplus">pyiacsun.sparse.proxes_rank1.prox_rank1_Rplus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html#module-pyiacsun.sparse.proxes_rank1.prox_rank1_box">pyiacsun.sparse.proxes_rank1.prox_rank1_box module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html#module-pyiacsun.sparse.proxes_rank1.prox_rank1_generic">pyiacsun.sparse.proxes_rank1.prox_rank1_generic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html#module-pyiacsun.sparse.proxes_rank1.prox_rank1_hinge">pyiacsun.sparse.proxes_rank1.prox_rank1_hinge module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html#module-pyiacsun.sparse.proxes_rank1.prox_rank1_l0">pyiacsun.sparse.proxes_rank1.prox_rank1_l0 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html#module-pyiacsun.sparse.proxes_rank1.prox_rank1_l1">pyiacsun.sparse.proxes_rank1.prox_rank1_l1 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html#module-pyiacsun.sparse.proxes_rank1.prox_rank1_l1pos">pyiacsun.sparse.proxes_rank1.prox_rank1_l1pos module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html#module-pyiacsun.sparse.proxes_rank1.prox_rank1_linf">pyiacsun.sparse.proxes_rank1.prox_rank1_linf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.proxes_rank1.html#module-pyiacsun.sparse.proxes_rank1">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyiacsun.sparse.smooth.html">pyiacsun.sparse.smooth package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.smooth.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.smooth.html#module-pyiacsun.sparse.smooth.normSquared">pyiacsun.sparse.smooth.normSquared module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyiacsun.sparse.smooth.html#module-pyiacsun.sparse.smooth">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.sparse.alps">
+<span id="pyiacsun-sparse-alps-module"></span><h2>pyiacsun.sparse.alps module<a class="headerlink" href="#module-pyiacsun.sparse.alps" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.sparse.alps.alpsLowRank">
+<code class="descclassname">pyiacsun.sparse.alps.</code><code class="descname">alpsLowRank</code><span class="sig-paren">(</span><em>y</em>, <em>A</em>, <em>At</em>, <em>size</em>, <em>k</em>, <em>tol=0.001</em>, <em>maxIter=500</em>, <em>frequencyVerbose=20</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.alps.alpsLowRank" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recover the low-rank matrix L such that y=A(L)+error</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>y</strong> (<em>real</em>) &#8211; measurements</li>
+<li><strong>A</strong> (<em>function</em>) &#8211; forward operator A</li>
+<li><strong>At</strong> (<em>function</em>) &#8211; adjoint operator At</li>
+<li><strong>size</strong> (<em>int tuple</em>) &#8211; tuple defining the size of the matrix to recover (m,n)</li>
+<li><strong>k</strong> (<em>int</em>) &#8211; rank of the matrix to search for</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">estimation of the low-rank matrix</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">real array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="pyiacsun-sparse-amp-module">
+<h2>pyiacsun.sparse.amp module<a class="headerlink" href="#pyiacsun-sparse-amp-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.sparse.fasta">
+<span id="pyiacsun-sparse-fasta-module"></span><h2>pyiacsun.sparse.fasta module<a class="headerlink" href="#module-pyiacsun.sparse.fasta" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyiacsun.sparse.fasta.fasta">
+<em class="property">class </em><code class="descclassname">pyiacsun.sparse.fasta.</code><code class="descname">fasta</code><span class="sig-paren">(</span><em>A</em>, <em>At</em>, <em>f</em>, <em>gradf</em>, <em>g</em>, <em>proxg</em>, <em>x0</em>, <em>maxIter=1000</em>, <em>tol=0.001</em>, <em>verbose=False</em>, <em>recordObjective=False</em>, <em>recordIterates=False</em>, <em>adaptive=True</em>, <em>accelerate=False</em>, <em>restart=True</em>, <em>backtrack=True</em>, <em>stepsizeShrink=0.2</em>, <em>window=10</em>, <em>eps_r=1e-08</em>, <em>eps_n=1e-08</em>, <em>L=0.0</em>, <em>tau=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.fasta.fasta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pyiacsun.sparse.fasta.fasta.checkAdjoint">
+<code class="descname">checkAdjoint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.fasta.fasta.checkAdjoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if A and At are adjoint operators</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">error in the two inner products</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">TYPE</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.sparse.fasta.fasta.optimize">
+<code class="descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.fasta.fasta.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div>This method solves the problem
+minimize f(Ax)+g(x)</div></blockquote>
+<p>Where A is a matrix, f is differentiable, and both f and g are convex.
+The algorithm is an adaptive/accelerated forward-backward splitting.
+The user supplies function handles that evaluate &#8216;f&#8217; and &#8216;g&#8217;.  The user
+also supplies a function that evaluates the gradient of &#8216;f&#8217; and the
+proximal operator of &#8216;g&#8217;, which is given by</p>
+<blockquote>
+<div>proxg(z,t) = argmin t*g(x)+.5||x-z||^2.</div></blockquote>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>A</strong> (<em>TYPE</em>) &#8211; a function that returns A*x</li>
+<li><strong>At</strong> (<em>TYPE</em>) &#8211; a function that returns A&#8217;<a href="#id1"><span class="problematic" id="id2">*</span></a>x</li>
+<li><strong>f</strong> (<em>TYPE</em>) &#8211; a function of x that computes f</li>
+<li><strong>gradf</strong> (<em>TYPE</em>) &#8211; a function of x that computes the gradient of f at x</li>
+<li><strong>g</strong> (<em>TYPE</em>) &#8211; a function of x that computes g</li>
+<li><strong>proxg</strong> (<em>TYPE</em>) &#8211; a function of x and t that computes the proximal operator of g with step size t</li>
+<li><strong>x0</strong> (<em>TYPE</em>) &#8211; initial guess</li>
+<li><strong>options</strong> (<em>TYPE</em>) &#8211; dictionary</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.sparse.iht">
+<span id="pyiacsun-sparse-iht-module"></span><h2>pyiacsun.sparse.iht module<a class="headerlink" href="#module-pyiacsun.sparse.iht" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.sparse.iht.AIHT">
+<code class="descclassname">pyiacsun.sparse.iht.</code><code class="descname">AIHT</code><span class="sig-paren">(</span><em>x</em>, <em>A</em>, <em>AT</em>, <em>m</em>, <em>M</em>, <em>thresh</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.iht.AIHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accelerated iterative Hard thresholding algorithm that keeps exactly M elements
+in each iteration. This algorithm includes an additional double
+overrelaxation step that significantly improves convergence speed without
+destroying any of the theoretical guarantees of the IHT algorithm
+detrived in [1], [2] and [3].</p>
+<p>This algorithm is used to solve the problem A*z=x</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd>x: observation vector to be decomposed
+A: it can be a (nxm) matrix that gives the effect of the forward matrix A on a vector or an operator that does the same
+AT: it can be a (nxm) matrix that gives the effect of the backward matrix A.T on a vector or an operator that does the same
+m: length of the solution vector s
+M: number of non-zero elements to keep in each iteration
+thresh: stopping criterion</dd>
+<dt>Outputs:</dt>
+<dd>s: solution vector
+err_mse: vector containing mse of approximation error for each iteration</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.sparse.iswt">
+<span id="pyiacsun-sparse-iswt-module"></span><h2>pyiacsun.sparse.iswt module<a class="headerlink" href="#module-pyiacsun.sparse.iswt" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.sparse.iswt.iswt">
+<code class="descclassname">pyiacsun.sparse.iswt.</code><code class="descname">iswt</code><span class="sig-paren">(</span><em>coefficients</em>, <em>wavelet</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.iswt.iswt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input parameters:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>coefficients</dt>
+<dd>approx and detail coefficients, arranged in level value
+exactly as output from swt:
+e.g. [(cA1, cD1), (cA2, cD2), ..., (cAn, cDn)]</dd>
+<dt>wavelet</dt>
+<dd>Either the name of a wavelet or a Wavelet object</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.sparse.iuwt">
+<span id="pyiacsun-sparse-iuwt-module"></span><h2>pyiacsun.sparse.iuwt module<a class="headerlink" href="#module-pyiacsun.sparse.iuwt" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.sparse.iuwt.iuwt_decomposition">
+<code class="descclassname">pyiacsun.sparse.iuwt.</code><code class="descname">iuwt_decomposition</code><span class="sig-paren">(</span><em>in1</em>, <em>scale_count</em>, <em>scale_adjust</em>, <em>store_smoothed</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.iuwt.iuwt_decomposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function calls the a trous algorithm code to decompose the input into its wavelet coefficients. This is
+the isotropic undecimated wavelet transform implemented for a single CPU core.</p>
+<p>INPUTS:
+in1                 (no default):   Array on which the decomposition is to be performed.
+scale_count         (no default):   Maximum scale to be considered.
+scale_adjust        (default=0):    Adjustment to scale value if first scales are of no interest.
+store_smoothed      (default=False):Boolean specifier for whether the smoothed image is stored or not.</p>
+<p>OUTPUTS:
+detail_coeffs                       Array containing the detail coefficients.
+C0                  (optional):     Array containing the smoothest version of the input.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.iuwt.iuwt_recomposition">
+<code class="descclassname">pyiacsun.sparse.iuwt.</code><code class="descname">iuwt_recomposition</code><span class="sig-paren">(</span><em>in1</em>, <em>scale_adjust</em>, <em>smoothed_array</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.iuwt.iuwt_recomposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function calls the a trous algorithm code to recompose the input into a single array. This is the
+implementation of the isotropic undecimated wavelet transform recomposition for a single CPU core.</p>
+<p>INPUTS:
+in1             (no default):   Array containing wavelet coefficients.
+scale_adjust    (no default):   Indicates the number of truncated array pages.
+smoothed_array  (default=None): For a complete inverse transform, this must be the smoothest approximation.</p>
+<p>OUTPUTS:
+recomposition                   Array containing the reconstructed image.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.iuwt.iuwt_threshold">
+<code class="descclassname">pyiacsun.sparse.iuwt.</code><code class="descname">iuwt_threshold</code><span class="sig-paren">(</span><em>in1</em>, <em>sigma_level=4</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.iuwt.iuwt_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function performs the thresholding of the values in array in1 based on the estimated standard deviation
+given by the MAD (median absolute deviation) estimator about zero.
+INPUTS:
+in1             (no default):   The array which is to be thresholded.
+sigma_level     (no default):   The number of estimated deviations at which thresholding is to occur.
+OUTPUTS:
+out1                            An thresholded version of in1.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.iuwt.ser_a_trous">
+<code class="descclassname">pyiacsun.sparse.iuwt.</code><code class="descname">ser_a_trous</code><span class="sig-paren">(</span><em>C0</em>, <em>filter</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.iuwt.ser_a_trous" title="Permalink to this definition">¶</a></dt>
+<dd><p>The following is a serial implementation of the a trous algorithm. Accepts the following parameters:</p>
+<p>INPUTS:
+filter      (no default):   The filter-bank which is applied to the components of the transform.
+C0          (no default):   The current array on which filtering is to be performed.
+scale       (no default):   The scale for which the decomposition is being carried out.</p>
+<p>OUTPUTS:
+C1                          The result of applying the a trous algorithm to the input.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.sparse.wavelet">
+<span id="pyiacsun-sparse-wavelet-module"></span><h2>pyiacsun.sparse.wavelet module<a class="headerlink" href="#module-pyiacsun.sparse.wavelet" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.sparse.wavelet.contiguous_to_structured">
+<code class="descclassname">pyiacsun.sparse.wavelet.</code><code class="descname">contiguous_to_structured</code><span class="sig-paren">(</span><em>contiguous_coefs</em>, <em>levels=inf</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.wavelet.contiguous_to_structured" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert from continguous array to a structured format (identical to the one used in PyWavelets).</p>
+<p>Works for both 1D and 2D coefficients.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>contiguous_coefs</strong> (<em>ndarray</em>) &#8211; Coefficients as returned by our wavelet functions.</li>
+<li><strong>levels</strong> (<em>int, optional</em>) &#8211; If you don&#8217;t want all levels, you can set this value to specify how many you want. Notice that this
+refers to levels of <cite>wavelet</cite> coefficients, which means that the scaling coefficient is not included and
+will always be returned, even if <cite>levels</cite> is set to zero.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.wavelet.daubechies_factory">
+<code class="descclassname">pyiacsun.sparse.wavelet.</code><code class="descname">daubechies_factory</code><span class="sig-paren">(</span><em>shape</em>, <em>wavelet='db2'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.wavelet.daubechies_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a forward and an inverse discrete wavelet transform function.</p>
+<p>The function is specialized for a specific size and wavelet.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><span class="xref std std-ref">wavelet2d</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shape</strong> (<em>tuple</em>) &#8211; A tuple describing the size of the input, for instance <code class="docutils literal"><span class="pre">(32,</span> <span class="pre">32)</span></code>. Values must be powers of two.</li>
+<li><strong>wavelet</strong> (<em>str</em>) &#8211; Type of wavelet described as a string. Supported values are <code class="docutils literal"><span class="pre">'db1'</span></code>, <code class="docutils literal"><span class="pre">'db2'</span></code>, ... <code class="docutils literal"><span class="pre">'db20'</span></code>. What is called, for instance, <cite>db3</cite> is what is generally called the D6 wavelet (since it uses a kernel of size 6). The string <code class="docutils literal"><span class="pre">'haar'</span></code> is a synonym for <code class="docutils literal"><span class="pre">'db1'</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><strong>wavedec2</strong> (<em>func(A[, levels])</em>) &#8211; Returns a function that takes an argument, <cite>A</cite>, input data that must be of the size specified above. It also takes an optional argument <cite>levels</cite>, where you can specify how many coefficient levels you plan to use. It will return an array with the coefficients of shape <code class="docutils literal"><span class="pre">(2**levels,</span> <span class="pre">2**levels)</span></code>.</li>
+<li><strong>waverec2</strong> (<em>func(coefs)</em>) &#8211; Returns a function that takes a single argument, <cite>coefs</cite>, the coefficients to use to reconstruct the spatial information.</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">amitgroup</span> <span class="k">as</span> <span class="nn">ag</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">amitgroup.util.wavelet</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">face</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">load_example</span><span class="p">(</span><span class="s1">&#39;faces&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>To compress a face and then inspect the results, let&#8217;s first create the transform functions:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wavedec2</span><span class="p">,</span> <span class="n">waverec2</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">wavelet</span><span class="o">.</span><span class="n">daubechies_factory</span><span class="p">(</span><span class="n">face</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s1">&#39;db8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And then deconstruct a face to coefficients and the reconstruct it again. Since we only used 4 coefficient levels, information will be lost.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">new_face</span> <span class="o">=</span> <span class="n">waverec2</span><span class="p">(</span><span class="n">wavedec2</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ag</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">images</span><span class="p">([</span><span class="n">face</span><span class="p">,</span> <span class="n">new_face</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.wavelet.smart_deflatten">
+<code class="descclassname">pyiacsun.sparse.wavelet.</code><code class="descname">smart_deflatten</code><span class="sig-paren">(</span><em>flatcoefs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.wavelet.smart_deflatten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverse function of <a class="reference internal" href="#pyiacsun.sparse.wavelet.smart_flatten" title="pyiacsun.sparse.wavelet.smart_flatten"><code class="xref py py-func docutils literal"><span class="pre">smart_flatten()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flatcoefs</strong> (<em>ndarray</em>) &#8211; Flat array of coefficients returned by <a class="reference internal" href="#pyiacsun.sparse.wavelet.smart_flatten" title="pyiacsun.sparse.wavelet.smart_flatten"><code class="xref py py-func docutils literal"><span class="pre">smart_flatten()</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.wavelet.smart_flatten">
+<code class="descclassname">pyiacsun.sparse.wavelet.</code><code class="descname">smart_flatten</code><span class="sig-paren">(</span><em>coefficients</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.wavelet.smart_flatten" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flattens 2D coefficients in a smart way, so that all coefficients levels are grouped into contiguous blocks, starting from the low-frequency coefficients going to the high-frequency ones.</p>
+<p>Notice that 1D coefficients are already flat and sorted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>coefficients</strong> (<em>ndarray</em>) &#8211; Wavelet coefficients returned by <a class="reference internal" href="#pyiacsun.sparse.wavelet.wavedec2" title="pyiacsun.sparse.wavelet.wavedec2"><code class="xref py py-func docutils literal"><span class="pre">wavedec2()</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.wavelet.structured_to_contiguous">
+<code class="descclassname">pyiacsun.sparse.wavelet.</code><code class="descname">structured_to_contiguous</code><span class="sig-paren">(</span><em>structured_coefs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.wavelet.structured_to_contiguous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a structured list-of-tuples-of-arrays-of-coefficients to a contiguous block.</p>
+<p>The input format follows <a class="reference external" href="http://www.pybytes.com/pywavelets/">PyWavelets</a>.</p>
+<p>Works for both 1D and 2D coefficients.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>structured_coefs</strong> (<em>list</em>) &#8211; List of coefficients.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.wavelet.wavedec">
+<code class="descclassname">pyiacsun.sparse.wavelet.</code><code class="descname">wavedec</code><span class="sig-paren">(</span><em>A</em>, <em>wavelet='db2'</em>, <em>levels=inf</em>, <em>length=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.wavelet.wavedec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a 1D wavelet decomposition (forward transform).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function runs <a class="reference internal" href="#pyiacsun.sparse.wavelet.daubechies_factory" title="pyiacsun.sparse.wavelet.daubechies_factory"><code class="xref py py-func docutils literal"><span class="pre">daubechies_factory()</span></code></a> for you and caches the value. This means that first time you call it,
+performance will be slower than expected. You will also incur a dictionary lookup, which might cost you 100 ns.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><span class="xref std std-ref">wavelet1d</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>A</strong> (<em>ndarray</em>) &#8211; 1D input data. Length must be powers of two.</li>
+<li><strong>wavelet</strong> (<em>str</em>) &#8211; Wavelet type. See <a class="reference internal" href="#pyiacsun.sparse.wavelet.daubechies_factory" title="pyiacsun.sparse.wavelet.daubechies_factory"><code class="xref py py-func docutils literal"><span class="pre">daubechies_factory()</span></code></a>.</li>
+<li><strong>levels</strong> (<em>int</em>) &#8211; Specify how many levels of coefficients you plan to use. The default is <code class="docutils literal"><span class="pre">np.inf</span></code>, which will default to the maximum number possible, which will make the coefficient array the same length as <cite>A</cite>. Notice that <cite>levels</cite> is zero-based, in the sense that entering 0 is valid and will the transform operate only on the energy-level coefficient.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.wavelet.wavedec2">
+<code class="descclassname">pyiacsun.sparse.wavelet.</code><code class="descname">wavedec2</code><span class="sig-paren">(</span><em>A</em>, <em>wavelet='db2'</em>, <em>levels=inf</em>, <em>shape=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.wavelet.wavedec2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a 2D wavelet decomposition (forward transform).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function runs <a class="reference internal" href="#pyiacsun.sparse.wavelet.daubechies_factory" title="pyiacsun.sparse.wavelet.daubechies_factory"><code class="xref py py-func docutils literal"><span class="pre">daubechies_factory()</span></code></a> for you and caches the value. This means that first time you call it,
+performance will be slower than expected. You will also incur a dictionary lookup, which might cost you 100 ns.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><span class="xref std std-ref">wavelet2d</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>A</strong> (<em>ndarray</em>) &#8211; 2D input data. Shape must be powers of two and square.</li>
+<li><strong>wavelet</strong> (<em>str</em>) &#8211; Wavelet type. See <a class="reference internal" href="#pyiacsun.sparse.wavelet.daubechies_factory" title="pyiacsun.sparse.wavelet.daubechies_factory"><code class="xref py py-func docutils literal"><span class="pre">daubechies_factory()</span></code></a>.</li>
+<li><strong>levels</strong> (<em>int</em>) &#8211; Specify how many levels of coefficients you plan to use. The default is <code class="docutils literal"><span class="pre">np.inf</span></code>, which will default to the maximum number possible, which will make the coefficient array the same size as <cite>A</cite>. Notice that <cite>levels</cite> is zero-based, in the sense that entering 0 is valid and will the transform operate only on the energy-level coefficient.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.wavelet.waverec">
+<code class="descclassname">pyiacsun.sparse.wavelet.</code><code class="descname">waverec</code><span class="sig-paren">(</span><em>coefs</em>, <em>wavelet='db2'</em>, <em>length=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.wavelet.waverec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a 1D wavelet reconstruction (inverse transform).</p>
+<p>In <a class="reference internal" href="#pyiacsun.sparse.wavelet.wavedec" title="pyiacsun.sparse.wavelet.wavedec"><code class="xref py py-func docutils literal"><span class="pre">wavedec()</span></code></a>, you specify <cite>levels</cite>, which is not done in this function since it can be inferred from the shape of <cite>coefs</cite>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function runs <a class="reference internal" href="#pyiacsun.sparse.wavelet.daubechies_factory" title="pyiacsun.sparse.wavelet.daubechies_factory"><code class="xref py py-func docutils literal"><span class="pre">daubechies_factory()</span></code></a> for you and caches the value. This means that first time you call it,
+performance will be slower than expected. You will also incur a dictionary lookup, which might cost you 100 ns.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><span class="xref std std-ref">wavelet1d</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>A</strong> (<em>ndarray</em>) &#8211; 1D input data. Length must be powers of two and square.</li>
+<li><strong>wavelet</strong> (<em>str</em>) &#8211; Wavelet type. See <a class="reference internal" href="#pyiacsun.sparse.wavelet.daubechies_factory" title="pyiacsun.sparse.wavelet.daubechies_factory"><code class="xref py py-func docutils literal"><span class="pre">daubechies_factory()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyiacsun.sparse.wavelet.waverec2">
+<code class="descclassname">pyiacsun.sparse.wavelet.</code><code class="descname">waverec2</code><span class="sig-paren">(</span><em>coefs</em>, <em>wavelet='db2'</em>, <em>shape=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.wavelet.waverec2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a 2D wavelet reconstruction (inverse transform).</p>
+<p>In <a class="reference internal" href="#pyiacsun.sparse.wavelet.wavedec2" title="pyiacsun.sparse.wavelet.wavedec2"><code class="xref py py-func docutils literal"><span class="pre">wavedec2()</span></code></a>, you specify <cite>levels</cite>, which is not done in this function since it can be inferred from the shape of <cite>coefs</cite>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function runs <a class="reference internal" href="#pyiacsun.sparse.wavelet.daubechies_factory" title="pyiacsun.sparse.wavelet.daubechies_factory"><code class="xref py py-func docutils literal"><span class="pre">daubechies_factory()</span></code></a> for you and caches the value. This means that first time you call it,
+performance will be slower than expected. You will also incur a dictionary lookup, which might cost you 100 ns.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><span class="xref std std-ref">wavelet2d</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>A</strong> (<em>ndarray</em>) &#8211; 2D input data. Shape must be powers of two and square.</li>
+<li><strong>wavelet</strong> (<em>str</em>) &#8211; Wavelet type. See <a class="reference internal" href="#pyiacsun.sparse.wavelet.daubechies_factory" title="pyiacsun.sparse.wavelet.daubechies_factory"><code class="xref py py-func docutils literal"><span class="pre">daubechies_factory()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.sparse.zeroSR1">
+<span id="pyiacsun-sparse-zerosr1-module"></span><h2>pyiacsun.sparse.zeroSR1 module<a class="headerlink" href="#module-pyiacsun.sparse.zeroSR1" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.sparse.zeroSR1.zeroSR1">
+<code class="descclassname">pyiacsun.sparse.zeroSR1.</code><code class="descname">zeroSR1</code><span class="sig-paren">(</span><em>fcnGrad</em>, <em>h</em>, <em>prox</em>, <em>options</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.sparse.zeroSR1.zeroSR1" title="Permalink to this definition">¶</a></dt>
+<dd><p>ZEROSR1 Solves smooth + nonsmooth/constrained optimization problems
+xk,nit, stepSizes = zeroSR1(fcnGrad, h, prox_h, opts)</p>
+<p>This uses the zero-memory SR1 method (quasi-Newton) to solve:</p>
+<p>min_x f(x)  + h(x)</p>
+<p>where
+&#8216;fcnGrad&#8217; calculates f(x) and its gradient at x,
+and h(x) is a non-smooth term that can be infinite-valued (a constraint),
+so long as you present a function &#8216;prox&#8217; that computes diagional plus
+rank-1 projections. The &#8216;prox&#8217; function should accept at least three inputs:</p>
+<p>&#8216;h&#8217; is the non-smooth function, and prox_h is a function with
+3 or 4 inputs that returns:</p>
+<blockquote>
+<div>y = prox_h( x0 , d, v, )</div></blockquote>
+<dl class="docutils">
+<dt>where</dt>
+<dd>y = argmin_x h(x) + 1/2||x-x0||^2_B</dd>
+<dt>and</dt>
+<dd>B = inv(H) = inv( diag(D) + v*v&#8217; )</dd>
+</dl>
+<p>or, for the case with 4 arguments, y = prox_h( x0, d, v, sigma )
+then B = inv( diag(D) + sigma*v*v&#8217; ) where sigma should be +1 or -1
+The 4 argument case only matters when opts.SR1=true and opts.BB_type=1
+or opts.SR1=true, opts.BB_type=1 and opts.SR1_diagWeight &gt; 1</p>
+<p>If &#8216;prox_h&#8217; isn&#8217;t provided or is [], it defaults to the identity mapping, which corresponds
+to the case when h=0.</p>
+<p>&#8216;prox_h&#8217; is mean to be given by something like prox_rank1_l1
+e.g.,
+prox        = &#64;(x0,d,v) prox_rank1_l1( x0, d, v, lambda );
+or, for 4 arguments,
+prox        = &#64;(x0,d,v,varargin) prox_rank1_l1( x0, d, v, lambda, [], varargin{:} );</p>
+<p>&#8220;opts&#8221; is a dictionary with additional options</p>
+<p>opts = {&#8216;tol&#8217;: 1e-6, &#8216;grad_tol&#8217; : 1e-6, &#8216;nmax&#8217; : 1000, &#8216;N&#8217; : N, &#8216;L&#8217;: normQ, &#8216;verbose&#8217;: 25}</p>
+<ul class="simple">
+<li>&#8216;tol&#8217;: final tolerance in function</li>
+<li>&#8216;grad_tol&#8217;: final tolerance in gradient</li>
+<li>&#8216;nmax&#8217;: maximum number of iterations</li>
+<li>&#8216;N&#8217;: size of signal (optional)</li>
+<li>&#8216;x0&#8217;: initial estimation of the signal (optional)</li>
+<li>&#8216;L&#8217;: estimation of the Lipschitz constant (or diagonal scaling)</li>
+<li>&#8216;verbose&#8217;: step size for the printing (=0 no printing)</li>
+</ul>
+<p>Stephen Becker and Jalal Fadili, Nov 24 2011 &#8211; Dec 2012
+Copied from zeroSR1.m Dec 11 2012
+Feb 28 2014, unnesting all functions to make compatible with octave.</p>
+<p>See also proximalGradient.m</p>
+<p>Python version directly translated from Matlab version (including comments): A. Asensio Ramos (March 12, 2015)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.sparse">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyiacsun.sparse" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">pyiacsun</a></h1>
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=aasensio&repo=pyiacsun&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+<h3>Navigation</h3>
+<ul class="simple">
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, A. Asensio Ramos.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/source/pyiacsun.sparse.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

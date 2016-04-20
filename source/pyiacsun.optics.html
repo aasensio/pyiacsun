@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyiacsun.optics package &mdash; pyiacsun 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyiacsun 1.0 documentation" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pyiacsun-optics-package">
+<h1>pyiacsun.optics package<a class="headerlink" href="#pyiacsun-optics-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="pyiacsun-optics-wavefront-module">
+<h2>pyiacsun.optics.wavefront module<a class="headerlink" href="#pyiacsun-optics-wavefront-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.optics.zernike">
+<span id="pyiacsun-optics-zernike-module"></span><h2>pyiacsun.optics.zernike module<a class="headerlink" href="#module-pyiacsun.optics.zernike" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyiacsun.optics.zernike.zernikeMachine">
+<em class="property">class </em><code class="descclassname">pyiacsun.optics.zernike.</code><code class="descname">zernikeMachine</code><span class="sig-paren">(</span><em>npix=256</em>, <em>phase=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.optics.zernike.zernikeMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class that can be used to carry out several operations with Zernike functions</p>
+<dl class="method">
+<dt id="pyiacsun.optics.zernike.zernikeMachine.generateTurbulentZernikesKolmogorov">
+<code class="descname">generateTurbulentZernikesKolmogorov</code><span class="sig-paren">(</span><em>D_over_r0</em>, <em>nModes</em>, <em>firstMode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.optics.zernike.zernikeMachine.generateTurbulentZernikesKolmogorov" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the covariance matrix for the Zernike coefficients for a given value of r0 using Kolmogorov statistics</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>r0</strong> (<em>float</em>) &#8211; Fried radius [m]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.optics.zernike.zernikeMachine.gradZernike">
+<code class="descname">gradZernike</code><span class="sig-paren">(</span><em>j</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.optics.zernike.zernikeMachine.gradZernike" title="Permalink to this definition">¶</a></dt>
+<dd><p>X and Y gradients of the Zernike function of index j</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>j</strong> (<em>int</em>) &#8211; Noll index</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">dZ/dX and dZ/dY</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.optics.zernike.zernikeMachine.nm_to_noll">
+<code class="descname">nm_to_noll</code><span class="sig-paren">(</span><em>n</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.optics.zernike.zernikeMachine.nm_to_noll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform n,m indices to Noll indices Z_n^m -&gt; Z_j</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>n</strong> (<em>int</em>) &#8211; n-index</li>
+<li><strong>m</strong> (<em>Tint</em>) &#8211; m-index</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Noll index of the Zernike functions</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.optics.zernike.zernikeMachine.noll_to_nm">
+<code class="descname">noll_to_nm</code><span class="sig-paren">(</span><em>j</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.optics.zernike.zernikeMachine.noll_to_nm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform Noll indices to n,m pairs Z_j -&gt; Z_n^m</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>j</strong> (<em>int</em>) &#8211; Noll index</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(n,m) indices of the Zernike functions</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.optics.zernike.zernikeMachine.zernikeNM">
+<code class="descname">zernikeNM</code><span class="sig-paren">(</span><em>n</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.optics.zernike.zernikeMachine.zernikeNM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Zernike polynomial of indices n and m</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>m</strong> (<em>n,</em>) &#8211; orders</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">circular phase with the output Zernike polynomial</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">real</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.optics.zernike.zernikeMachine.zernikeNoll">
+<code class="descname">zernikeNoll</code><span class="sig-paren">(</span><em>j</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.optics.zernike.zernikeMachine.zernikeNoll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Zernike polynomial of Noll order j</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>j</strong> (<em>int</em>) &#8211; Zernike order (Noll ordering)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">circular phase with the output Zernike polynomial</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">real</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.optics">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyiacsun.optics" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">pyiacsun</a></h1>
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=aasensio&repo=pyiacsun&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+<h3>Navigation</h3>
+<ul class="simple">
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, A. Asensio Ramos.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/source/pyiacsun.optics.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

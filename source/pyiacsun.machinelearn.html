@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyiacsun.machinelearn package &mdash; pyiacsun 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyiacsun 1.0 documentation" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pyiacsun-machinelearn-package">
+<h1>pyiacsun.machinelearn package<a class="headerlink" href="#pyiacsun-machinelearn-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.machinelearn.gpAndres">
+<span id="pyiacsun-machinelearn-gpandres-module"></span><h2>pyiacsun.machinelearn.gpAndres module<a class="headerlink" href="#module-pyiacsun.machinelearn.gpAndres" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyiacsun.machinelearn.gpAndres.GaussianProcess">
+<em class="property">class </em><code class="descclassname">pyiacsun.machinelearn.gpAndres.</code><code class="descname">GaussianProcess</code><span class="sig-paren">(</span><em>xInput</em>, <em>lambdaGPInitial=1.0</em>, <em>sigmaGPInitial=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.gpAndres.GaussianProcess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pyiacsun.machinelearn.gpAndres.GaussianProcess.covariance">
+<code class="descname">covariance</code><span class="sig-paren">(</span><em>x</em>, <em>pars</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.gpAndres.GaussianProcess.covariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Covariance matrix. It returns the value of the covariance matrix
+and the derivative of the matrix wrt to the hyperparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.machinelearn.gpAndres.GaussianProcess.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>y</em>, <em>sigmaNoise</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.gpAndres.GaussianProcess.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.machinelearn.gpAndres.GaussianProcess.marginalLikelihood">
+<code class="descname">marginalLikelihood</code><span class="sig-paren">(</span><em>pars</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.gpAndres.GaussianProcess.marginalLikelihood" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.machinelearn.gpAndres.GaussianProcess.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>xStar</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.gpAndres.GaussianProcess.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.machinelearn.kmeans">
+<span id="pyiacsun-machinelearn-kmeans-module"></span><h2>pyiacsun.machinelearn.kmeans module<a class="headerlink" href="#module-pyiacsun.machinelearn.kmeans" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.machinelearn.kmeans.kmeans">
+<code class="descclassname">pyiacsun.machinelearn.kmeans.</code><code class="descname">kmeans</code><span class="sig-paren">(</span><em>datos_fila</em>, <em>nGrupos</em>, <em>umbral=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.kmeans.kmeans" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calcula los vectores clase de la muestra para nGrupos</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>datos_fila</strong> (<em>array [vectores x lambdas]</em>) &#8211; matriz de datos</li>
+<li><strong>nGrupos</strong> (<em>int</em>) &#8211; Numero de grupos para la clasificacion</li>
+<li><strong>umbral</strong> (<em>None, optional</em>) &#8211; Error relativo</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Los diccionarios con los grupos y las medias</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.machinelearn.rvm">
+<span id="pyiacsun-machinelearn-rvm-module"></span><h2>pyiacsun.machinelearn.rvm module<a class="headerlink" href="#module-pyiacsun.machinelearn.rvm" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyiacsun.machinelearn.rvm.rvm">
+<em class="property">class </em><code class="descclassname">pyiacsun.machinelearn.rvm.</code><code class="descname">rvm</code><span class="sig-paren">(</span><em>basis</em>, <em>targets</em>, <em>noise=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.rvm.rvm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pyiacsun.machinelearn.rvm.rvm.fullStatistics">
+<code class="descname">fullStatistics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.rvm.rvm.fullStatistics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.machinelearn.rvm.rvm.initialization">
+<code class="descname">initialization</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.rvm.rvm.initialization" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.machinelearn.rvm.rvm.iterateUntilConvergence">
+<code class="descname">iterateUntilConvergence</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.rvm.rvm.iterateUntilConvergence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.machinelearn.rvm.rvm.oneIteration">
+<code class="descname">oneIteration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.rvm.rvm.oneIteration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.machinelearn.rvm.rvm.postProcess">
+<code class="descname">postProcess</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.rvm.rvm.postProcess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyiacsun.machinelearn.rvm.rvm.preprocessBasis">
+<code class="descname">preprocessBasis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.machinelearn.rvm.rvm.preprocessBasis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.machinelearn">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyiacsun.machinelearn" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">pyiacsun</a></h1>
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=aasensio&repo=pyiacsun&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+<h3>Navigation</h3>
+<ul class="simple">
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, A. Asensio Ramos.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/source/pyiacsun.machinelearn.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyiacsun.hazel package &mdash; pyiacsun 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyiacsun 1.0 documentation" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pyiacsun-hazel-package">
+<h1>pyiacsun.hazel package<a class="headerlink" href="#pyiacsun-hazel-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.hazel.genNetCDF">
+<span id="pyiacsun-hazel-gennetcdf-module"></span><h2>pyiacsun.hazel.genNetCDF module<a class="headerlink" href="#module-pyiacsun.hazel.genNetCDF" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.hazel.genNetCDF.genNetCDF">
+<code class="descclassname">pyiacsun.hazel.genNetCDF.</code><code class="descname">genNetCDF</code><span class="sig-paren">(</span><em>wavelength</em>, <em>stI</em>, <em>stQ</em>, <em>stU</em>, <em>stV</em>, <em>sigmaI</em>, <em>sigmaQ</em>, <em>sigmaU</em>, <em>sigmaV</em>, <em>boundary</em>, <em>height</em>, <em>obsTheta</em>, <em>obsGamma</em>, <em>mask</em>, <em>pars</em>, <em>normalization</em>, <em>outputFile</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.hazel.genNetCDF.genNetCDF" title="Permalink to this definition">¶</a></dt>
+<dd><p>This routine generates a NetCDF file with the observations ready for Hazel-MPI</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>wavelength</strong> (<em>float</em>) &#8211; array of size [nlambda]</li>
+<li><strong>stI</strong> (<em>float</em>) &#8211; array of size [npixel, nlambda] with Stokes I</li>
+<li><strong>stQ</strong> (<em>float</em>) &#8211; array of size [npixel, nlambda] with Stokes Q</li>
+<li><strong>stU</strong> (<em>float</em>) &#8211; array of size [npixel, nlambda] with Stokes U</li>
+<li><strong>stV</strong> (<em>float</em>) &#8211; array of size [npixel, nlambda] with Stokes V</li>
+<li><strong>sigmaI</strong> (<em>float</em>) &#8211; array of size [npixel, nlambda] with the noise in Stokes I</li>
+<li><strong>sigmaQ</strong> (<em>float</em>) &#8211; array of size [npixel, nlambda] with the noise in Stokes Q</li>
+<li><strong>sigmaU</strong> (<em>float</em>) &#8211; array of size [npixel, nlambda] with the noise in Stokes U</li>
+<li><strong>sigmaV</strong> (<em>float</em>) &#8211; array of size [npixel, nlambda] with the noise in Stokes V</li>
+<li><strong>boundary</strong> (<em>float</em>) &#8211; array of size [npixel, 4] with the boundary conditions [I0,Q0,U0,V0] for every pixel</li>
+<li><strong>height</strong> (<em>float</em>) &#8211; array of size [npixel] indicating the height of the pixel over the surface in arcsec</li>
+<li><strong>obsTheta</strong> (<em>float</em>) &#8211; array of size [npixel] indicating the angle of the observation in degrees</li>
+<li><strong>obsGamma</strong> (<em>float</em>) &#8211; array of size [npixel] the angle of the reference for Stokes Q</li>
+<li><strong>mask</strong> (<em>float</em>) &#8211; array of the original dimensions of the observations that is used later to reconstruct the inverted maps [nx,ny]</li>
+<li><strong>pars</strong> (<em>float</em>) &#8211; <p>array of size [nparameters,npixel] that gives the initial value of the parameters
+The size depends on the radiative transfer option:</p>
+<blockquote>
+<div><ul>
+<li>1-component (vector of size 8): B, thetaB, chiB, tau, vdop, a, vmac, beta</li>
+<li>2-component 1+1 with same field (vector of size 10): B, thetaB, chiB, tau1, tau2, vdop, a, vmac1, vmac2, beta</li>
+<li>2-component 1+1 with different field (vector of size 14): B1, thetaB1, chiB1, B2, thetaB2, chiB2, tau1, tau2, vdop1, vdop2, a, vmac1, vmac2, beta</li>
+<li>2-component 2 with different field with ff (vector of size 14): B1, thetaB1, chiB1, B2, thetaB2, chiB2, tau1, tau2, vdop1, vdop2, a, vmac1, vmac2, ff</li>
+</ul>
+</div></blockquote>
+</li>
+<li><strong>normalization</strong> (<em>string</em>) &#8211; &#8216;continuum&#8217; or &#8216;peak&#8217;, indicating how the profiles are normalized</li>
+<li><strong>outputFile</strong> (<em>float</em>) &#8211; output file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.hazel.i0Allen">
+<span id="pyiacsun-hazel-i0allen-module"></span><h2>pyiacsun.hazel.i0Allen module<a class="headerlink" href="#module-pyiacsun.hazel.i0Allen" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.hazel.i0Allen.i0Allen">
+<code class="descclassname">pyiacsun.hazel.i0Allen.</code><code class="descname">i0Allen</code><span class="sig-paren">(</span><em>wavelength</em>, <em>muAngle</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.hazel.i0Allen.i0Allen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the solar intensity at a specific wavelength and heliocentric angle
+wavelength: wavelength in angstrom
+muAngle: cosine of the heliocentric angle</p>
+</dd></dl>
+
+</div>
+<div class="section" id="pyiacsun-hazel-vishazel-module">
+<h2>pyiacsun.hazel.visHazel module<a class="headerlink" href="#pyiacsun-hazel-vishazel-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.hazel">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyiacsun.hazel" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">pyiacsun</a></h1>
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=aasensio&repo=pyiacsun&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+<h3>Navigation</h3>
+<ul class="simple">
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, A. Asensio Ramos.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/source/pyiacsun.hazel.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

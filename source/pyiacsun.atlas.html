@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyiacsun.atlas package &mdash; pyiacsun 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyiacsun 1.0 documentation" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pyiacsun-atlas-package">
+<h1>pyiacsun.atlas package<a class="headerlink" href="#pyiacsun-atlas-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyiacsun.atlas.Delbouille73">
+<span id="pyiacsun-atlas-delbouille73-module"></span><h2>pyiacsun.atlas.Delbouille73 module<a class="headerlink" href="#module-pyiacsun.atlas.Delbouille73" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.atlas.Delbouille73.Delbouille73">
+<code class="descclassname">pyiacsun.atlas.Delbouille73.</code><code class="descname">Delbouille73</code><span class="sig-paren">(</span><em>ini</em>, <em>endi</em>, <em>atlasdir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.atlas.Delbouille73.Delbouille73" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract spectral data from the original disk-center
+intensity atlas recorded at the Jungfraujoch Observatory:
+Delbouille, Neven, Roland (1973)</p>
+<p>Wavelength range: 3000 - 10.000 A
+Wavelength step (visible): 0.002 A</p>
+<p>CALL: atlas,xlam = Delbouille73(ini = waveIni ,endi = waveEndi)</p>
+<p>Downloaded from:
+<a class="reference external" href="http://bass2000.obspm.fr/solar_spect.php">http://bass2000.obspm.fr/solar_spect.php</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ini</strong> (<em>int</em>) &#8211; Initial wavelength</li>
+<li><strong>endi</strong> (<em>int</em>) &#8211; Final wavelength</li>
+<li><strong>atlasdir</strong> (<em>string, optional</em>) &#8211; Atlas directory</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.atlas.Neckel84">
+<span id="pyiacsun-atlas-neckel84-module"></span><h2>pyiacsun.atlas.Neckel84 module<a class="headerlink" href="#module-pyiacsun.atlas.Neckel84" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.atlas.Neckel84.Neckel84">
+<code class="descclassname">pyiacsun.atlas.Neckel84.</code><code class="descname">Neckel84</code><span class="sig-paren">(</span><em>ini</em>, <em>endi</em>, <em>atlasdir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.atlas.Neckel84.Neckel84" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract spectral data from the original disk-center
+intensity atlas recorded at the Kitt-Peak National
+Observatory: Neckel and Labs (1984)</p>
+<p>Wavelength range: 3290 - 12510 A
+Wavelength step: from 0.004 A to 0.02</p>
+<p>CALL: atlas,xlam = Neckel84(ini = waveIni ,endi = waveEndi)</p>
+<p>Downloaded from:
+<a class="reference external" href="ftp://ftp.hs.uni-hamburg.de/pub/outgoing/FTS-Atlas">ftp://ftp.hs.uni-hamburg.de/pub/outgoing/FTS-Atlas</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ini</strong> (<em>int</em>) &#8211; Initial wavelength</li>
+<li><strong>endi</strong> (<em>int</em>) &#8211; Final wavelength</li>
+<li><strong>ftsdir</strong> (<em>string, optional</em>) &#8211; Atlas directory</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.atlas.ftsread">
+<span id="pyiacsun-atlas-ftsread-module"></span><h2>pyiacsun.atlas.ftsread module<a class="headerlink" href="#module-pyiacsun.atlas.ftsread" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyiacsun.atlas.ftsread.ftsread">
+<code class="descclassname">pyiacsun.atlas.ftsread.</code><code class="descname">ftsread</code><span class="sig-paren">(</span><em>ini</em>, <em>endi</em>, <em>ftsdir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyiacsun.atlas.ftsread.ftsread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract spectral data from the interpolated disk-center
+intensity atlas recorded at the Kitt-Peak National
+Observatory: Neckel and Labs (1984)</p>
+<p>Wavelength range: 3290 - 12508 A
+Wavelength step: 0.002 A</p>
+<p>CALL: atlas,xlam = ftsread(ini = waveIni ,endi = waveEndi)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ini</strong> (<em>int</em>) &#8211; Initial wavelength</li>
+<li><strong>endi</strong> (<em>int</em>) &#8211; Final wavelength</li>
+<li><strong>ftsdir</strong> (<em>string, optional</em>) &#8211; FTS directory</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">spectrum and wavelength</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">specFinal, lmbda</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyiacsun.atlas">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyiacsun.atlas" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">pyiacsun</a></h1>
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=aasensio&repo=pyiacsun&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+<h3>Navigation</h3>
+<ul class="simple">
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, A. Asensio Ramos.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/source/pyiacsun.atlas.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
