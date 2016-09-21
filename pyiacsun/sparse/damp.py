@@ -18,9 +18,9 @@ def largestElement(x, n):
     t = np.sort(x)[::-1]
     return t[n]
 
-def amp(A, AT, x0, eta, etaprime, b, mu, maxIter=5000, tol=1e-8, alpha=1.0):
+def damp(A, AT, x0, denoiser, b, maxIter=5000, tol=1e-8, alpha=1.0):
     """Solve a linear system of equations imposing a sparsity constraint using the 
-    Approximate Message Passing (AMP) algorithm
+    Denoising-based Approximate Message Passing (DAMP) algorithm
     
     Ax=b, where A is a matrix, b is a vector and x is the solution, over which a sparsity
     constraint is used.
@@ -35,10 +35,7 @@ def amp(A, AT, x0, eta, etaprime, b, mu, maxIter=5000, tol=1e-8, alpha=1.0):
         A (function): operator that applies the matrix A to an arbitry vector (e.g., A = lambda z : AMatrix.dot(z))
         AT (function): operator that applies the transpose matrix A.T to an arbitry vector (e.g., A = lambda z : AMatrix.T.dot(z))
         x0 (array): vector with the initial solution 
-        eta (function): proximal operator associated with the sparsity constraint 
-            (e.g., eta = x, threshold : np.sign(x) * np.fmax(np.abs(x) - threshold, 0) for l1 constraint)
-        etaprime (TYPE): derivative of the proximal operator associated with the sparsity constraint 
-            (e.g., etaprime = x, threshold : (x > threshold) + (x < -threshold) for l1 constraint)
+        eta (function): denoiser (e.g., A = lambda z, beta : )
         b (array): vector with the right-hand-side of the equation
         mu (float): regularization parameter
         maxIter (int, optional): maximum number of iterations        
@@ -49,27 +46,33 @@ def amp(A, AT, x0, eta, etaprime, b, mu, maxIter=5000, tol=1e-8, alpha=1.0):
     Returns:
         TYPE: Description
     """
-    xhat = np.copy(x0)
-    z = np.copy(b)
+
+    m = len(b)
+    n = len(x0)
+
+    xt = np.zeros(n)
+    zt = np.copy(b)
+
+    eps = np.finfo(1.0).resolution
     
-    delta = 1.0 * len(b) / len(xhat)
-
     err = []
-
-    gamm = 0.0
 
     loop = 0
 
     continueIteration = True
 
     while(continueIteration):
-        xhat = alpha * eta(xhat + AT(z), mu + gamm) + (1.0-alpha) * xhat
+        pseudoData = AT(zt) + xt
+        sigmaHat = np.sqrt(np.sum(zt**2) / m)
 
-        z = alpha * (b - A(xhat) + z / delta * np.mean(etaprime(xhat + AT(z), mu + gamm))) + (1.0-alpha) * z
+        xt = denoiser(pseudoData, sigmaHat)
+        epsilon = np.max(pseudoData) / 1000 + eps
+        eta = np.random.randn(n)
+        div = np.sum(eta * (denoiser(pseudoData + epsilon * eta, sigmaHat) - xt) / epsilon)
+        
+        zt = alpha * (b - A(xt) + 1.0 / m * zt * div) + (1.0-alpha) * zt
 
-        gamm = (mu+gamm) / delta * np.mean(etaprime(xhat + AT(z), mu + gamm))
-
-        stopping = np.linalg.norm(b - A(xhat)) / np.linalg.norm(b)
+        stopping = np.linalg.norm(b - A(xt)) / np.linalg.norm(b)
         err.append(stopping)
 
         continueIteration = (stopping > tol) and (loop < maxIter)
@@ -79,15 +82,14 @@ def amp(A, AT, x0, eta, etaprime, b, mu, maxIter=5000, tol=1e-8, alpha=1.0):
 
         loop += 1
         
-    return xhat, err
+    return xt, err
 
 if (__name__ == "__main__"):
     M = 200
     N = 1000
-    K = 10
+    K = 20
 
-    mu = 0.0005
-    sigma = 0.00001
+    sigma = 0.00000
 
     # Create sparse signal
     x = np.zeros(N)
@@ -100,15 +102,16 @@ if (__name__ == "__main__"):
 
     # Define observation vector
     b = AMat.dot(x)
-    b += np.random.normal(scale=sigma, size=b.shape)
+    #b += np.random.normal(scale=sigma, size=b.shape)
 
     # Initial state
-    x0 = np.zeros(N)
+    x0 = np.ones(N)
 
     A = lambda z : AMat.dot(z)
     At = lambda z : AMat.T.dot(z)
+    denoiser = lambda z, t : eta(z, t)
 
-    sol, err = amp(A, At, x0, eta, etaprime, b, mu, 500, 1e-6, alpha=1.0)
+    sol, err = damp(A, At, x0, denoiser, b, maxIter=500, tol=1e-8, alpha=0.5)
 
     pl.plot(sol)
     pl.plot(x, 'o')

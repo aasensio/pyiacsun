@@ -9,6 +9,7 @@ from .contHSRA import *
 from .nearest import *
 from .gauss_weights import *
 from .splinequad import *
+from .wigner import *
 # from . import pb0r
 # from . import prof4
 # from . import prof

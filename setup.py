@@ -102,7 +102,7 @@ DOCSTRING = __doc__.strip().split("\n")
 # Milne-Eddington
 path = pathGlobal+"sourceMilne"
 
-libMilne = MyExtension('pyiacsun.radtran.milne',
+libMilne = MyExtension('pyiacsun.radtran.pymilne',
                   libraries=["gfortran"],
                   library_dirs=get_libgfortran_dir(),
                   sources=[path+'/pymilne.pyx', path+'/vars.f90', path+'/maths.f90', path+'/atomic.f90', path+'/milne.f90'],
@@ -121,7 +121,7 @@ libLTE = MyExtension('pyiacsun.radtran.lte',
 # Hazel
 path = pathGlobal+"sourceHazel"
 
-libHazel = MyExtension('pyiacsun.radtran.hazel',
+libHazel = MyExtension('pyiacsun.radtran.pyhazel',
                   libraries=["gfortran"],
                   library_dirs=get_libgfortran_dir(),
                   sources=[path+'/pyhazel.pyx', path+'/vars.f90', path+'/singleton.f90', path+'/maths.f90', path+'/allen.f90', 
@@ -133,7 +133,7 @@ path = pathGlobal+"sourceSIR/"
 listFiles = glob.glob(path+'*.f*')
 listFiles.append(path+'pySIR.pyx')
 
-libSIR = MyExtension('pyiacsun.radtran.sir',
+libSIR = MyExtension('pyiacsun.radtran.pysir',
                   libraries=["gfortran"],
                   library_dirs=get_libgfortran_dir(),
                   sources=listFiles,

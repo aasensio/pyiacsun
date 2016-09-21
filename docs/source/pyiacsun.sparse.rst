@@ -29,6 +29,30 @@ pyiacsun.sparse.amp module
     :undoc-members:
     :show-inheritance:
 
+pyiacsun.sparse.bsbl module
+---------------------------
+
+.. automodule:: pyiacsun.sparse.bsbl
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.sparse.bsbl_b0 module
+------------------------------
+
+.. automodule:: pyiacsun.sparse.bsbl_b0
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.sparse.damp module
+---------------------------
+
+.. automodule:: pyiacsun.sparse.damp
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pyiacsun.sparse.fasta module
 ----------------------------
 

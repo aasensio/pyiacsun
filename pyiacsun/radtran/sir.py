@@ -1,10 +1,10 @@
 from __future__ import print_function
 import numpy as np
-from .sir import *
+from .pysir import * 
 import os.path
 import shutil
 
-__all__ = ["listLinesSIR", "initializeSIR", "synthesizeSIR"]
+__all__ = ["listLinesSIR", "buildModel", "initializeSIR", "synthesizeSIR"]
 
 def listLinesSIR():
     """List the lines available in SIR for synthesis
@@ -28,7 +28,7 @@ def initializeSIR(lines):
     
     Args:
         lines (list): list of lists containing the information for the lines to be synthesized
-                    Each region is defined is defined by a list containing the following elements:
+                    Each region is defined by a list containing the following elements:
                      - A string defining which lines are synthesized in the region. E.g. '1,2,3'
                      - Initial wavelength displacement in mA
                      - Step in mA
@@ -65,6 +65,43 @@ def initializeSIR(lines):
         
     return init()
 
+def _interpolateNodes(logTau, nodes):
+    n = logTau.shape[0]
+    out = np.zeros_like(variable)
+
+    if (len(nodes) == 1):
+        out = variable
+    
+    if (len(nodes) >= 2):
+        pos = np.linspace(0, n-1, len(nodes), dtype=int)
+        coeff = np.polyfit(logTau[pos], nodes, len(nodes)-1)
+        out = variable + np.polyval(coeff, logTau)
+    return out
+
+def buildModel(logTau, nodes_T=None, nodes_vmic=None, nodes_B=None, nodes_v=None, nodes_thB=None, nodes_phiB=None):
+    """Build a SIR model given the nodes for all quantities
+
+    Args:
+        logTau (float): array with the log(tau) axis
+        nodes_T (list): list with the number of nodes for Temperature [K]
+        nodes_vmic (list): list with the number of nodes for microturbulent velocity [km/s]
+        nodes_B (list): list with the number of nodes for magnetic field strength [G]
+        nodes_v (list): list with the number of nodes for velocity [km/s]
+        nodes_thB (list): list with the number of nodes for inclination of magnetic field [deg]
+        nodes_phiB (list): list with the number of nodes for azimuth of magnetic field [deg]
+
+    Returns:
+        model (float): [nDepth x 7] array appropriate for synthesizing with SIR
+    """
+    n = len(logTau)
+    nodes = [nodes_t, nodes_vmic, nodes_B, nodes_v, nodes_thB, nodes_phiB]
+    model = np.zeros((n,7))
+    for i in range(7):
+        model[:,i] = _interpolateNodes(logTau, np.asarray(nodes[i]))
+
+    return model
+
+
 def setPSF(xPSF, yPSF):
     """Define the spectral PSF to be convolved with the profiles
     
@@ -96,7 +133,7 @@ def synthesizeSIR(model, macroturbulence=0.0, fillingFactor=1.0, stray=0.0, retu
     Returns:
         stokes: (float array) Stokes parameters, with the first index containing the wavelength displacement and the remaining
                                 containing I, Q, U and V. Size (5,nLambda)
-        rf: (float array) Response functions to T, Pe, vmic, B, v, theta, phi, all of size (4,nLambda,nDepth), plus the RF to macroturbulence of size (4,nLambda)
+        rf: (float array) Response functions to T, Pe, vmic, B, v, theta, phi, vmic, all of size (4,nLambda,nDepth), plus the RF to macroturbulence of size (4,nLambda)
                         It is not returned if returnRF=False
     """
 

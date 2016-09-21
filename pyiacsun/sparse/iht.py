@@ -1,11 +1,9 @@
 from __future__ import print_function
 import numpy as np
-import scipy.io
-import types
 
-def AIHT(x, A, AT, m, M, thresh):
+def AIHT(x, A, AT, m, M, thresh, proximalProjection=None):
 	"""
-	Accelerated iterative Hard thresholding algorithm that keeps exactly M elements 
+	Accelerated Iterative Hard thresholding algorithm that keeps exactly M elements 
 	in each iteration. This algorithm includes an additional double
 	overrelaxation step that significantly improves convergence speed without
 	destroying any of the theoretical guarantees of the IHT algorithm
@@ -20,12 +18,16 @@ def AIHT(x, A, AT, m, M, thresh):
 	 m: length of the solution vector s
 	 M: number of non-zero elements to keep in each iteration
 	 thresh: stopping criterion
+	 proximalProjection (optional): function that carries out the hard thresholding projection. The input is the vector to be
+	 	thresholded and the number of elements to be left. The output is the thresholded vector.
 	 
 	Outputs:
 	 s: solution vector
 	 err_mse: vector containing mse of approximation error for each iteration
 	"""
-	
+
+	x = np.atleast_2d(x).T
+
 	n1, n2 = x.shape
 	if (n2 == 1):
 		n = n1
@@ -87,20 +89,29 @@ def AIHT(x, A, AT, m, M, thresh):
 			IND = s != 0
 			d = PT(Residual)
 
-# If the current vector is zero, we take the largest element in d
+# If the current vector is zero, we take the largest element in d			
 			if (np.sum(IND) == 0):
-				sortind = np.argsort(np.abs(d), axis=0)[::-1]
-				IND[sortind[0:M]] = 1
+				if (proximalProjection):
+					s = proximalProjection(d, M)
+					IND = s != 0
+				else:
+					sortind = np.argsort(np.abs(d), axis=0)[::-1]
+					IND[sortind[0:M]] = 1
 			
 			id = IND * d
 			Pd = P(id)
 			mu = np.dot(id.T, id) / np.dot(Pd.T, Pd)
+			
 			max_mu = np.max([mu,max_mu])
 			min_mu = np.min([mu,min_mu])
 			mu = min_mu
 			s = s_old + mu*d
-			sortind = np.argsort(np.abs(s), axis=0)[::-1]
-			s[sortind[M:]] = 0
+
+			if (proximalProjection):
+				s = proximalProjection(s, M)
+			else:
+				sortind = np.argsort(np.abs(s), axis=0)[::-1]
+				s[sortind[M:]] = 0
 			
 			if ((Count > 1) & (acceleration == 0)):
 				very_old_Ps = old_Ps
@@ -124,8 +135,11 @@ def AIHT(x, A, AT, m, M, thresh):
 				z2 = z1 + a2 * (z1-s_very_old)
 				
 # Threshold z2
-				sortind = np.argsort(np.abs(z2), axis=0)[::-1]
-				z2[sortind[M:]] = 0
+				if (proximalProjection):
+					z2 = proximalProjection(z2, M)
+				else:
+					sortind = np.argsort(np.abs(z2), axis=0)[::-1]
+					z2[sortind[M:]] = 0
 				Pz2 = P(z2)
 				Residual_z2 = x - Pz2
 								
@@ -150,8 +164,11 @@ def AIHT(x, A, AT, m, M, thresh):
 # We use a simple line search, halving mu in each step
 				mu = mu / 2
 				s = s_old + mu*d
-				sortind = np.argsort(np.abs(s), axis=0)[::-1]
-				s[sortind[M:]] = 0
+				if (proximalProjection):
+					s = proximalProjection(s, M)
+				else:
+					sortind = np.argsort(np.abs(s), axis=0)[::-1]
+					s[sortind[M:]] = 0
 				Ps = P(s)
 				
 # Calculate optimal step size and do line search
@@ -171,8 +188,11 @@ def AIHT(x, A, AT, m, M, thresh):
 					z2 = z1 + a2 * (z1-s_very_old)
 					
 # Threshold z2
-					sortind = np.argsort(np.abs(z2), axis=0)[::-1]
-					z2[sortind[M:]] = 0
+					if (proximalProjection):
+						z2 = proximalProjection(z2, M)
+					else:
+						sortind = np.argsort(np.abs(z2), axis=0)[::-1]
+						z2[sortind[M:]] = 0
 					Pz2 = P(z2)
 					Residual_z2 = x - Pz2
 				
@@ -199,3 +219,40 @@ def AIHT(x, A, AT, m, M, thresh):
 			if (verbose):
 				print("Iter={0} - gap={1} - target={2}".format(Count,gap,thresh))
 	return s, err_mse
+
+if (__name__ == "__main__"):
+	import matplotlib.pyplot as pl
+
+	def proximalProj(x, M):
+		sortind = np.argsort(np.abs(x), axis=0)[::-1]
+		x[sortind[M:]] = 0
+		return x
+
+	M = 200
+	N = 1000
+	K = 40
+
+
+	mu = 0.0005
+	sigma = 0.00001
+
+# Create sparse signal
+	x = np.zeros(N)
+	ind = np.random.permutation(N)
+	x[ind[0:K]] = 1.0
+
+    # Define matrix
+	AMat = np.random.normal(size=(M,N))
+	AMat /= np.linalg.norm(AMat, 2)
+
+    # Define observation vector
+	b = AMat.dot(x)
+	b += np.random.normal(scale=sigma, size=b.shape)
+    
+	A = lambda z : AMat.dot(z)
+	At = lambda z : AMat.T.dot(z)
+
+	sol, err = AIHT(b, A, At, N, K, 1e-10, proximalProjection=proximalProj)
+
+	pl.plot(sol)
+	pl.plot(x, 'o')

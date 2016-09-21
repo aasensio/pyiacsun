@@ -20,10 +20,26 @@ pyiacsun.radtran.LTEnodes module
     :undoc-members:
     :show-inheritance:
 
-pyiacsun.radtran.pySIR module
+pyiacsun.radtran.hazel module
 -----------------------------
 
-.. automodule:: pyiacsun.radtran.pySIR
+.. automodule:: pyiacsun.radtran.hazel
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.radtran.milne module
+-----------------------------
+
+.. automodule:: pyiacsun.radtran.milne
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyiacsun.radtran.sir module
+---------------------------
+
+.. automodule:: pyiacsun.radtran.sir
     :members:
     :undoc-members:
     :show-inheritance:

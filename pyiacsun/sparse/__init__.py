@@ -8,3 +8,5 @@ from .iuwt import *
 from .alps import *
 from .smooth import *
 from .proxes_rank1 import *
+from .damp import *
+from .bsbl import *

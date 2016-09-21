@@ -7,7 +7,9 @@ import numpy.core.umath_tests
 import scipy.optimize as opt
 
 class GaussianProcess:
-	
+	"""
+	Gaussian process
+	"""
 	def __init__(self, xInput, lambdaGPInitial=1.0, sigmaGPInitial=1.0):
 		
 		self.lambdaGP = lambdaGPInitial

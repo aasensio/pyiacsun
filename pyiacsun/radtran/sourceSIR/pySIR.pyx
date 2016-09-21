@@ -68,4 +68,4 @@ def synthRF(ar[float, ndim=2] modelIn, float macroturbulence, float filling, flo
 	c_synthrf(&nDepth, &nLambda, &macroturbulence, &filling, &stray, &model[0,0], <float*> stokes.data, <float*> rt.data, <float*> rp.data, 
 		<float*> rh.data, <float*> rv.data, <float*> rf.data, <float*> rg.data, <float*> rm.data, <float*> rmac.data)
 	
-	return stokes, [rt, rp, rh, rv, rf, rg, rm, rmac]
+	return stokes, [rt, rp, rm, rh, rv, rg, rf, rmac]

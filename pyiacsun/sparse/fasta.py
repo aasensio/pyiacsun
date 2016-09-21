@@ -172,6 +172,8 @@ class fasta(object):
 
 		start = datetime.datetime.now()
 
+		bestObjectiveIterate = x1
+
 		for i in range(self.maxIter):
 
 # Rename iterates relative to loop index.  "0" denotes index i, and "1" denotes index i+1

@@ -140,6 +140,14 @@ pyiacsun.util.tv module
     :undoc-members:
     :show-inheritance:
 
+pyiacsun.util.wigner module
+---------------------------
+
+.. automodule:: pyiacsun.util.wigner
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------
